@@ -3,6 +3,18 @@ body {
     color: #FAFAFA
 }
 
+h1, #nacionalidade, #cidade {
+    color: #DA4167;
+}
+
+h2 {
+    color: #8A1C7C;
+}
+
+a {
+    color: #F0BCD4;
+}
+
 .paragraph{
     font-family: 'Source Code Pro', monospace;
 }
