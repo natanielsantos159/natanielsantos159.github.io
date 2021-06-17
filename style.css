@@ -8,17 +8,24 @@ h1, #nacionalidade, #cidade {
 }
 
 h2 {
-    color: #8A1C7C;
+    color: #ad449f;
 }
 
 a {
-    color: #F0BCD4;
+    color: #1F0322;
+    padding: 10px 30px;
+    margin-top: 5px;
+    background-color: #DA4167;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-.paragraph{
+.paragraph, a{
     font-family: 'Source Code Pro', monospace;
 }
 
 .titulo {
     font-family: 'Staatliches', cursive;
+    word-spacing: 3px;
+    letter-spacing: 2px;
 }
