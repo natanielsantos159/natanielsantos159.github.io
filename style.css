@@ -29,3 +29,12 @@ a {
     word-spacing: 3px;
     letter-spacing: 2px;
 }
+
+.sobre-mim{
+    display: flex;
+}
+
+.resumo {
+    margin: 30px;
+}
+
