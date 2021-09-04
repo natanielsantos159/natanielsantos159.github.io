@@ -9,7 +9,6 @@ const btnMoveUp = document.querySelector('#mover-cima');
 const btnMoveDown = document.querySelector('#mover-baixo');
 const btnRemoveSelected = document.getElementById('remover-selecionado');
 let listItens = taskList.children;
-
 btnCreateTask.addEventListener('click', addTask);
 
 function addTask() {
