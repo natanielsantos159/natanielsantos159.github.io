@@ -1,53 +1,65 @@
 body {
-    background-color: #1F0322;
-    color: #FAFAFA
+  background-color: #1f0322;
+  color: #fafafa;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
-h1, #nacionalidade, #cidade {
-    color: #DA4167;
+h1,
+#nacionalidade,
+#cidade {
+  color: #da4167;
 }
 
 h2 {
-    color: #ad449f;
+  color: #ebe3ea;
 }
 
 a {
-    color: #1F0322;
-    padding: 10px 30px;
-    margin-top: 5px;
-    background-color: #DA4167;
-    border-radius: 5px;
-    text-decoration: none;
+  color: #1f0322;
+  padding: 10px 30px;
+  margin-top: 5px;
+  background-color: #da4167;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.paragraph, a{
-    font-family: 'Source Code Pro', monospace;
+.paragraph,
+a {
+  font-family: "Source Code Pro", monospace;
 }
 
 .titulo {
-    font-family: 'Staatliches', cursive;
-    word-spacing: 3px;
-    letter-spacing: 2px;
-    margin: 30px;
+  font-family: "Staatliches", cursive;
+  word-spacing: 3px;
+  letter-spacing: 2px;  
 }
 
-.sobre-mim{
-    display: flex;
-    margin-top: 30px;
+.sobre-mim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .resumo {
-    margin: 5px 30px;
+    margin: 30px;
+  width: 350px
+}
 
+.more-information-container {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
 }
 
 img {
-    border-radius: 50%;
-    background-color: #DA4167;
-    padding: 8px;
+  border-radius: 50%;
+  background-color: #da4167;
+  padding: 4px;
 }
-
-
