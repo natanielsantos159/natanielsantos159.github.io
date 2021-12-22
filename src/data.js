@@ -9,7 +9,7 @@ const projects = [
   {
     name: 'TrybeWallet',
     description: 'TrybeWallet é uma aplicação feita pra gerenciar despesas, com conversão de moedas de diversos países.',
-    image: 'https://github.com/natanielsantos159/trybetunes/raw/main/src/images/trybetuneshomepage.png',
+    image: 'https://github.com/natanielsantos159/trybe-wallet/raw/main/public/ezgif.com-gif-maker%20(2).gif',
     repository: 'https://github.com/natanielsantos159/trybe-wallet/raw/main/public/ezgif.com-gif-maker%20(2).gif',
     link: 'https://natanielsantos159.github.io/trybe-wallet'
   },
