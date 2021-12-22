@@ -10,15 +10,15 @@ header {
   justify-content: space-around;
   width: 300px;
 
-  color: white;
+  color: rgb(31, 31, 31);
   font-weight: 800;
 }
 
 a:link, a:visited {
-  color: white;
+  color: rgb(31, 31, 31);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(202, 201, 201);
+  color: rgb(31, 31, 31);
 }
