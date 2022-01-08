@@ -21,4 +21,5 @@ a:link, a:visited {
 
 a:hover {
   color: rgb(31, 31, 31);
+  text-decoration: underline;
 }
