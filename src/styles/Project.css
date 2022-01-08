@@ -5,6 +5,8 @@
   background-color: #84A98C;
   padding: 20px;
   margin: 10px 20px;
+  min-height: 218px;
+  transition: 0.5s;
 }
 
 .project-card:hover {
@@ -12,6 +14,9 @@
   transition: 0.5s;
 }
 
+.image-wrapper {
+  min-height: 50%;
+}
 .project-image {
   width: 100%;
   border-radius: 9px;
