@@ -5,7 +5,7 @@ export default function Project({image, name, description}) {
   return (
     <div className="project-card">
       <img src={image} alt={`Imagem do Projeto ${name}`} className="project-image" />
-      <h2>{name}</h2>
+      <h2 className="project-name">{name}</h2>
       <p>{description}</p>
     </div>
   )
