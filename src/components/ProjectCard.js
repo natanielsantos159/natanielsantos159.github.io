@@ -18,12 +18,24 @@ export default function ProjectCard({
         />
       </div>
       <h2 className="project-name">{name}</h2>
-      <p className="project-description">{description}</p>
+      <div className="description-wrapper">
+        <p className="project-description">{description}</p>
+      </div>
       <section className="btn-wrapper">
-        <a href={repository} className="btn-repository" target="_blank" rel="noreferrer">
+        <a
+          href={repository}
+          className="btn-repository"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
-        <a href={website} className="btn-website" target="_blank" rel="noreferrer">
+        <a
+          href={website}
+          className="btn-website"
+          target="_blank"
+          rel="noreferrer"
+        >
           Website
         </a>
       </section>

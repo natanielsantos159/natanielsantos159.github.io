@@ -1,7 +1,6 @@
 .project-card {
   width: 70vh;
   border-radius: 13px;
-  border: 1px solid #FFEEDB;
   background-color: #5a2745;
   padding: 20px;
   margin: 10px 20px;
@@ -27,22 +26,28 @@
 
 .btn-wrapper a {
   padding: 10px 15px;
-  border: 1px solid #FFEEDB;
+  border: 0.3px solid #FFEEDB;
   border-radius: 6px;
   cursor: pointer;
   margin-right: 5px;
 }
 
 .btn-wrapper a:hover {
-  background: #b0235f;
-  transition: 0.5s all;
+  background: #b02360cc;;
+  backdrop-filter: blur(10px);
+  transition: ease 0.4s all;
+  border: 0.3px solid transparent;
+  box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;
+  transform: translateY(-9px);
   text-decoration: none;
 }
 
 .project-description {
   font-family: 'Outfit', sans-serif;
+  font-size: 16px;
 }
 
 .project-name {
   margin: 7px 0;
+  font-size: 20px;
 }
