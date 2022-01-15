@@ -8,7 +8,6 @@ export default function ProjectCard({
   repository,
   website,
 }) {
-  console.log(repository, website);
   return (
     <div className="project-card">
       <div className="image-wrapper">
