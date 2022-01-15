@@ -1,7 +1,7 @@
 .project-card {
-  width: 40%;
+  width: 40vh;
   border-radius: 13px;
-  border: 1px solid white;
+  border: 1px solid #FFEEDB;
   background-color: #5a2745;
   padding: 20px;
   margin: 10px 20px;
@@ -25,7 +25,7 @@
 
 .btn-wrapper a {
   padding: 10px 15px;
-  border: 1px solid white;
+  border: 1px solid #FFEEDB;
   border-radius: 6px;
   cursor: pointer;
   margin-right: 5px;

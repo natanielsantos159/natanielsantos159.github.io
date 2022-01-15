@@ -10,18 +10,18 @@ header {
   justify-content: space-around;
   width: 300px;
 
-  color: #dfe6eb;
+  color: #FFEEDB;
   font-weight: 800;
   font-size: 17px;
 }
 
 a:link, a:visited {
-  color: #dfe6eb;
+  color: #FFEEDB;
   text-decoration: none;
 }
 
 a:hover {
-  color: #dfe6eb;
+  color: #FFEEDB;
   text-decoration: underline;
 }
 
