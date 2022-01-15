@@ -8,7 +8,7 @@ export default function Projects() {
     <div>
       <h1 className="projects-h1">Projetos</h1>
       <section className="projects-section">
-        { projects.map((proj) => <Project name={proj.name} image={proj.image} description={proj.description}/>)}
+        { projects.map((proj) => <Project {...proj} />)}
       </section>
     </div>
   )

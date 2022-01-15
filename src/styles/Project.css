@@ -5,13 +5,8 @@
   background-color: #5a2745;
   padding: 20px;
   margin: 10px 20px;
-  min-height: 218px;
+  height: min-content;
   font-size: 17px;
-  transition: 0.5s;
-}
-
-.project-card:hover {
-  transform: scale(1.04);
   transition: 0.5s;
 }
 
@@ -21,4 +16,23 @@
 .project-image {
   width: 100%;
   border-radius: 9px;
+}
+
+.btn-wrapper {
+  display: flex;
+  margin-top: 10px
+}
+
+.btn-wrapper a {
+  padding: 10px 15px;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-wrapper a:hover {
+  background: #b0235f;
+  transition: 0.5s all;
+  text-decoration: none;
 }
