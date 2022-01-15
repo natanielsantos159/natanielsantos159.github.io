@@ -1,8 +1,13 @@
 header {
   display: flex;
-  justify-content: space-between;
+  column-gap: 30%;
+  justify-content: space-around;
   align-items: center;
   padding: 5px 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 10vh;
 }
 
 .header-navs {
