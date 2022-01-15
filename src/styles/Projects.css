@@ -1,3 +1,7 @@
+.projects-page {
+  padding-top: 15vh;
+}
+
 .projects-section {
   display: flex;
   flex-wrap: wrap;
