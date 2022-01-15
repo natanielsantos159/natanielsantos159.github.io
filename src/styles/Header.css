@@ -10,16 +10,21 @@ header {
   justify-content: space-around;
   width: 300px;
 
-  color: rgb(31, 31, 31);
+  color: #dfe6eb;
   font-weight: 800;
+  font-size: 17px;
 }
 
 a:link, a:visited {
-  color: rgb(31, 31, 31);
+  color: #dfe6eb;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(31, 31, 31);
+  color: #dfe6eb;
   text-decoration: underline;
+}
+
+.projects-h1 {
+  margin-left: 30px;
 }
