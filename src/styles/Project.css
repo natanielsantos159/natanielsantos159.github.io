@@ -13,6 +13,7 @@
 .image-wrapper {
   min-height: 50%;
 }
+
 .project-image {
   width: 100%;
   border-radius: 9px;
@@ -35,4 +36,12 @@
   background: #b0235f;
   transition: 0.5s all;
   text-decoration: none;
+}
+
+.project-description {
+  font-family: 'Outfit', sans-serif;
+}
+
+.project-name {
+  margin: 7px 0;
 }

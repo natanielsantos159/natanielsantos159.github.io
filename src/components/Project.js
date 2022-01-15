@@ -19,7 +19,7 @@ export default function Project({
         />
       </div>
       <h2 className="project-name">{name}</h2>
-      <p>{description}</p>
+      <p className="project-description">{description}</p>
       <section className="btn-wrapper">
         <a href={repository} className="btn-repository" target="_blank" rel="noreferrer">
           GitHub
