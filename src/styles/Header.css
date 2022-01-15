@@ -18,6 +18,7 @@ header {
   color: #FFEEDB;
   font-weight: 800;
   font-size: 17px;
+  text-shadow: 3px 2px 13px black;
 }
 
 a:link, a:visited {
