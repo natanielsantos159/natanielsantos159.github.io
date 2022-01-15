@@ -30,3 +30,14 @@
   font-size: 18px;
   word-spacing: 2px;
 }
+
+.projects-container-home {
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  width: 100%;
+}
+
+.projects-container-home .project-card {
+  width: 40vh;
+}

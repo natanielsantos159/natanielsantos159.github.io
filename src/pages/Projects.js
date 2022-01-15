@@ -1,5 +1,5 @@
 import React from 'react'
-import Project from '../components/Project';
+import ProjectCard from '../components/ProjectCard';
 import projects from '../data';
 import '../styles/Projects.css';
 
@@ -8,7 +8,7 @@ export default function Projects() {
     <main className="projects-page">
       <h1 className="projects-h1">Projetos</h1>
       <section className="projects-section">
-        { projects.map((proj) => <Project {...proj} />)}
+        { projects.map((proj) => <ProjectCard {...proj} />)}
       </section>
     </main>
   )

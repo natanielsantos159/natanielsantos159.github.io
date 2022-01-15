@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Project.css";
 
-export default function Project({
+export default function ProjectCard({
   image,
   name,
   description,
