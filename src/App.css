@@ -4,9 +4,9 @@ body {
   font-family: 'Merriweather', serif;
   margin: 0;
   /* generated with https://www.magicpattern.design/tools/css-backgrounds */
-  background-color: #B0235F;
+  background-color: #932759;
   opacity: 1;
-  background: radial-gradient(circle, transparent 20%, #B0235F 20%, #B0235F 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #B0235F 20%, #B0235F 80%, transparent 80%, transparent) 22.5px 22.5px, linear-gradient(#5A2745 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #5A2745 1.8px, #B0235F 1.8px) -0.9px 0;
+  background: radial-gradient(circle, transparent 20%, #932759 20%, #932759 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #932759 20%, #932759 80%, transparent 80%, transparent) 22.5px 22.5px, linear-gradient(#5A2745 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #5A2745 1.8px, #932759 1.8px) -0.9px 0;
   background-size: 45px 45px, 45px 45px, 22.5px 22.5px, 22.5px 22.5px;
 }
 
