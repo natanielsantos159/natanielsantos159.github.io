@@ -12,13 +12,33 @@ header {
 
 .header-navs {
   display: flex;
+  column-gap: 14px;
   justify-content: space-around;
+  align-items: center;
   width: 300px;
 
   color: #FFEEDB;
   font-weight: 800;
   font-size: 17px;
   text-shadow: 3px 2px 13px black;
+}
+
+.header-navs img {
+  height: 30px;
+}
+
+.header-navs a {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px;
+}
+
+.header-navs a:hover {
+  transition: ease 0.4s all;
+  filter: brightness(1.15);
+  transform: translateY(-4px);
 }
 
 a:link, a:visited {
@@ -28,7 +48,6 @@ a:link, a:visited {
 
 a:hover {
   color: #FFEEDB;
-  text-decoration: underline;
 }
 
 .projects-h1 {
