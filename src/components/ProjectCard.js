@@ -1,4 +1,6 @@
 import React from "react";
+import githubIcon from '../images/github.png';
+import websiteIcon from '../images/laptop.png';
 import "../styles/Project.css";
 
 export default function ProjectCard({
@@ -28,6 +30,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noreferrer"
         >
+          <img src={githubIcon} alt="GitHub"/>
           GitHub
         </a>
         <a
@@ -36,6 +39,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noreferrer"
         >
+          <img src={websiteIcon} alt="Website"/>
           Website
         </a>
       </section>

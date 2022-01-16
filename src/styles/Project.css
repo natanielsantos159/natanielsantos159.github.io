@@ -25,9 +25,13 @@
 }
 
 .btn-wrapper a {
-  padding: 10px 15px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  padding: 9px 13px;
   background: #b02360cc;
-  /* border: 0.3px solid #FFEEDB; */
   border-radius: 6px;
   box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;
   cursor: pointer;
@@ -36,9 +40,14 @@
 
 .btn-wrapper a:hover {
   transition: ease 0.4s all;
-  /* border: 0.3px solid transparent; */
+  filter: brightness(1.15);
   transform: translateY(-9px);
   text-decoration: none;
+}
+
+.btn-wrapper img {
+  height: 25px;
+  margin: 2px 3px;
 }
 
 .project-description {
