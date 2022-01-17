@@ -8,9 +8,8 @@ import ProjectSkills from "./ProjectSkills";
 export default function Projects() {
   const {showSkills} = useContext(AppContext);
   const {idSkill} = useContext(AppContext);
-console.log(showSkills, idSkill)
   return (
-    <main className="projects-page">
+    <main className="projects-page" >
       <h1 className="projects-h1">Projetos</h1>
       <section className="projects-section">
         {projects.map((proj) => (
