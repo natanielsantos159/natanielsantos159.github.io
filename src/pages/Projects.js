@@ -19,14 +19,10 @@ console.log(showSkills, idSkill)
       </section>
       {(showSkills && idSkill) && (
         <ProjectSkills
-          name={projects[idSkill].name}
-          skills={projects[idSkill].skills}
+          name={projects[idSkill - 1].name}
+          skills={projects[idSkill - 1].skills}
         />
       )}
-      {/* <ProjectSkills
-          name={projects[1].name}
-          skills={projects[1].skills}
-        /> */}
     </main>
   );
 }

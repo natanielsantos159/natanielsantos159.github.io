@@ -57,8 +57,8 @@ export default function ProjectCard({
           Website
         </a>
         <button className="btn-skills" onClick={() => {
-          setShowSkills(true)
           setIdSkill(id)
+          setShowSkills(true)
         }}>
           <img src={skillsIcon} alt="Skills" />
           Skills
