@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: 1,
     name: "Trivia",
     description: "Um game de perguntas que utiliza a API do Trivia",
     image:
@@ -8,15 +9,16 @@ const projects = [
     website: "https://natanielsantos159.github.io/trivia-redux/",
     tags: ["Módulo de Front-End", "Projeto em Grupo"],
     skills: [
-      'Criar um store Redux em aplicações React',
-      'Criar reducers no Redux em aplicações React',
-      'Criar actions no Redux em aplicações React',
-      'Criar dispatchers no Redux em aplicações React',
-      'Conectar Redux aos componentes React',
-      'Criar actions assíncronas na sua aplicação React que faz uso de Redux.',
+      "Criar um store Redux em aplicações React",
+      "Criar reducers no Redux em aplicações React",
+      "Criar actions no Redux em aplicações React",
+      "Criar dispatchers no Redux em aplicações React",
+      "Conectar Redux aos componentes React",
+      "Criar actions assíncronas na sua aplicação React que faz uso de Redux.",
     ],
   },
   {
+    id: 2,
     name: "TrybeWallet",
     description:
       "TrybeWallet é uma aplicação feita pra gerenciar despesas, com conversão de moedas de diversos países.",
@@ -35,6 +37,7 @@ const projects = [
     ],
   },
   {
+    id: 3,
     name: "TrybeTunes",
     description:
       "Uma aplicação web para pesquisar e salvar as músicas favoritas",
@@ -43,9 +46,19 @@ const projects = [
     repository: "https://github.com/natanielsantos159/trybetunes",
     website: "https://natanielsantos159.github.io/trybetunes/",
     tags: ["Módulo de Front-End"],
-    skills: [],
+    skills: [
+      "Fazer requisições e consumir dados vindos de uma API;",
+      "Utilizar os ciclos de vida de um componente React;",
+      "Utilizar a função setState de forma a garantir que um determinado código só é executado após o estado ser atualizado",
+      "Utilizar o componente BrowserRouter corretamente;",
+      "Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route;",
+      "Utilizar o Switch do React Router",
+      "Usar o componente Redirect pra redirecionar para uma rota específica;",
+      "Criar links de navegação na aplicação com o componente Link;",
+    ],
   },
   {
+    id: 4,
     name: "Todo List",
     description: "Uma aplicação simples de lista de tarefas",
     image:
@@ -56,6 +69,7 @@ const projects = [
     skills: ["Manipular CSS", "Manipular Javascript"],
   },
   {
+    id: 5,
     name: "Pixels Art",
     description: "App simples pra desenhar pixel art",
     image:
@@ -66,6 +80,7 @@ const projects = [
     skills: ["Manipular o DOM", "Manipular o Javascript"],
   },
   {
+    id: 6,
     name: "Recipes App",
     description: "Um app de receitas de bebibas e comidas completo.",
     image:
@@ -84,6 +99,5 @@ const projects = [
     ],
   },
 ];
-
 
 export default projects;
