@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactMe() {
   return (
-    <section className="contact-me-section">
+    <section className="contact-me-section" id="contact-me-section">
       <h1>Contato</h1>
       <section className="contact-me-btns">
         <a href="mailto:nathan.santos159@hotmail.com" className="email-btn">
