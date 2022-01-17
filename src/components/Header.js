@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderNav from "./HeaderNav";
 
 import homeIcon from "../images/home.png";
@@ -13,8 +13,18 @@ import contactHover from '../images/contacthover.png';
 import "../styles/Header.css";
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (window) {
+      window.addEventListener("scroll", () =>
+      setScrolled(window.pageYOffset > 200)
+      );
+    }
+  }, []);
+
   return (
-    <header>
+    <header className={scrolled && 'header-scrolled'}>
       <h1>Nataniel Santos</h1>
       <nav className="header-navs">
         <HeaderNav
