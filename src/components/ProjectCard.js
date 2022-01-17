@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
 import websiteIcon from "../images/laptop.png";
+import skillsIcon from "../images/skills.png";
 import "../styles/Project.css";
 
 export default function ProjectCard({
+  id,
   image,
   name,
   description,
@@ -11,6 +14,9 @@ export default function ProjectCard({
   website,
   tags,
 }) {
+  const { setShowSkills} = useContext(AppContext);
+  const { setIdSkill } = useContext(AppContext);
+
   return (
     <div className="project-card">
       <div className="image-wrapper">
@@ -50,6 +56,13 @@ export default function ProjectCard({
           <img src={websiteIcon} alt="Website" />
           Website
         </a>
+        <button className="btn-skills" onClick={() => {
+          setShowSkills(true)
+          setIdSkill(id)
+        }}>
+          <img src={skillsIcon} alt="Skills" />
+          Skills
+        </button>
       </section>
     </div>
   );

@@ -1,0 +1,13 @@
+.project-skills {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72vh;
+  background: #580e3f;
+  border-radius: 13px;
+  box-shadow: 1px 4px 7px 3px #00000033;
+  padding: 6vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}

@@ -24,7 +24,7 @@
   margin-top: 10px
 }
 
-.btn-wrapper a {
+.btn-wrapper a, .btn-wrapper button {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
   font-size: 17px;
@@ -39,7 +39,12 @@
   transition: ease 0.4s all;
 }
 
-.btn-wrapper a:hover {
+.btn-wrapper button {
+  color: #FFEEDB;
+  border: none;
+}
+
+.btn-wrapper a:hover, .btn-wrapper button:hover {
   filter: brightness(1.15);
   transform: translateY(-9px);
   text-decoration: none;
