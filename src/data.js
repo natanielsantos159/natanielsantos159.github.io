@@ -5,7 +5,7 @@ const projects = [
     image: 'https://github.com/natanielsantos159/trivia-redux/raw/main-group-16/public/trivia.gif',
     repository: 'https://github.com/natanielsantos159/trivia-redux',
     website: 'https://natanielsantos159.github.io/trivia-redux/',
-    tags: ['Módulo de Front-End']
+    tags: ['Módulo de Front-End', 'Projeto em Grupo']
   },
   {
     name: 'TrybeWallet',
@@ -38,6 +38,14 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/pixels-art-project',
     website: 'https://natanielsantos159.github.io/pixels-art-project/',
     tags: ['Módulo de Fundamentos']
+  },
+  {
+    name: 'Recipes App',
+    description: 'Um app de receitas de bebibas e comidas completo.',
+    image: 'https://github.com/natanielsantos159/recipes-app-project/blob/main-group-18-development/src/images/Captura%20de%20tela%20de%202022-01-17%2016-37-13.png?raw=true',
+    repository: 'https://github.com/natanielsantos159/recipes-app-project',
+    website: 'https://natanielsantos159.github.io/recipes-app-project/',
+    tags: ['Módulo de Front-End', 'Projeto em Grupo']
   }
 ];
 
