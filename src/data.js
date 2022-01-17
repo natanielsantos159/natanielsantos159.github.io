@@ -31,6 +31,14 @@ const projects = [
     website: 'https://natanielsantos159.github.io/todo-list-project',
     tags: ['Módulo de Fundamentos']
   },
+  {
+    name: 'Pixels Art',
+    description: 'App simples pra desenhar pixel art',
+    image: 'https://github.com/natanielsantos159/pixels-art-project/blob/nataniel-santos-project-pixels-art/Captura%20de%20tela%20de%202022-01-17%2014-43-46.png?raw=true',
+    repository: 'https://github.com/natanielsantos159/pixels-art-project',
+    website: 'https://natanielsantos159.github.io/pixels-art-project/',
+    tags: ['Módulo de Fundamentos']
+  }
 ];
 
 export default projects;
