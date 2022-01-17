@@ -36,10 +36,10 @@
   box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;
   cursor: pointer;
   margin-right: 5px;
+  transition: ease 0.4s all;
 }
 
 .btn-wrapper a:hover {
-  transition: ease 0.4s all;
   filter: brightness(1.15);
   transform: translateY(-9px);
   text-decoration: none;
