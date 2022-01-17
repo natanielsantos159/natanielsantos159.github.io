@@ -1,6 +1,5 @@
 header {
   display: flex;
-  column-gap: 30%;
   justify-content: space-around;
   align-items: center;
   padding: 5px 20px;
@@ -15,7 +14,6 @@ header {
   column-gap: 14px;
   justify-content: space-around;
   align-items: center;
-  width: 300px;
 
   color: #FFEEDB;
   font-weight: 800;
