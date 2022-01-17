@@ -1,6 +1,6 @@
 import React from "react";
-import githubIcon from '../images/github.png';
-import websiteIcon from '../images/laptop.png';
+import githubIcon from "../images/github.png";
+import websiteIcon from "../images/laptop.png";
 import "../styles/Project.css";
 
 export default function ProjectCard({
@@ -9,6 +9,7 @@ export default function ProjectCard({
   description,
   repository,
   website,
+  tags,
 }) {
   return (
     <div className="project-card">
@@ -20,6 +21,13 @@ export default function ProjectCard({
         />
       </div>
       <h2 className="project-name">{name}</h2>
+      <div className="tags-wrapper">
+        {tags.map((tag, i) => (
+          <div className="tag" key={i}>
+            {tag}
+          </div>
+        ))}
+      </div>
       <div className="description-wrapper">
         <p className="project-description">{description}</p>
       </div>
@@ -30,7 +38,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noreferrer"
         >
-          <img src={githubIcon} alt="GitHub"/>
+          <img src={githubIcon} alt="GitHub" />
           GitHub
         </a>
         <a
@@ -39,7 +47,7 @@ export default function ProjectCard({
           target="_blank"
           rel="noreferrer"
         >
-          <img src={websiteIcon} alt="Website"/>
+          <img src={websiteIcon} alt="Website" />
           Website
         </a>
       </section>
