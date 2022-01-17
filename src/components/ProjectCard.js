@@ -59,6 +59,7 @@ export default function ProjectCard({
         <button className="btn-skills" onClick={() => {
           setIdSkill(id)
           setShowSkills(true)
+          document.body.style.overflow = 'hidden';
         }}>
           <img src={skillsIcon} alt="Skills" />
           Skills
