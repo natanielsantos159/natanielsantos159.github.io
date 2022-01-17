@@ -7,11 +7,7 @@
 }
 
 .projects-container-home-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.projects-container-home-wrapper .project-card {
-  width: 40vh;
+  height: 5px;
 }
 
 .projects-container-home-wrapper .project-description:hover {
