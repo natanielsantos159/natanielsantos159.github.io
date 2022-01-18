@@ -14,7 +14,7 @@ export default function ProjectCard({
   website,
   tags,
 }) {
-  const { setShowSkills} = useContext(AppContext);
+  const { setShowSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
 
   return (
@@ -47,20 +47,25 @@ export default function ProjectCard({
           <img src={githubIcon} alt="GitHub" />
           GitHub
         </a>
-        <a
-          href={website}
-          className="btn-website"
-          target="_blank"
-          rel="noreferrer"
+        {website && (
+          <a
+            href={website}
+            className="btn-website"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={websiteIcon} alt="Website" />
+            Website
+          </a>
+        )}
+        <button
+          className="btn-skills"
+          onClick={() => {
+            setIdSkill(id);
+            setShowSkills(true);
+            document.body.style.overflow = "hidden";
+          }}
         >
-          <img src={websiteIcon} alt="Website" />
-          Website
-        </a>
-        <button className="btn-skills" onClick={() => {
-          setIdSkill(id)
-          setShowSkills(true)
-          document.body.style.overflow = 'hidden';
-        }}>
           <img src={skillsIcon} alt="Skills" />
           Skills
         </button>
