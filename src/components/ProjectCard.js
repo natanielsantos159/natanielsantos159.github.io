@@ -3,6 +3,7 @@ import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
 import websiteIcon from "../images/laptop.png";
 import skillsIcon from "../images/skills.png";
+import defaultProjectImage from "../images/projectimage.png"
 import "../styles/Project.css";
 
 export default function ProjectCard({
@@ -21,7 +22,7 @@ export default function ProjectCard({
     <div className="project-card">
       <div className="image-wrapper">
         <img
-          src={image}
+          src={image ? image : defaultProjectImage}
           alt={`Imagem do Projeto ${name}`}
           className="project-image"
         />
