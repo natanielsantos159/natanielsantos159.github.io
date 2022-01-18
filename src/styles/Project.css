@@ -27,6 +27,7 @@
 .btn-wrapper a, .btn-wrapper button {
   font-weight: 500;
   font-size: 17px;
+  font-family: 'Outfit', sans-serif;
   display: flex;
   align-items: center;
   padding: 9px 13px;
