@@ -36,6 +36,12 @@
   padding: 10px;
 }
 
+code {
+  background: #b2396a91;
+  border-radius: 5px;
+  padding: 3px;
+}
+
 @keyframes moveUp{
   from {
     opacity: 0;
