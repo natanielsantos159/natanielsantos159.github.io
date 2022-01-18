@@ -40,7 +40,6 @@ header {
   display: flex;
   column-gap: 5px;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
   padding: 10px;
   transition: ease 0.4s all;
 }

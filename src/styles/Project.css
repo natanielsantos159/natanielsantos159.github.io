@@ -25,7 +25,6 @@
 }
 
 .btn-wrapper a, .btn-wrapper button {
-  font-family: 'Outfit', sans-serif;
   font-weight: 500;
   font-size: 17px;
   display: flex;
@@ -56,7 +55,6 @@
 }
 
 .project-description, .tag {
-  font-family: 'Outfit', sans-serif;
   font-size: 16px;
 }
 
