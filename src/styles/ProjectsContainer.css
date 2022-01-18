@@ -3,7 +3,6 @@
   overflow-x: scroll;
   align-items: center;
   width: 100%;
-  height: 63vh;
 }
 
 .projects-container-home-wrapper::-webkit-scrollbar {
