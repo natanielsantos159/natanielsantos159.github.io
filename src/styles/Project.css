@@ -17,6 +17,7 @@
 .project-image {
   width: 100%;
   border-radius: 9px;
+  min-height: 25vh;
 }
 
 .btn-wrapper {
