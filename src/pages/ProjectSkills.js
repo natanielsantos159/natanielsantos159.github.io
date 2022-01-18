@@ -1,15 +1,19 @@
 import React, { useContext, useEffect } from "react";
 import "../styles/ProjectSkills.css";
 import ReactMarkdown from "react-markdown";
-import closeIcon from "../images/close.png";
 import AppContext from "../context/AppContext";
 import projects from "../data";
+
+import closeIcon from "../images/close.png";
+import tipIcon from "../images/tip.png"
 
 export default function ProjectSkills() {
   const {
     showSkills: show,
     setShowSkills,
     idSkill: id,
+    skillApparitionCount,
+    setSkillApparitionCount: setCount,
   } = useContext(AppContext);
 
   const closeModal = () => {
@@ -23,9 +27,16 @@ export default function ProjectSkills() {
     };
     document.addEventListener("keydown", escListener);
 
-    return () => document.removeEventListener("keydown", escListener);
+    return () => {
+      document.removeEventListener("keydown", escListener);
+    }
   }, []);
 
+  useEffect(() => {
+    if (show) setCount(skillApparitionCount + 1)
+  }, [show])
+
+console.log(skillApparitionCount)
   return (
     <>
       {show && id ? (
@@ -44,6 +55,11 @@ export default function ProjectSkills() {
                   </li>
                 ))}
             </ul>
+            { skillApparitionCount < 3 && <section className="tip-section">
+              <img src={tipIcon} alt="Dica"/>
+              <span className="tip">Dica:</span>
+              <span>pressione <code>Esc</code> para fechar.</span>
+              </section>}
           </section>
         </>
       ) : null}
