@@ -1,4 +1,7 @@
 .profile-picture {
+  position: absolute;
+  top: 25vh;
+  right: 25vh;
   height: 30vh;
   border-radius: 50%;
   border: 3px solid #FFEEDB;
@@ -9,7 +12,8 @@
   display: flex;
   margin: 0 15vh;
   width: 100%;
-  justify-content: space-around;
+  z-index: 1;
+  justify-content: space-between;
 }
 
 .welcome-container {
@@ -25,4 +29,11 @@
   max-width: 70vh;
   font-size: 18px;
   word-spacing: 2px;
+}
+
+.planets {
+  position: absolute;
+  z-index: -1;
+  top: 20vh;
+  right: 1vh;
 }
