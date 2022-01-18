@@ -31,9 +31,22 @@
   word-spacing: 2px;
 }
 
-.planets {
+.planets, .first-planet, .second-planet {
   position: absolute;
+}
+
+.planets {
   z-index: -1;
   top: 20vh;
   right: 1vh;
+}
+
+.first-planet {
+  top: -13vh;
+  right: -22vh;
+}
+
+.second-planet {
+  height: 550px;
+  right: 5vh;
 }
