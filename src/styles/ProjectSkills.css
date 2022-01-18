@@ -54,6 +54,10 @@ code {
 }
 
 .tip-section {
+  animation: moveUpTip 0.3s;
+  animation-delay: 0.3s;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-fill-mode: backwards;
   display: flex;
   padding: 15px;
   column-gap: 10px;
@@ -67,6 +71,7 @@ code {
 .tip-section img {
   height: 25px;
 }
+
 @keyframes moveUp{
   from {
     opacity: 0;
@@ -76,5 +81,18 @@ code {
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
+  }
+}
+
+
+@keyframes moveUpTip{
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
