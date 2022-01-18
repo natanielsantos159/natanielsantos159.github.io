@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="homepage">
       <AboutMe />
-      <Parallax speed={6}>
+      <Parallax speed={3}>
         <ProjectsContainer />
         <ContactMe />
       </Parallax>
