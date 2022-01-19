@@ -121,6 +121,32 @@ const projects = [
       "Criar rotas e aplicar `middlewares`.",
     ],
   },
+  {
+    id: 8,
+    name: "Movie Card Library",
+    description:
+      "Projeto introdutório ao React do módulo de Front-end da Trybe.",
+    image: "https://github.com/natanielsantos159/project-movie-cards-library/blob/nataniel-santos-movie-cards-library/src/images/Captura%20de%20tela%20de%202022-01-18%2021-12-10.png?raw=true",
+    repository:
+      "https://github.com/natanielsantos159/project-movie-cards-library",
+    website: "https://natanielsantos159.github.io/project-movie-cards-library",
+    tags: ["Módulo de Front-End"],
+    skills: [
+      "Saber a melhor forma para instalar um gerenciador de pacotes",
+      "Inicializar um projeto em **React**",
+      "Utilizar JSX no **React**",
+      "Utilizar o **ReactDOM.render** para renderizar elementos numa página web",
+      "Utilizar o `import` para usar código externo junto ao seu",
+      "Criar componentes **React** corretamente",
+      "Fazer uso de `props` corretamente",
+      "Fazer composição de componentes corretamente",
+      "Criar múltiplos componentes dinamicamente",
+      "Utilizar **PropTypes** para checar o tipo de uma prop no uso de um componente",
+      "Utilizar **PropTypes** para garantir a presença de props obrigatórias no uso de um componente",
+      "Utilizar **PropTypes** para checar que uma prop é um objeto de formato específico",
+      "Utilizar **PropTypes** para garantir que uma prop é um array com elementos de um determinado tipo",
+    ],
+  },
 ];
 
 export default projects;
