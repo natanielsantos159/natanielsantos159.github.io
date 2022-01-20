@@ -20,7 +20,7 @@ export default function ProjectCard({
   const { setIdSkill } = useContext(AppContext);
 console.log(index)
   return (
-    <div className="project-card" data-aos="zoom-in" data-aos-delay={ index * 50 }>
+    <div className="project-card" data-aos="zoom-in" data-aos-delay={ index ? index * 50 : 0 }>
       <div className="image-wrapper">
         <img
           src={image ? image : defaultProjectImage}

@@ -10,7 +10,7 @@ export default function Projects() {
       <h1 className="projects-h1">Projetos</h1>
       <section className="projects-section">
         {projects.map((proj, i) => (
-          <ProjectCard {...proj} index={i} />
+          <ProjectCard {...proj} />
         ))}
       </section>
       <ProjectSkills />
