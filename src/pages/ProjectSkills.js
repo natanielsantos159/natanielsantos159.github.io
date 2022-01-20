@@ -5,15 +5,15 @@ import AppContext from "../context/AppContext";
 import projects from "../data";
 
 import closeIcon from "../images/close.png";
-import tipIcon from "../images/tip.png"
+import tipIcon from "../images/tip.png";
 
 export default function ProjectSkills() {
   const {
     showSkills: show,
     setShowSkills,
     idSkill: id,
-    skillApparitionCount,
-    setSkillApparitionCount: setCount,
+    isFirstTimeTip,
+    setIsFirstTimeTip,
   } = useContext(AppContext);
 
   const closeModal = () => {
@@ -29,14 +29,15 @@ export default function ProjectSkills() {
 
     return () => {
       document.removeEventListener("keydown", escListener);
-    }
+    };
   }, []);
 
   useEffect(() => {
-    if (show) setCount(skillApparitionCount + 1)
-  }, [show])
+    return () => {
+      if (show && isFirstTimeTip) setIsFirstTimeTip(false);
+    };
+  }, [show]);
 
-console.log(skillApparitionCount)
   return (
     <>
       {show && id ? (
@@ -55,11 +56,15 @@ console.log(skillApparitionCount)
                   </li>
                 ))}
             </ul>
-            { skillApparitionCount < 3 && <section className="tip-section">
-              <img src={tipIcon} alt="Dica"/>
-              <span className="tip">Dica:</span>
-              <span>pressione <code>Esc</code> para fechar.</span>
-              </section>}
+            {isFirstTimeTip && (
+              <section className="tip-section">
+                <img src={tipIcon} alt="Dica" />
+                <span className="tip">Dica:</span>
+                <span>
+                  pressione <code>Esc</code> para fechar.
+                </span>
+              </section>
+            )}
           </section>
         </>
       ) : null}
