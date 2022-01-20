@@ -1,8 +1,10 @@
 .projects-container-home-wrapper {
-  display: flex;
-  overflow-x: scroll;
-  align-items: center;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.projects-container-home-wrapper .project-card {
+  width: auto;
 }
 
 .projects-container-home-wrapper::-webkit-scrollbar {
