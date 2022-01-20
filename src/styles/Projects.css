@@ -4,10 +4,36 @@
 
 .projects-section {
   display: flex;
+}
+
+.projects-section.grid {
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.projects-section.list {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
 .projects-section:last-child {
   justify-self: flex-start;
+}
+
+.header-projects-page {
+  display: flex;
+  flex-direction: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vh 0 5vh;
+}
+
+.switch-view-mode-btn {
+  background: transparent;
+  height: 30px;
+}
+
+.switch-view-mode-btn img {
+  height: 30px
 }

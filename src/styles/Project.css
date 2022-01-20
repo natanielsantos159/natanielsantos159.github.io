@@ -10,6 +10,28 @@
   box-shadow: 1px 4px 7px 3px #00000033;
 }
 
+.list .project-card {  
+  width: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 5px 28px;
+  grid-auto-flow: row;
+  grid-template-areas:
+      "project-image info-wrapper info-wrapper"
+      "project-image info-wrapper info-wrapper"
+      "project-image btn-wrapper btn-wrapper";
+  justify-items: start;
+}
+
+.project-image { grid-area: project-image; }
+
+.info-wrapper { grid-area: info-wrapper; }
+
+.btn-wrapper { grid-area: btn-wrapper; }
+
+
 .image-wrapper {
   min-height: 50%;
 }
@@ -34,14 +56,12 @@
   background: #b02360cc;
   border-radius: 6px;
   box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;
-  cursor: pointer;
   margin-right: 5px;
   transition: ease 0.4s all;
 }
 
 .btn-wrapper button {
   color: #FFEEDB;
-  border: none;
 }
 
 .btn-wrapper a:hover, .btn-wrapper button:hover {

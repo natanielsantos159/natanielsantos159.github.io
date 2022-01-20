@@ -3,7 +3,7 @@ import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
 import websiteIcon from "../images/laptop.png";
 import skillsIcon from "../images/skills.png";
-import defaultProjectImage from "../images/projectimage.png"
+import defaultProjectImage from "../images/projectimage.png";
 import "../styles/Project.css";
 
 export default function ProjectCard({
@@ -13,12 +13,12 @@ export default function ProjectCard({
   description,
   repository,
   website,
-  tags
+  tags,
 }) {
   const { setShowSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
   return (
-    <div className="project-card" data-aos="zoom-in" >
+    <div className="project-card" data-aos="zoom-in">
       <div className="image-wrapper">
         <img
           src={image ? image : defaultProjectImage}
@@ -26,16 +26,18 @@ export default function ProjectCard({
           className="project-image"
         />
       </div>
-      <h2 className="project-name">{name}</h2>
-      <div className="tags-wrapper">
-        {tags.map((tag, i) => (
-          <div className="tag" key={i}>
-            {tag}
-          </div>
-        ))}
-      </div>
-      <div className="description-wrapper">
-        <p className="project-description">{description}</p>
+      <div className="project-info-wrapper">
+        <h2 className="project-name">{name}</h2>
+        <div className="tags-wrapper">
+          {tags.map((tag, i) => (
+            <div className="tag" key={i}>
+              {tag}
+            </div>
+          ))}
+        </div>
+        <div className="description-wrapper">
+          <p className="project-description">{description}</p>
+        </div>
       </div>
       <section className="btn-wrapper">
         <a
