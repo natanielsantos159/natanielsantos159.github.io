@@ -29,32 +29,3 @@
   font-size: 18px;
   word-spacing: 2px;
 }
-
-.planets, .first-planet, .second-planet {
-  position: absolute;
-}
-
-.planets {
-  z-index: -1;
-  top: 20vh;
-  right: 1vh;
-}
-
-.first-planet {
-  top: -13vh;
-  right: -22vh;
-}
-
-.second-planet {
-  height: 550px;
-  right: 5vh;
-}
-
-.outsite-path, .second-planet path, .first-planet path {
-  -webkit-filter: drop-shadow( 0px 10px 20px rgb(0 0 0 / 25%));
-  filter: drop-shadow( 0px 10px 20px rgb(0 0 0 / 25%));
-}
-
-.first-planet, .second-planet, .planets {
-  transition: 0.3s all;
-}
