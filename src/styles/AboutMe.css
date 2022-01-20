@@ -3,6 +3,7 @@
   top: 25vh;
   right: 25vh;
   height: 30vh;
+  width: 30vh;
   border-radius: 50%;
   box-shadow: 1px 4px 11px 11px #00000033;
 }
@@ -25,7 +26,20 @@
 }
 
 .about-me-home {
+  animation: moveDownHome 1s;
   max-width: 70vh;
   font-size: 18px;
   word-spacing: 2px;
+}
+
+
+@keyframes moveDownHome {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }

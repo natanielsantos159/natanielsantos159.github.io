@@ -10,7 +10,36 @@
 }
 
 .planets-bg path {
+  animation: moveDownPlanetsBg 1.5s backwards;
   opacity: 0.4;
+}
+
+.planets-bg path:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.planets-bg path:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.planets-bg path:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.planets-bg path:nth-of-type(4) {
+  animation-delay: 0.7s;
+}
+
+.planets-bg path:nth-of-type(5) {
+  animation-delay: 0.8s;
+}
+
+.planets-bg path:nth-of-type(6) {
+  animation-delay: 0.9s;
+}
+
+.planets-bg path:nth-of-type(7) {
+  animation-delay: 0.9s;
 }
 
 .first-planet {
@@ -28,6 +57,16 @@
   filter: drop-shadow( 0px 10px 20px rgb(0 0 0 / 25%));
 }
 
-.first-planet, .second-planet, .planets-bg {
-  transition: 0.3s all;
+.first-planet, .second-planet {
+  animation: moveDownPlanetsBg 2s backwards;
+}
+
+@keyframes moveDownPlanetsBg {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
