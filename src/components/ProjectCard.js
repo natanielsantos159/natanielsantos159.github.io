@@ -17,7 +17,6 @@ export default function ProjectCard({
 }) {
   const { setShowSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
-console.log(index)
   return (
     <div className="project-card" data-aos="zoom-in" >
       <div className="image-wrapper">

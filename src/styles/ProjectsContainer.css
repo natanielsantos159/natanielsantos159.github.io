@@ -7,10 +7,6 @@
   width: auto;
 }
 
-.projects-container-home-wrapper::-webkit-scrollbar {
-  height: 5px;
-}
-
 .projects-container-home-wrapper .project-description:hover {
   -webkit-transition: max-height .6s; 
   -moz-transition: max-height .6s; 
