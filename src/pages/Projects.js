@@ -9,8 +9,8 @@ export default function Projects() {
     <main className="projects-page">
       <h1 className="projects-h1">Projetos</h1>
       <section className="projects-section">
-        {projects.map((proj) => (
-          <ProjectCard {...proj} />
+        {projects.map((proj, i) => (
+          <ProjectCard {...proj} index={i} />
         ))}
       </section>
       <ProjectSkills />
