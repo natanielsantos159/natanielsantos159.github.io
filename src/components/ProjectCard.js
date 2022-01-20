@@ -14,12 +14,13 @@ export default function ProjectCard({
   repository,
   website,
   tags,
+  index
 }) {
   const { setShowSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
-
+console.log(index)
   return (
-    <div className="project-card">
+    <div className="project-card" data-aos="zoom-in" data-aos-delay={ index * 50 }>
       <div className="image-wrapper">
         <img
           src={image ? image : defaultProjectImage}
