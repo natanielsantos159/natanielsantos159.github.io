@@ -9,6 +9,10 @@
   right: 1vh;
 }
 
+.planets-bg path {
+  opacity: 0.4;
+}
+
 .first-planet {
   top: -13vh;
   right: -22vh;
