@@ -4,7 +4,7 @@
 }
 
 .projects-container-home-wrapper .project-card {
-  width: auto;
+  width: auto; 
 }
 
 .projects-container-home-wrapper .project-description:hover {
@@ -31,4 +31,10 @@
   text-overflow: unset;
   display: block;
   max-height: 90px;
+}
+
+@media (max-width: 1000px) {
+  .projects-container-home-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }
