@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import "../styles/ProjectSkills.css";
-import ReactMarkdown from "react-markdown";
+import SkillsList from "../components/SkillsList";
 import AppContext from "../context/AppContext";
 import projects from "../data";
 
 import closeIcon from "../images/close.png";
 import tipIcon from "../images/tip.png";
+
+import "../styles/ProjectSkills.css";
 
 export default function ProjectSkills() {
   const {
@@ -48,14 +49,7 @@ export default function ProjectSkills() {
               <img src={closeIcon} alt="Fechar" />
             </button>
             <h1>{projects[id - 1].name}</h1>
-            <ul className="skills-list">
-              {projects[id - 1].skills &&
-                projects[id - 1].skills.map((skill, i) => (
-                  <li key={i} className="skill">
-                    <ReactMarkdown>{skill}</ReactMarkdown>
-                  </li>
-                ))}
-            </ul>
+            <SkillsList index={id -1} />
             {isFirstTimeTip && (
               <section className="tip-section">
                 <img src={tipIcon} alt="Dica" />
