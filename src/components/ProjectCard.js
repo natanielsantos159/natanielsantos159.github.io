@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
 import websiteIcon from "../images/laptop.png";
@@ -16,8 +16,13 @@ export default function ProjectCard({
   website,
   tags,
 }) {
-  const { setShowSkills, showAllSkills } = useContext(AppContext);
+  const { setShowSkills, showAllSkills, setShowAllSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
+
+  useEffect(() => {
+    return () => setShowAllSkills(false)
+  }, [])
+
   return (
     <div className={`project-card ${showAllSkills ? 'skills-expanded' : ''}`} >
       <div className="image-wrapper">
