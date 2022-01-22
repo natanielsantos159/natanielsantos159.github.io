@@ -90,7 +90,7 @@ export default function ProjectCard({
           )}
         </section>
       </div>
-      {viewMode === 'grid' && <ProjectSkills />}
+      {(viewMode === 'grid' && idSkill === id) && <ProjectSkills />}
       {viewMode === 'list' && <section
         className={`skills-wrapper ${
          showAllSkills || (showSkills && idSkill === id ) ? "expand" : "collapse"
