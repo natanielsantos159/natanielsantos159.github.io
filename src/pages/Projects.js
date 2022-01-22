@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import AppContext from "../context/AppContext";
-import ProjectSkills from "./ProjectSkills";
 import projects from "../data";
 
 import gridIcon from "../images/grid.png";
@@ -30,7 +29,10 @@ export default function Projects() {
           <input
             type="checkbox"
             id="show-all-skills-btn"
-            onClick={() => setShowAllSkills(!showAllSkills)}
+            onClick={() => {
+              if (showAllSkills) setShowSkills(false);
+              setShowAllSkills(!showAllSkills)
+            }}
           />
           Expandir todas as skills
         </label>}

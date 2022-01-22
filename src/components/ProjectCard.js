@@ -93,7 +93,7 @@ export default function ProjectCard({
       {viewMode === 'grid' && <ProjectSkills />}
       {viewMode === 'list' && <section
         className={`skills-wrapper ${
-          showSkills && idSkill === id ? "expand" : "collapse"
+         showAllSkills || (showSkills && idSkill === id ) ? "expand" : "collapse"
         }`}
         onClick={ showSkillsOnClick }
       >
