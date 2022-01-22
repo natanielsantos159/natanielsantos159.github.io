@@ -78,12 +78,10 @@ export default function ProjectCard({
           Skills
         </button>}
       </section>
-      {showAllSkills && (
-        <section className="skills-wrapper">
-          <h2>Skills</h2>
+        <details className="skills-wrapper">
+          <summary>Skills</summary>
           <SkillsList index={id - 1} />
-        </section>
-      )}
+        </details>
     </div>
   );
 }
