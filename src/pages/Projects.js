@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import AppContext from "../context/AppContext";
 import projects from "../data";
@@ -8,6 +8,7 @@ import listIcon from "../images/list.png";
 import uncheckedIcon from "../images/checkbox.png";
 import checkedIcon from "../images/checkboxfilled.png";
 import "../styles/Projects.css";
+import ProjectSkills from "./ProjectSkills";
 
 export default function Projects() {
   const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode } = useContext(AppContext);
@@ -15,6 +16,10 @@ export default function Projects() {
     setViewMode(viewMode === "grid" ? "list" : "grid");
     setShowSkills(false);
   }
+
+  useEffect(() => {
+    return () => setViewMode('grid');
+  }, [])
 
   return (
     <main className="projects-page">
@@ -45,6 +50,7 @@ export default function Projects() {
           <ProjectCard {...proj} />
         ))}
       </section>
+      <ProjectSkills />
     </main>
   );
 }

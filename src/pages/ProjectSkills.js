@@ -15,6 +15,7 @@ export default function ProjectSkills() {
     idSkill: id,
     isFirstTimeTip,
     setIsFirstTimeTip,
+    viewMode
   } = useContext(AppContext);
 
   const closeModal = () => {
@@ -41,7 +42,7 @@ export default function ProjectSkills() {
 
   return (
     <>
-      {show && id ? (
+      {(show && id && viewMode === "grid") ? (
         <>
           <div id="mask" onClick={closeModal}></div>
           <section className="project-skills">

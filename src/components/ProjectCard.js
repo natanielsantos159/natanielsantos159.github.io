@@ -7,7 +7,7 @@ import defaultProjectImage from "../images/projectimage.png";
 import "../styles/Project.css";
 import SkillsList from "./SkillsList";
 import ProjectSkills from "../pages/ProjectSkills";
-import useCollapse from 'react-collapsed'
+import useCollapse from "react-collapsed";
 
 export default function ProjectCard({
   id,
@@ -27,7 +27,7 @@ export default function ProjectCard({
     viewMode,
   } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
-  const { getCollapseProps, getToggleProps, setExpanded } = useCollapse()
+  const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
 
   useEffect(() => {
     return () => setShowAllSkills(false);
@@ -40,8 +40,8 @@ export default function ProjectCard({
   const showSkillsOnClick = () => {
     setIdSkill(id);
     if (!showSkills) setShowSkills(true);
-    if (showSkills && idSkill === id ) setShowSkills(false);
-    if (viewMode === 'grid') document.body.style.overflow = "hidden";
+    if (showSkills && idSkill === id) setShowSkills(false);
+    if (viewMode === "grid") document.body.style.overflow = "hidden";
   };
 
   return (
@@ -88,14 +88,14 @@ export default function ProjectCard({
               Website
             </a>
           )}
-          {(viewMode === 'grid') && (
+          {viewMode === "grid" && (
             <button className="btn-skills" onClick={showSkillsOnClick}>
               <img src={skillsIcon} alt="Skills" />
               Skills
             </button>
           )}
 
-          {(viewMode === 'list') && (
+          {viewMode === "list" && (
             <button className="btn-skills" {...getToggleProps()}>
               <img src={skillsIcon} alt="Skills" />
               Skills
@@ -103,13 +103,12 @@ export default function ProjectCard({
           )}
         </section>
       </div>
-      {(viewMode === 'grid' && idSkill === id) && <ProjectSkills />}
-      {viewMode === 'list' && <section
-        {...getCollapseProps()}
-      >
-        <h2>Skills</h2>
-        <SkillsList index={id - 1} />
-      </section>}
+      {viewMode === "list" && (
+        <section {...getCollapseProps()}>
+          <h2>Skills</h2>
+          <SkillsList index={id - 1} />
+        </section>
+      )}
     </div>
   );
 }
