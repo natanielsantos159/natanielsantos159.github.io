@@ -19,21 +19,22 @@
   gap: 5px 28px;
   grid-auto-flow: row;
   grid-template-areas:
-      "project-image info-wrapper info-wrapper"
-      "project-image info-wrapper info-wrapper"
-      "project-image btn-wrapper btn-wrapper";
+  "image-wrapper info-wrapper info-wrapper"
+  "image-wrapper info-wrapper info-wrapper"
+  "image-wrapper btn-wrapper btn-wrapper";
   justify-items: start;
 }
 
-.project-image { grid-area: project-image; }
-
 .info-wrapper { grid-area: info-wrapper; }
-
-.btn-wrapper { grid-area: btn-wrapper; }
-
 
 .image-wrapper {
   min-height: 50%;
+  grid-area: image-wrapper;
+}
+
+.list .image-wrapper  {
+  display: flex;
+  align-items: center;
 }
 
 .project-image {
@@ -41,9 +42,19 @@
   border-radius: 9px;
 }
 
+.list .project-image {
+  height: 100%;
+  object-fit: cover;
+}
+
 .btn-wrapper {
   display: flex;
-  margin-top: 10px
+  margin-top: 10px;
+  grid-area: btn-wrapper;
+}
+
+.list .btn-wrapper {
+  margin-top: 0;
 }
 
 .btn-wrapper a, .btn-wrapper button {
