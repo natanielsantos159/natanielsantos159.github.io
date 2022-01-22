@@ -26,7 +26,7 @@
 }
 
 .list .project-card.skills-expanded {
-  grid-template-rows: 1fr 0.2fr 2fr;
+  grid-template-rows: 1fr 0.2fr auto;
    grid-template-areas:
   "image-wrapper info-wrapper info-wrapper"
   "image-wrapper btn-wrapper btn-wrapper"

@@ -61,7 +61,7 @@ export default function ProjectCard({
             Website
           </a>
         )}
-        <button
+        { !showAllSkills && <button
           className="btn-skills"
           onClick={() => {
             setIdSkill(id);
@@ -71,7 +71,7 @@ export default function ProjectCard({
         >
           <img src={skillsIcon} alt="Skills" />
           Skills
-        </button>
+        </button>}
       </section>
       {showAllSkills && (
         <section className="skills-wrapper">
