@@ -6,6 +6,7 @@ export default function Provider({ children }) {
   const [showAllSkills, setShowAllSkills] = useState(false);
   const [ idSkill, setIdSkill ] = useState();
   const [isFirstTimeTip, setIsFirstTimeTip] = useState(true);
+  const [viewMode, setViewMode] = useState("grid");
 
   const contextValue = {
     showSkills,
@@ -15,8 +16,11 @@ export default function Provider({ children }) {
     isFirstTimeTip,
     setIsFirstTimeTip,
     showAllSkills,
-    setShowAllSkills
+    setShowAllSkills,
+    viewMode,
+    setViewMode
   };
+
   return (
     <AppContext.Provider value={ contextValue }>
       {children}

@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import AppContext from "../context/AppContext";
-import ProjectSkills from "./ProjectSkills";
 import projects from "../data";
 
 import gridIcon from "../images/grid.png";
@@ -11,17 +10,17 @@ import checkedIcon from "../images/checkboxfilled.png";
 import "../styles/Projects.css";
 
 export default function Projects() {
-  const { showAllSkills, setShowAllSkills } = useContext(AppContext);
-  const [viewMode, setViewMode] = useState("grid");
-
-  const switchViewMode = () =>
+  const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode } = useContext(AppContext);
+  const switchViewMode = () => {
     setViewMode(viewMode === "grid" ? "list" : "grid");
+    setShowSkills(false);
+  }
 
   return (
     <main className="projects-page">
       <div className="header-projects-page">
         <h1 className="projects-h1">Projetos</h1>
-        <label htmlFor="show-all-skills-btn">
+        { viewMode === 'list' && <label htmlFor="show-all-skills-btn">
           <img
             src={showAllSkills ?  checkedIcon : uncheckedIcon}
             alt="checkbox"
@@ -30,10 +29,13 @@ export default function Projects() {
           <input
             type="checkbox"
             id="show-all-skills-btn"
-            onClick={() => setShowAllSkills(!showAllSkills)}
+            onClick={() => {
+              if (showAllSkills) setShowSkills(false);
+              setShowAllSkills(!showAllSkills)
+            }}
           />
           Expandir todas as skills
-        </label>
+        </label>}
         <button className="switch-view-mode-btn" onClick={switchViewMode}>
           <img src={viewMode === "grid" ? listIcon : gridIcon} alt={viewMode} />
         </button>
@@ -43,7 +45,6 @@ export default function Projects() {
           <ProjectCard {...proj} />
         ))}
       </section>
-      <ProjectSkills />
     </main>
   );
 }

@@ -14,7 +14,7 @@ body {
   background-size: 45px 45px, 45px 45px, 22.5px 22.5px, 22.5px 22.5px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, summary {
   font-family: 'Merriweather', serif;
 }
 
@@ -42,4 +42,11 @@ button:focus-visible {
 
 input[type="checkbox"] {
   display: none;
+}
+
+summary {
+  font-weight: 800;
+  cursor: pointer;
+  margin: 10px;
+  height: 25px
 }
