@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import projects from "../data";
+import '../styles/SkillsList.css';
 
 export default function SkillsList({index}) {
   return (

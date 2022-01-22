@@ -39,3 +39,7 @@ button, a{
 button:focus-visible {
   outline: none;
 }
+
+input[type="checkbox"] {
+  display: none;
+}

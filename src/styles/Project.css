@@ -25,6 +25,14 @@
   justify-items: start;
 }
 
+.list .project-card.skills-expanded {
+  grid-template-rows: 1fr 0.2fr 2fr;
+   grid-template-areas:
+  "image-wrapper info-wrapper info-wrapper"
+  "image-wrapper btn-wrapper btn-wrapper"
+  "skills-wrapper skills-wrapper skills-wrapper";
+}
+
 .info-wrapper { grid-area: info-wrapper; }
 
 .image-wrapper {

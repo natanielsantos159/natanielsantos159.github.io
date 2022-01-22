@@ -3,6 +3,7 @@ import AppContext from './AppContext';
 
 export default function Provider({ children }) {
   const [showSkills, setShowSkills] = useState(false);
+  const [showAllSkills, setShowAllSkills] = useState(false);
   const [ idSkill, setIdSkill ] = useState();
   const [isFirstTimeTip, setIsFirstTimeTip] = useState(true);
 
@@ -12,7 +13,9 @@ export default function Provider({ children }) {
     idSkill,
     setIdSkill,
     isFirstTimeTip,
-    setIsFirstTimeTip
+    setIsFirstTimeTip,
+    showAllSkills,
+    setShowAllSkills
   };
   return (
     <AppContext.Provider value={ contextValue }>

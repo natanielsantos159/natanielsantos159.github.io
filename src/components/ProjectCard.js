@@ -5,6 +5,7 @@ import websiteIcon from "../images/laptop.png";
 import skillsIcon from "../images/skills.png";
 import defaultProjectImage from "../images/projectimage.png";
 import "../styles/Project.css";
+import SkillsList from "./SkillsList";
 
 export default function ProjectCard({
   id,
@@ -15,10 +16,10 @@ export default function ProjectCard({
   website,
   tags,
 }) {
-  const { setShowSkills } = useContext(AppContext);
+  const { setShowSkills, showAllSkills } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
   return (
-    <div className="project-card" data-aos="zoom-in">
+    <div className={`project-card ${showAllSkills ? 'skills-expanded' : ''}`} >
       <div className="image-wrapper">
         <img
           src={image ? image : defaultProjectImage}
@@ -72,6 +73,12 @@ export default function ProjectCard({
           Skills
         </button>
       </section>
+      {showAllSkills && (
+        <section className="skills-wrapper">
+          <h2>Skills</h2>
+          <SkillsList index={id - 1} />
+        </section>
+      )}
     </div>
   );
 }
