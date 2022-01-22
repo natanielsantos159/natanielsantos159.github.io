@@ -47,5 +47,6 @@ input[type="checkbox"] {
 summary {
   font-weight: 800;
   cursor: pointer;
-  margin: 10px
+  margin: 10px;
+  height: 25px
 }

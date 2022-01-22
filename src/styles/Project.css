@@ -10,19 +10,19 @@
   box-shadow: 1px 4px 7px 3px #00000033;
 }
 
-.list .project-card {  
+.list .project-card {
   width: 100vh;
   height: 100%;
+}
+.list .project-card-content {  
   display: grid;
-  grid-template-rows: 1fr 0.2fr auto;
+  grid-template-rows: 1fr 0.2fr;
   grid-template-columns: 2fr 2fr;
   gap: 5px 28px;
   grid-auto-flow: row;
-  overflow-y: hidden;
   grid-template-areas:
   "image-wrapper info-wrapper info-wrapper"
-  "image-wrapper btn-wrapper btn-wrapper"
-  "skills-wrapper skills-wrapper skills-wrapper";
+  "image-wrapper btn-wrapper btn-wrapper";
   justify-items: start;
   transition: all 1s;
 }
@@ -108,20 +108,20 @@
 
 .skills-wrapper {
   width: 100%;
-  grid-area: skills-wrapper;
-}
-
-.skills-wrapper {
   animation: sweep 3s reverse;
   transition: max-height 1s;
   overflow: hidden;
 }
 
-.skills-wrapper[open] {
-  animation: sweep 3s infinite;
+.skills-wrapper.collapse {
+  height: 0;
 }
 
-@keyframes sweep {
+.skills-wrapper.expand {
+  animation: expand 1s;
+}
+
+@keyframes expand {
   0% {
     /* opacity: 0;  */
     max-height: 0;
