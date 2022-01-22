@@ -19,6 +19,10 @@
   gap: 5px 28px;
   grid-auto-flow: row;
   overflow-y: hidden;
+<<<<<<< HEAD
+=======
+  grid-template-rows: 1fr 0.2fr auto; 
+>>>>>>> 8fc2b34f4ef8ac811a91f477dc288831f968b6ed
   grid-template-areas:
   "image-wrapper info-wrapper info-wrapper"
   "image-wrapper btn-wrapper btn-wrapper"
