@@ -108,28 +108,7 @@
 
 .skills-wrapper {
   width: 100%;
-  animation: sweep 3s reverse;
   transition: max-height 1s;
   overflow: hidden;
-}
-
-.skills-wrapper.collapse {
-  height: 0;
-}
-
-.skills-wrapper.expand {
-  animation: expand 1s;
-}
-
-@keyframes expand {
-  0% {
-    /* opacity: 0;  */
-    max-height: 0;
-    /* transform: translateY(-10%) */
-  }
-  100%  {
-    /* opacity: 1;  */
-    max-height: 100%;
-    /* transform: translateY(0) */
-  }
+  display: none;
 }

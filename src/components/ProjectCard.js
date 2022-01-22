@@ -7,6 +7,7 @@ import defaultProjectImage from "../images/projectimage.png";
 import "../styles/Project.css";
 import SkillsList from "./SkillsList";
 import ProjectSkills from "../pages/ProjectSkills";
+import useCollapse from 'react-collapsed'
 
 export default function ProjectCard({
   id,
@@ -26,10 +27,15 @@ export default function ProjectCard({
     viewMode,
   } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
+  const { getCollapseProps, getToggleProps, setExpanded } = useCollapse()
 
   useEffect(() => {
     return () => setShowAllSkills(false);
   }, []);
+
+  useEffect(() => {
+    setExpanded(showAllSkills);
+  }, [showAllSkills]);
 
   const showSkillsOnClick = () => {
     setIdSkill(id);
@@ -82,8 +88,15 @@ export default function ProjectCard({
               Website
             </a>
           )}
-          {(!showAllSkills) && (
+          {(viewMode === 'grid') && (
             <button className="btn-skills" onClick={showSkillsOnClick}>
+              <img src={skillsIcon} alt="Skills" />
+              Skills
+            </button>
+          )}
+
+          {(viewMode === 'list') && (
+            <button className="btn-skills" {...getToggleProps()}>
               <img src={skillsIcon} alt="Skills" />
               Skills
             </button>
@@ -92,10 +105,7 @@ export default function ProjectCard({
       </div>
       {(viewMode === 'grid' && idSkill === id) && <ProjectSkills />}
       {viewMode === 'list' && <section
-        className={`skills-wrapper ${
-         showAllSkills || (showSkills && idSkill === id ) ? "expand" : "collapse"
-        }`}
-        onClick={ showSkillsOnClick }
+        {...getCollapseProps()}
       >
         <h2>Skills</h2>
         <SkillsList index={id - 1} />
