@@ -14,23 +14,21 @@
   width: 100vh;
   height: 100%;
   display: grid;
+  grid-template-rows: 1fr 0.2fr 0;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 1fr;
   gap: 5px 28px;
   grid-auto-flow: row;
+  overflow-y: hidden;
   grid-template-areas:
   "image-wrapper info-wrapper info-wrapper"
-  "image-wrapper info-wrapper info-wrapper"
-  "image-wrapper btn-wrapper btn-wrapper";
+  "image-wrapper btn-wrapper btn-wrapper"
+  "skills-wrapper skills-wrapper skills-wrapper";
   justify-items: start;
+  transition: all 1s;
 }
 
 .list .project-card.skills-expanded {
   grid-template-rows: 1fr 0.2fr auto;
-   grid-template-areas:
-  "image-wrapper info-wrapper info-wrapper"
-  "image-wrapper btn-wrapper btn-wrapper"
-  "skills-wrapper skills-wrapper skills-wrapper";
 }
 
 .info-wrapper { grid-area: info-wrapper; }

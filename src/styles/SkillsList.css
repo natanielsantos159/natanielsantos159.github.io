@@ -1,3 +1,7 @@
 .list .skills-wrapper {
   grid-area: skills-wrapper;
 }
+
+.skills-wrapper {
+  /* animation: growDownAnimation 6s; */
+}
