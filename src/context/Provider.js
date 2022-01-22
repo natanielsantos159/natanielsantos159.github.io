@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppContext from './AppContext';
 
 export default function Provider({ children }) {
@@ -20,6 +20,7 @@ export default function Provider({ children }) {
     viewMode,
     setViewMode
   };
+
   return (
     <AppContext.Provider value={ contextValue }>
       {children}

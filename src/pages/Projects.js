@@ -11,9 +11,11 @@ import checkedIcon from "../images/checkboxfilled.png";
 import "../styles/Projects.css";
 
 export default function Projects() {
-  const { showAllSkills, setShowAllSkills, viewMode, setViewMode } = useContext(AppContext);
-  const switchViewMode = () =>
+  const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode } = useContext(AppContext);
+  const switchViewMode = () => {
     setViewMode(viewMode === "grid" ? "list" : "grid");
+    setShowSkills(false);
+  }
 
   return (
     <main className="projects-page">
