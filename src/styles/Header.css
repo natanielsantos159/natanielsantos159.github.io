@@ -15,6 +15,7 @@ header {
   backdrop-filter: blur(30px);
   box-shadow: 1px 1px 9px 3px #00000026;
   background: #b023603d;
+  height: 7vh;
 }
 
 .header-scrolled a {

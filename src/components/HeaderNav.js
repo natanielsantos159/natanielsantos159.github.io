@@ -33,7 +33,7 @@ export default function HeaderNav({
     if (link !== '/') {
       setTimeout(() => {
         scroller.scrollTo(link);
-      }, 2000);
+      }, 1000);
     }
   };
   return (
