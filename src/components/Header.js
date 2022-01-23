@@ -32,6 +32,7 @@ export default function Header() {
           link="/"
           img={homeIcon}
           imgHover={homeHover}
+          scroll
         >
           Início
         </HeaderNav>

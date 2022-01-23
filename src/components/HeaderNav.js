@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Link as ScrollLink, scroller } from "react-scroll";
+import { scroller, animateScroll } from "react-scroll";
 
 export default function HeaderNav({
   children,
@@ -18,13 +18,22 @@ export default function HeaderNav({
   );
 
   const handleScroll = () => {
-    if (pathname !== "/") {
-      navigate("/");
+    // se já estiver na homepage e clicou no icone de homepage
+    if (pathname === '/' && link === '/') { 
+      return animateScroll.scrollToTop({ delay: 0})
+    }
+
+    navigate('/');
+
+    // se clicou no icone de homepage
+    if (link === '/') {
+      return animateScroll.scrollToTop({ delay: 0})
+    }
+    // se clicou em outro icone
+    if (link !== '/') {
       setTimeout(() => {
         scroller.scrollTo(link);
       }, 2000);
-    } else {
-      scroller.scrollTo(link, {  delay: 4500, });
     }
   };
   return (
@@ -39,7 +48,7 @@ export default function HeaderNav({
           {children}
         </a>
       ) : (
-        <Link to={link}>
+        <Link to={link} onClick={handleScroll}>
           {getImage()}
           {children}
         </Link>
