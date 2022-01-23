@@ -5,6 +5,7 @@ import ProjectsContainer from "../containers/ProjectsContainer";
 import "../styles/Home.css";
 import Parallax from "react-rellax";
 import ProjectSkills from "./ProjectSkills";
+import { Element } from "react-scroll";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       <AboutMe />
       <Parallax speed={0.6}>
         <ProjectsContainer />
-        <ContactMe />
+        <Element name="contact-container">
+          <ContactMe />
+        </Element>
       </Parallax>
       <ProjectSkills />
     </main>

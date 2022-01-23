@@ -53,9 +53,10 @@ export default function Header() {
         </HeaderNav>
         <HeaderNav
           name="Contact"
-          link="/contact"
+          link="contact-container"
           img={contactIcon}
           imgHover={contactHover}
+          scroll
         >
           Contato
         </HeaderNav>
