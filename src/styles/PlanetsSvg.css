@@ -1,46 +1,6 @@
 
-.planets-bg, .first-planet, .second-planet {
+.first-planet, .second-planet {
   position: absolute;
-}
-
-.planets-bg {
-  z-index: -1;
-  top: 20vh;
-  right: 1vh;
-  height: 75vh;
-}
-
-.planets-bg path {
-  animation: moveDownPlanetsBg 1.5s backwards;
-  opacity: 0.4;
-}
-
-.planets-bg path:nth-of-type(1) {
-  animation-delay: 0.2s;
-}
-
-.planets-bg path:nth-of-type(2) {
-  animation-delay: 0.4s;
-}
-
-.planets-bg path:nth-of-type(3) {
-  animation-delay: 0.6s;
-}
-
-.planets-bg path:nth-of-type(4) {
-  animation-delay: 0.7s;
-}
-
-.planets-bg path:nth-of-type(5) {
-  animation-delay: 0.8s;
-}
-
-.planets-bg path:nth-of-type(6) {
-  animation-delay: 0.9s;
-}
-
-.planets-bg path:nth-of-type(7) {
-  animation-delay: 0.9s;
 }
 
 .first-planet {
