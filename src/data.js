@@ -1,5 +1,22 @@
 const projects = [
   {
+    name: "Song Identifier",
+    description: "Uma aplicação que reconhece qual música está tocando no ambiente e disponibiliza links pra plataformas de streaming(Spotify, iTunes, Deezer, Youtube, etc.)",
+    image:
+      "https://github.com/natanielsantos159/songidentifier/raw/master/src/images/preview.gif",
+    repository: "https://github.com/natanielsantos159/songidentifier",
+    website: "https://natanielsantos159.github.io/songidentifier/",
+    tags: ["Projeto Pessoal"],
+    skills: [
+      "Solicitar acesso ao microfone e gravar áudio",
+      "Manipular dados providos pelo microfone do usuário",
+      "Fazer upload de arquivo para o servidor",
+      "Conceito de `blob` e `buffer`",
+      "Criar arquivo a partir de um `blob`",
+      "Implementar um `visualizador de áudio` do microfone utilizando `Vanilla Javascript`",
+    ],
+  },
+  {
     name: "Trivia",
     description: "Um game de perguntas que utiliza a API do Trivia",
     image:
