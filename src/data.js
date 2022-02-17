@@ -1,6 +1,5 @@
 const projects = [
   {
-    id: 1,
     name: "Trivia",
     description: "Um game de perguntas que utiliza a API do Trivia",
     image:
@@ -18,7 +17,6 @@ const projects = [
     ],
   },
   {
-    id: 2,
     name: "TrybeWallet",
     description:
       "TrybeWallet é uma aplicação feita pra gerenciar despesas, com conversão de moedas de diversos países.",
@@ -37,7 +35,6 @@ const projects = [
     ],
   },
   {
-    id: 3,
     name: "TrybeTunes",
     description:
       "Uma aplicação web para pesquisar e salvar as músicas favoritas",
@@ -58,7 +55,6 @@ const projects = [
     ],
   },
   {
-    id: 4,
     name: "Todo List",
     description: "Uma aplicação simples de lista de tarefas",
     image:
@@ -69,7 +65,6 @@ const projects = [
     skills: ["Manipular `CSS`", "Manipular `Javascript`"],
   },
   {
-    id: 5,
     name: "Pixels Art",
     description: "App simples pra desenhar pixel art",
     image:
@@ -80,7 +75,6 @@ const projects = [
     skills: ["Manipular o `DOM`", "Manipular o `Javascript`"],
   },
   {
-    id: 6,
     name: "Recipes App",
     description: "Um app de receitas de bebibas e comidas completo.",
     image:
@@ -99,7 +93,6 @@ const projects = [
     ],
   },
   {
-    id: 7,
     name: "Talker Manager",
     description:
       "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe",
@@ -122,7 +115,6 @@ const projects = [
     ],
   },
   {
-    id: 8,
     name: "Movie Card Library",
     description:
       "Projeto introdutório ao React do módulo de Front-end da Trybe.",
