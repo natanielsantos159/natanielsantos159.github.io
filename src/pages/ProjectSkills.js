@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import SkillsList from "../components/SkillsList";
 import AppContext from "../context/AppContext";
-import projects from "../data";
+import projects from "../projects";
 
 import closeIcon from "../images/close.png";
 import tipIcon from "../images/tip.png";

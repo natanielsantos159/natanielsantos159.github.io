@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import AppContext from "../context/AppContext";
-import projects from "../data";
+import projects from "../projects";
 
 import gridIcon from "../images/grid.png";
 import listIcon from "../images/list.png";

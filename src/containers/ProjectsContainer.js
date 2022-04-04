@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import projects from "../data";
+import projects from "../projects";
 import "../styles/ProjectsContainer.css";
 
 export default function ProjectsContainer() {
