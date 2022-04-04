@@ -4,10 +4,9 @@ import githubIcon from "../images/github.png";
 import websiteIcon from "../images/laptop.png";
 import skillsIcon from "../images/skills.png";
 import defaultProjectImage from "../images/projectimage.png";
-import "../styles/Project.css";
 import SkillsList from "./SkillsList";
-import ProjectSkills from "../pages/ProjectSkills";
 import useCollapse from "react-collapsed";
+import "../styles/Project.css";
 
 export default function ProjectCard({
   id,

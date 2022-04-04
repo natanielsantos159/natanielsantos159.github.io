@@ -18,7 +18,7 @@ export default function Header() {
   useEffect(() => {
     if (window) {
       window.addEventListener("scroll", () =>
-      setScrolled(window.pageYOffset > 200)
+      setScrolled(window.scrollY > 200)
       );
     }
   }, []);

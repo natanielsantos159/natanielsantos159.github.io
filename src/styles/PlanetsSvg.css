@@ -1,6 +1,7 @@
 
 .first-planet, .second-planet {
   position: absolute;
+  animation: moveDownPlanetsBg 2s backwards;
 }
 
 .first-planet {
@@ -16,10 +17,6 @@
 .outsite-path, .second-planet path, .first-planet path {
   -webkit-filter: drop-shadow( 0px 10px 20px rgb(0 0 0 / 25%));
   filter: drop-shadow( 0px 10px 20px rgb(0 0 0 / 25%));
-}
-
-.first-planet, .second-planet {
-  animation: moveDownPlanetsBg 2s backwards;
 }
 
 @keyframes moveDownPlanetsBg {
