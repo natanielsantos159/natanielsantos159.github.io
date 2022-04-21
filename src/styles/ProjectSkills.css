@@ -6,7 +6,7 @@
   transform: translate(-50%, -50%);
   width: 72vh;
   max-height: 80vh;
-  background: #580e3f;
+  background: var(--color-bg);
   border-radius: 13px;
   box-shadow: 1px 4px 7px 3px #00000033;
   padding: 6vh 6vh 1vh;
@@ -51,7 +51,8 @@ ul.skills-list::-webkit-scrollbar-thumb {
 }
 
 code {
-  background: #b2396a91;
+  background: var(--color-primary);
+  color: var(--color-text-dark);
   border-radius: 5px;
   padding: 3px;
 }

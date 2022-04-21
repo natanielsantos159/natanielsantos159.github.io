@@ -1,13 +1,23 @@
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6 );
+  --color-text-dark: #17171a;
+}
+
 html {
-  background-color: #932759;
   scroll-behavior: smooth;
+  background-color: var(--color-bg);
 }
 
 body {
-  color:#FFEEDB;
+  color: var(--color-white);
   font-family: 'Outfit', sans-serif;
   margin: 0;
-  background-image: url("./images/background.png");
+  background-image: url('../src/images/bg-texture.png')
 }
 
 h1, h2, h3, summary {
@@ -19,11 +29,11 @@ h1, h2, h3, summary {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f100; 
+  background: var(--color-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #580e3f; 
+  background: var(--color-primary-variant); 
   border-radius: 15px;
 }
 

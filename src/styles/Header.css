@@ -13,7 +13,7 @@ header {
 .header-scrolled {
   backdrop-filter: blur(30px);
   box-shadow: 1px 1px 9px 3px #00000026;
-  background: #b023603d;
+  background: #0740753d;
   height: 7vh;
 }
 
@@ -50,14 +50,14 @@ header {
   transform: translateY(-4px);
 }
 
-a:link, a:visited {
+header a:link,header a:visited, header a:hover {
   color: #FFEEDB;
+}
+
+a:link, a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  color: #FFEEDB;
-}
 
 .projects-h1 {
   margin-left: 30px;
