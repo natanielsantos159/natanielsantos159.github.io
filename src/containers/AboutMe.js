@@ -1,5 +1,4 @@
 import React from "react";
-import PlanetsSvg from "../components/PlanetsSvg";
 import profilePicture from "../images/profile-picture.jpg";
 
 import "../styles/AboutMe.css";
@@ -22,7 +21,6 @@ export default function AboutMe() {
           src={profilePicture}
           alt="Foto de Perfil"
         />
-        <PlanetsSvg />
       </div>
     </div>
   );
