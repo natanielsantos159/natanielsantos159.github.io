@@ -9,6 +9,7 @@ import uncheckedIcon from "../images/checkbox.png";
 import checkedIcon from "../images/checkboxfilled.png";
 import "../styles/Projects.css";
 import ProjectSkills from "./ProjectSkills";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Projects() {
   const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode } = useContext(AppContext);
@@ -23,6 +24,7 @@ export default function Projects() {
 
   return (
     <main className="projects-page">
+      <ScrollToTop/>
       <div className="header-projects-page">
         <h1 className="projects-h1">Projetos</h1>
         { viewMode === 'list' && <label htmlFor="show-all-skills-btn">

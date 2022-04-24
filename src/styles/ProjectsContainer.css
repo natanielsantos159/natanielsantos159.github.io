@@ -3,15 +3,16 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 }
 
 .projects-container-home-wrapper {
-    display: flex;
-    max-width: 65vw;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+  display: flex;
+  max-width: 65vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
 }
 
 .projects-container-home-wrapper .project-card {
