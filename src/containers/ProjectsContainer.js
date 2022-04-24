@@ -8,8 +8,8 @@ export default function ProjectsContainer() {
     <section  className="projects-container-home">
       <h1>Meus Projetos</h1>
       <section className="projects-container-home-wrapper">
-        {projects.map((proj) => (
-          <ProjectCard {...proj} />
+        {projects.map((proj, i) => (
+          <ProjectCard {...proj} key={i}/>
         ))}
       </section>
     </section>

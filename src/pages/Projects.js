@@ -46,8 +46,8 @@ export default function Projects() {
         </button>
       </div>
       <section className={`projects-section ${viewMode}`}>
-        {projects.map((proj) => (
-          <ProjectCard {...proj} />
+        {projects.map((proj, i) => (
+          <ProjectCard {...proj} key={i} />
         ))}
       </section>
       <ProjectSkills />
