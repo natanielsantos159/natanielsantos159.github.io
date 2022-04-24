@@ -59,7 +59,7 @@
   margin-top: 0;
 }
 
-.btn-wrapper a, .btn-skills {
+.project-card-btn {
   font-weight: 500;
   font-size: 17px;
   font-family: 'Outfit', sans-serif;
@@ -75,7 +75,7 @@
   color: var(--color-white);
 }
 
-.btn-wrapper a:hover, .btn-wrapper button:hover {
+.project-card-btn:hover {
   filter: brightness(1.15);
   transform: translateY(-9px);
   box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;

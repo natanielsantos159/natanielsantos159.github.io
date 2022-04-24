@@ -15,7 +15,7 @@ export default function ProjectCardButton({
     return (
       <a
         href={href}
-        className={className}
+        className={`${className} project-card-btn`}
         target="_blank"
         rel="noreferrer"
         onMouseEnter={() => setHover(true)}
@@ -30,7 +30,7 @@ export default function ProjectCardButton({
   if (href === false) {
     return (
       <button
-        className="btn-skills"
+        className={`${className} project-card-btn`}
         {...onClickProps}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
