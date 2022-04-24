@@ -1,0 +1,42 @@
+import React, { useState } from "react";
+
+export default function ProjectCardButton({
+  href = false,
+  icon,
+  iconHover,
+  name,
+  className,
+  ...onClickProps
+}) {
+  const [hover, setHover] = useState(false);
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noreferrer"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <img src={hover ? iconHover : icon} alt={name} />
+        {name}
+      </a>
+    );
+  }
+
+  if (href === false) {
+    return (
+      <button
+        className="btn-skills"
+        {...onClickProps}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <img src={hover ? iconHover : icon} alt="Skills" />
+        {name}
+      </button>
+    );
+  }
+}

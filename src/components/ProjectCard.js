@@ -1,12 +1,16 @@
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
-import websiteIcon from "../images/laptop.png";
+import githubHover from "../images/github-dark.png";
+import websiteIcon from "../images/website.png";
+import websiteHover from "../images/website-dark.png";
 import skillsIcon from "../images/skills.png";
+import skillsHover from "../images/skills-dark.png";
 import defaultProjectImage from "../images/projectimage.png";
 import SkillsList from "./SkillsList";
 import useCollapse from "react-collapsed";
 import "../styles/Project.css";
+import ProjectCardButton from "./ProjectCardButton";
 
 export default function ProjectCard({
   id,
@@ -34,7 +38,7 @@ export default function ProjectCard({
 
   useEffect(() => {
     setExpanded(showAllSkills);
-  }, [showAllSkills]);
+  }, [showAllSkills, setExpanded]);
 
   const showSkillsOnClick = () => {
     setIdSkill(id);
@@ -67,38 +71,41 @@ export default function ProjectCard({
           </div>
         </div>
         <section className="btn-wrapper">
-          <a
+          <ProjectCardButton
+            name="GitHub"
             href={repository}
             className="btn-repository"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={githubIcon} alt="GitHub" />
-            GitHub
-          </a>
+            icon={githubIcon}
+            iconHover={githubHover}
+          />
           {website && (
-            <a
+            <ProjectCardButton
+              name="Website"
               href={website}
               className="btn-website"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={websiteIcon} alt="Website" />
-              Website
-            </a>
+              icon={websiteIcon}
+              iconHover={websiteHover}
+            />
           )}
+
           {viewMode === "grid" && (
-            <button className="btn-skills" onClick={showSkillsOnClick}>
-              <img src={skillsIcon} alt="Skills" />
-              Skills
-            </button>
+            <ProjectCardButton
+              name="Skills"
+              className="btn-skills"
+              icon={skillsIcon}
+              iconHover={skillsHover}
+              onClick={showSkillsOnClick}
+            />
           )}
 
           {viewMode === "list" && (
-            <button className="btn-skills" {...getToggleProps()}>
-              <img src={skillsIcon} alt="Skills" />
-              Skills
-            </button>
+            <ProjectCardButton
+              name="Skills"
+              className="btn-skills"
+              icon={skillsIcon}
+              iconHover={skillsHover}
+              {...getToggleProps()}
+            />
           )}
         </section>
       </div>
