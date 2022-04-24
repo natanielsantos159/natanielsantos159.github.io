@@ -52,10 +52,12 @@ header {
   column-gap: 5px;
   align-items: center;
   padding: 10px;
-  transition: ease 0.4s all;
+  font-family: 'Poppins', san-serif;
+  font-weight: 500;
+  font-size: 15px;
 }
 
-.header-navs a:hover {
+.nav-wrapper:hover {
   filter: brightness(1.15);
   transform: translateY(-4px);
   background: #2e326c3d;
@@ -71,7 +73,16 @@ a:link, a:visited {
   text-decoration: none;
 }
 
-
 .projects-h1 {
   margin-left: 30px;
+}
+
+.nav-wrapper {
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+}
+
+.nav-wrapper.active {
+  background: linear-gradient(183deg, var(--color-primary), var(--color-bg));
+  border-radius: 50px;
 }

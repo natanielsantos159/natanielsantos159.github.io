@@ -22,6 +22,7 @@ body {
 
 h1, h2, h3, summary {
   font-family: 'Poppins', sans-serif;
+  color: var(--color-primary);
 }
 
 ::-webkit-scrollbar {
@@ -75,7 +76,7 @@ summary {
 
 .default-btn:hover {
   filter: brightness(1.15);
-  transform: translateY(-9px);
+  transform: translateY(-7px);
   box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px, rgb(255 255 255 / 25%) 1px 1px 0px inset;
   background: var(--color-primary);
   color: var(--color-text-dark);

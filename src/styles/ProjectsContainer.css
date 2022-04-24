@@ -8,7 +8,7 @@
 
 .projects-container-home-wrapper {
   display: flex;
-  max-width: 65vw;
+  max-width: 95vw;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
