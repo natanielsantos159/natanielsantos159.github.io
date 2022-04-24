@@ -6,15 +6,26 @@ header {
   width: 100%;
   position: fixed;
   height: 10vh;
-  transition: all 0.5s;
+  transition: all 0.9s;
   z-index: 3;
 }
 
 .header-scrolled {
+  -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   box-shadow: 1px 1px 9px 3px #00000026;
-  background: #0740753d;
+  background: #799cbd14;
   height: 7vh;
+  min-width: 400px;
+  width: auto;
+  border-radius: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1%;
+}
+
+.header-scrolled h1 {
+  display: none;
 }
 
 .header-scrolled a {
@@ -30,7 +41,6 @@ header {
   color: #FFEEDB;
   font-weight: 800;
   font-size: 17px;
-  text-shadow: 3px 2px 13px black;
 }
 
 .header-navs img {
@@ -48,6 +58,9 @@ header {
 .header-navs a:hover {
   filter: brightness(1.15);
   transform: translateY(-4px);
+  background: #2e326c3d;
+  border-radius: 40px;
+  box-shadow: rgb(0 0 0 / 25%) 10px 10px 20px;
 }
 
 header a:link,header a:visited, header a:hover {
