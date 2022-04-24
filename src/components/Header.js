@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import HeaderNav from "./HeaderNav";
 
 import homeIcon from "../images/home.png";
-import homeHover from "../images/homehover.png";
+import homeHover from "../images/home-hover.png";
 import projectsIcon from '../images/projects.png';
-import projectsHover from '../images/projectshover.png';
+import projectsHover from '../images/projects-hover.png';
 import aboutIcon from '../images/about.png';
-import aboutHover from '../images/abouthover.png';
+import aboutHover from '../images/about-hover.png';
 import contactIcon from '../images/contact.png';
-import contactHover from '../images/contacthover.png';
+import contactHover from '../images/contact-hover.png';
 
 import "../styles/Header.css";
 
