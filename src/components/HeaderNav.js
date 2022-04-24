@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { scroller, animateScroll } from "react-scroll";
@@ -19,18 +20,18 @@ export default function HeaderNav({
 
   const handleScroll = () => {
     // se já estiver na homepage e clicou no icone de homepage
-    if (pathname === '/' && link === '/') { 
-      return animateScroll.scrollToTop({ delay: 0})
+    if (pathname === "/" && link === "/") {
+      return animateScroll.scrollToTop({ delay: 0 });
     }
 
-    navigate('/');
+    navigate("/");
 
     // se clicou no icone de homepage
-    if (link === '/') {
-      return animateScroll.scrollToTop({ delay: 0})
+    if (link === "/") {
+      return animateScroll.scrollToTop({ delay: 0 });
     }
     // se clicou em outro icone
-    if (link !== '/') {
+    if (link !== "/") {
       setTimeout(() => {
         scroller.scrollTo(link);
       }, 1000);
@@ -55,4 +56,13 @@ export default function HeaderNav({
       )}
     </div>
   );
+}
+
+HeaderNav.propTypes = {
+  children: PropTypes.node.isRequired,
+  img: PropTypes.string.isRequired,
+  imgHover: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  scroll: PropTypes.bool.isRequired
 }

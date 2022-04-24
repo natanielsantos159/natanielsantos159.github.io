@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import projects from "../projects";
@@ -13,4 +14,8 @@ export default function SkillsList({index}) {
         ))}
     </ul>
   );
+}
+
+SkillsList.propTypes = {
+  index: PropTypes.number
 }

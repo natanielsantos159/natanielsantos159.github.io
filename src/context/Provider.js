@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState } from 'react';
 import AppContext from './AppContext';
 
@@ -26,4 +27,8 @@ export default function Provider({ children }) {
       {children}
     </AppContext.Provider>
   )
+}
+
+Provider.propTypes = {
+  children: PropTypes.node
 }

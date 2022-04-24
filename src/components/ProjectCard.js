@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
@@ -117,4 +118,14 @@ export default function ProjectCard({
       )}
     </div>
   );
+}
+
+ProjectCard.propTypes = {
+  description: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  repository: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  website: PropTypes.string
 }

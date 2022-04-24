@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState } from "react";
 
 export default function ProjectCardButton({
@@ -39,4 +40,12 @@ export default function ProjectCardButton({
       </button>
     );
   }
+}
+
+ProjectCardButton.propTypes = {
+  className: PropTypes.string.isRequired,
+  href: PropTypes.bool,
+  icon: PropTypes.string.isRequired,
+  iconHover: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 }
