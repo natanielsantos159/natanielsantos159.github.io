@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../projects";
 import seeMoreIcon from '../images/see-more.png';
 import seeMoreHover from '../images/see-more-dark.png';
+import useOnScreen from "../hooks/useOnScreen";
 import "../styles/ProjectsContainer.css";
 
 export default function ProjectsContainer() {
+  const ref = useRef();
+  useOnScreen(ref, "-200px", "projects");
   const [seeMoreBtnHover, setSeeMoreBtnHover] = useState(false);
+
   return (
-    <section className="projects-container-home">
+    <section className="projects-container-home" ref={ref}>
       <h1>Meus Projetos</h1>
       <section className="projects-container-home-wrapper">
         {projects.slice(0, 4).map((proj, i) => (

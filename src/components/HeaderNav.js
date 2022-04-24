@@ -1,7 +1,8 @@
-import PropTypes from "prop-types"
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { scroller, animateScroll } from "react-scroll";
+import PropTypes from "prop-types";
+import React, { useContext, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+import AppContext from "../context/AppContext";
 
 export default function HeaderNav({
   children,
@@ -9,9 +10,9 @@ export default function HeaderNav({
   imgHover,
   name,
   link,
-  scroll,
 }) {
   const [hover, setHover] = useState(false);
+  const { onScreen } = useContext(AppContext);
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const getImage = () => (
@@ -21,15 +22,11 @@ export default function HeaderNav({
   const handleScroll = () => {
     // se já estiver na homepage e clicou no icone de homepage
     if (pathname === "/" && link === "/") {
-      return animateScroll.scrollToTop({ delay: 0 });
+      window.scrollTo(0, 0);
     }
 
-    navigate("/");
+    if (pathname !== "/" && link === "/") navigate("/");
 
-    // se clicou no icone de homepage
-    if (link === "/") {
-      return animateScroll.scrollToTop({ delay: 0 });
-    }
     // se clicou em outro icone
     if (link !== "/") {
       setTimeout(() => {
@@ -39,21 +36,14 @@ export default function HeaderNav({
   };
   return (
     <div
-      className="nav-wrapper"
+      className={`nav-wrapper ${onScreen === name ? "active" : ""}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {scroll ? (
-        <a onClick={handleScroll}>
-          {getImage()}
-          {children}
-        </a>
-      ) : (
-        <Link to={link} onClick={handleScroll}>
-          {getImage()}
-          {children}
-        </Link>
-      )}
+      <a onClick={handleScroll}>
+        {getImage()}
+        {children}
+      </a>
     </div>
   );
 }
@@ -64,5 +54,5 @@ HeaderNav.propTypes = {
   imgHover: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  scroll: PropTypes.bool.isRequired
-}
+  scroll: PropTypes.bool.isRequired,
+};

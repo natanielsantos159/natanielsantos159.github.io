@@ -5,12 +5,16 @@ import ProjectsContainer from "../containers/ProjectsContainer";
 import ProjectSkills from "./ProjectSkills";
 import { Element } from "react-scroll";
 import "../styles/Home.css";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Home() {
   return (
     <main className="homepage">
+      <ScrollToTop />
       <AboutMe />
-      <ProjectsContainer />
+      <Element name="projects-container">
+        <ProjectsContainer />
+      </Element>
       <Element name="contact-container">
         <ContactMe />
       </Element>

@@ -8,6 +8,7 @@ export default function Provider({ children }) {
   const [ idSkill, setIdSkill ] = useState();
   const [isFirstTimeTip, setIsFirstTimeTip] = useState(true);
   const [viewMode, setViewMode] = useState("grid");
+  const [onScreen, setOnScreen] = useState('');
 
   const contextValue = {
     showSkills,
@@ -19,7 +20,9 @@ export default function Provider({ children }) {
     showAllSkills,
     setShowAllSkills,
     viewMode,
-    setViewMode
+    setViewMode,
+    onScreen, 
+    setOnScreen,
   };
 
   return (

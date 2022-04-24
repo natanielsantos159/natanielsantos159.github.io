@@ -28,24 +28,23 @@ export default function Header() {
       <h1>Nataniel Santos</h1>
       <nav className="header-navs">
         <HeaderNav
-          name="Home"
+          name="home"
           link="/"
           img={homeIcon}
           imgHover={homeHover}
-          scroll
         >
           Início
         </HeaderNav>
         <HeaderNav
-          name="Projects"
-          link="/projects"
+          name="projects"
+          link="projects-container"
           img={projectsIcon}
           imgHover={projectsHover}
         >
           Projetos
         </HeaderNav>
         <HeaderNav
-          name="About"
+          name="about"
           link="/about"
           img={aboutIcon}
           imgHover={aboutHover}
@@ -53,11 +52,10 @@ export default function Header() {
           Sobre
         </HeaderNav>
         <HeaderNav
-          name="Contact"
+          name="contact"
           link="contact-container"
           img={contactIcon}
           imgHover={contactHover}
-          scroll
         >
           Contato
         </HeaderNav>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
 import "../styles/ContactMe.css";
 
 export default function ContactMe() {
+  const ref = useRef();
+  useOnScreen(ref, "-200px", "contact");
   return (
     <section className="contact-me-section" id="contact-me-section">
       <h1>Contato</h1>

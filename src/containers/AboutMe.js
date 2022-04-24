@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnScreen from "../hooks/useOnScreen";
 import profilePicture from "../images/profile-picture.jpg";
 
 import "../styles/AboutMe.css";
 
 export default function AboutMe() {
+  const ref = useRef();
+  useOnScreen(ref, "-200px", "home");
+
   return (
-    <div className="welcome-container">
+    <div className="welcome-container" ref={ref}>
       <div className="info-wrapper">
         <div>
           <h1>Oii, tudo bem?</h1>
