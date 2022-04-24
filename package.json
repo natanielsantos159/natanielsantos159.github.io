@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@wellyshen/use-web-animations": "^0.9.1",
     "aos": "^2.3.4",
-    "eslint": "^8.5.0",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-collapsed": "^3.3.0",
@@ -45,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-plugin-react": "^7.29.4"
   }
 }
