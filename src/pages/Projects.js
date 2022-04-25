@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import AppContext from "../context/AppContext";
@@ -6,12 +5,10 @@ import projects from "../projects";
 
 import gridIcon from "../images/grid.png";
 import listIcon from "../images/list.png";
-import uncheckedIcon from "../images/checkbox.png";
-import checkedIcon from "../images/checkboxfilled.png";
-import "../styles/Projects.css";
-import ProjectSkills from "./ProjectSkills";
+import ProjectSkills from "../components/ProjectSkills";
 import ScrollToTop from "../components/ScrollToTop";
 import Checkbox from "../components/Checkbox";
+import "../styles/Projects.css";
 
 export default function Projects() {
   const {
