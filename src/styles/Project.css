@@ -1,7 +1,7 @@
 .project-card {
   width: 70vh;
   border-radius: 13px;
-  background-color: var(--color-bg-variant);
+  background-image: linear-gradient(212deg, var(--color-bg-variant), var(--color-bg));
   padding: 20px;
   margin: 10px 20px;
   height: min-content;
