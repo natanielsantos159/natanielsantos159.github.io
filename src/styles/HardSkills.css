@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
+  height: 100vh;
 }
 
 .hard-skills-wrapper {

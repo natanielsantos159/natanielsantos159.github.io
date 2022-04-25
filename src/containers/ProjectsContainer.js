@@ -9,7 +9,7 @@ import "../styles/ProjectsContainer.css";
 
 export default function ProjectsContainer() {
   const ref = useRef();
-  useOnScreen(ref, "-200px", "projects");
+  useOnScreen(ref, "-250px", "projects");
   const [seeMoreBtnHover, setSeeMoreBtnHover] = useState(false);
 
   return (

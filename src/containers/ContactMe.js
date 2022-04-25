@@ -4,7 +4,7 @@ import "../styles/ContactMe.css";
 
 export default function ContactMe() {
   const ref = useRef();
-  useOnScreen(ref, "-200px", "contact");
+  useOnScreen(ref, "-250px", "contact");
   return (
     <section className="contact-me-section" id="contact-me-section">
       <h1>Contato</h1>

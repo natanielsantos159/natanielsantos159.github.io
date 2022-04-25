@@ -9,6 +9,9 @@ import aboutIcon from '../images/about.png';
 import aboutHover from '../images/about-hover.png';
 import contactIcon from '../images/contact.png';
 import contactHover from '../images/contact-hover.png';
+import hardSkillsIcon from '../images/hard-skills.png';
+import hardSkillsHover from '../images/hard-skills-hover.png';
+
 
 import "../styles/Header.css";
 
@@ -34,6 +37,14 @@ export default function Header() {
           imgHover={homeHover}
         >
           Início
+        </HeaderNav>
+        <HeaderNav
+          name="hard-skills"
+          link="hard-skills-container"
+          img={hardSkillsIcon}
+          imgHover={hardSkillsHover}
+        >
+          Conhecimentos
         </HeaderNav>
         <HeaderNav
           name="projects"

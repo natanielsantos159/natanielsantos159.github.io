@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import TechnologyCard from '../components/TechnologyCard';
+import useOnScreen from '../hooks/useOnScreen';
 import '../styles/HardSkills.css';
 
 export default function HardSkills() {
+  const ref = useRef();
+  useOnScreen(ref, "-250px", "hard-skills");
   return (
-    <section className="hard-skills-container">
+    <section className="hard-skills-container" ref={ref}>
       <h1>Conhecimentos</h1>
       <section className="hard-skills-wrapper">
         <TechnologyCard name="Node JS" iconClass="bx bxl-nodejs"/>

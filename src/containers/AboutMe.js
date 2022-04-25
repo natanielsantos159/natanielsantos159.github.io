@@ -6,7 +6,7 @@ import "../styles/AboutMe.css";
 
 export default function AboutMe() {
   const ref = useRef();
-  useOnScreen(ref, "-200px", "home");
+  useOnScreen(ref, "-250px", "home");
 
   return (
     <div className="welcome-container" ref={ref}>

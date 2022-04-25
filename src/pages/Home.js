@@ -13,13 +13,19 @@ export default function Home() {
     <main className="homepage">
       <ScrollToTop />
       <AboutMe />
-      <HardSkills />
+
+      <Element name="hard-skills-container">
+        <HardSkills />
+      </Element>
+
       <Element name="projects-container">
         <ProjectsContainer />
       </Element>
+
       <Element name="contact-container">
         <ContactMe />
       </Element>
+
       <ProjectSkills />
     </main>
   );
