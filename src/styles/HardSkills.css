@@ -1,7 +1,7 @@
 .hard-skills-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   align-content: center;
   height: 100vh;

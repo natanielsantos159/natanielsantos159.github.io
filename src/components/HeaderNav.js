@@ -6,21 +6,26 @@ import AppContext from "../context/AppContext";
 
 export default function HeaderNav({ children, img, imgHover, name, link }) {
   const [hover, setHover] = useState(false);
-  const { onScreen } = useContext(AppContext);
+  const { onScreen, setOnScreen } = useContext(AppContext);
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   const handleScroll = () => {
+    setOnScreen(name);
+
     // se já estiver na homepage e clicou no icone de homepage
     if (pathname === "/" && link === "/") {
       window.scrollTo(0, 0);
     }
 
-    if (pathname !== "/" && link === "/") navigate("/");
+    // se não estiver na homepage e clicou um icone qualquer
+    const delay = pathname === "/" ? 0 : 700;
 
-    // se clicou em outro icone
+    if (pathname !== "/") navigate("/");
+
     if (link !== "/") {
-      scroller.scrollTo(link);
+      // delay para esperar a pagina carregar
+      setTimeout(() => scroller.scrollTo(link, { offset: -60}), delay);
     }
   };
   return (
