@@ -29,9 +29,7 @@ export default function HeaderNav({
 
     // se clicou em outro icone
     if (link !== "/") {
-      setTimeout(() => {
-        scroller.scrollTo(link);
-      }, 1000);
+      scroller.scrollTo(link);
     }
   };
   return (
