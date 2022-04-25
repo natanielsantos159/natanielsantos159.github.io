@@ -69,7 +69,7 @@
 }
 
 .tag {
-  color: var(--color-text-dark);
+  color: var(--color-bg);
   display: inline-block;
   padding: 3px 8px;
   margin: auto 4px 4px auto;

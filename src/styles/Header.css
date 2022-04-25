@@ -85,4 +85,5 @@ a:link, a:visited {
 .nav-wrapper.active {
   background: linear-gradient(183deg, var(--color-primary), var(--color-bg));
   border-radius: 50px;
+  box-shadow: 0 0 19px 0px var(--color-primary-variant);
 }
