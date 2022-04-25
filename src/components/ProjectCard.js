@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import React, { useContext, useEffect } from "react";
 import AppContext from "../context/AppContext";
 import githubIcon from "../images/github.png";
@@ -48,6 +48,11 @@ export default function ProjectCard({
     if (viewMode === "grid") document.body.style.overflow = "hidden";
   };
 
+  const getOnClickProps = () => {
+    if (viewMode === "grid") return { onClick: showSkillsOnClick };
+    if (viewMode === "list") return { ...getToggleProps() };
+  };
+
   return (
     <div className="project-card">
       <div className="project-card-content">
@@ -89,25 +94,13 @@ export default function ProjectCard({
             />
           )}
 
-          {viewMode === "grid" && (
-            <ProjectCardButton
-              name="Skills"
-              className="btn-skills"
-              icon={skillsIcon}
-              iconHover={skillsHover}
-              onClick={showSkillsOnClick}
-            />
-          )}
-
-          {viewMode === "list" && (
-            <ProjectCardButton
-              name="Skills"
-              className="btn-skills"
-              icon={skillsIcon}
-              iconHover={skillsHover}
-              {...getToggleProps()}
-            />
-          )}
+          <ProjectCardButton
+            name="Skills"
+            className="btn-skills"
+            icon={skillsIcon}
+            iconHover={skillsHover}
+            {...getOnClickProps()}
+          />
         </section>
       </div>
       {viewMode === "list" && (
@@ -127,5 +120,5 @@ ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
   repository: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  website: PropTypes.string
-}
+  website: PropTypes.string,
+};
