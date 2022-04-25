@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 import AppContext from "../context/AppContext";
+import { motion } from "framer-motion";
 
 export default function HeaderNav({ children, img, imgHover, name, link }) {
   const [hover, setHover] = useState(false);
@@ -30,7 +31,7 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
   };
   return (
     <div
-      className={`nav-wrapper ${onScreen === name ? "active" : ""}`}
+      className={`nav-wrapper`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -38,6 +39,7 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
         <img src={hover ? imgHover : img} alt={`${name} Icon`} />
         {children}
       </a>
+      { onScreen === name ? <motion.div className="tab" layoutId="tab" /> : null }  
     </div>
   );
 }
