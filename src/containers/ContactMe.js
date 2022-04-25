@@ -6,7 +6,7 @@ export default function ContactMe() {
   const ref = useRef();
   useOnScreen(ref, "-250px", "contact");
   return (
-    <section className="contact-me-section" id="contact-me-section">
+    <section className="contact-me-section" id="contact-me-section" ref={ref}>
       <h1>Contato</h1>
       <section className="contact-me-btns">
         <a href="mailto:nathan.santos159@hotmail.com" className="email-btn">
