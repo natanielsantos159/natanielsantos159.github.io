@@ -17,6 +17,7 @@ export default function Projects() {
     setShowSkills,
     viewMode,
     setViewMode,
+    setOnScreen,
   } = useContext(AppContext);
   const switchViewMode = () => {
     setViewMode(viewMode === "grid" ? "list" : "grid");
@@ -24,6 +25,7 @@ export default function Projects() {
   };
 
   useEffect(() => {
+    setOnScreen('projects');
     return () => setViewMode("grid");
   }, []);
 

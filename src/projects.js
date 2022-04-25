@@ -123,7 +123,7 @@ const projects = [
     skills: ["Manipular `CSS`", "Manipular `Javascript`"],
   },
   {
-    id: 9,
+    id: 8,
     name: "Pixels Art",
     description: "App simples pra desenhar pixel art",
     image:
@@ -134,7 +134,7 @@ const projects = [
     skills: ["Manipular o `DOM`", "Manipular o `Javascript`"],
   },
   {
-    id: 10,
+    id: 9,
     name: "Talker Manager",
     description:
       "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe",
@@ -157,7 +157,7 @@ const projects = [
     ],
   },
   {
-    id: 11,
+    id: 10,
     name: "Movie Card Library",
     description:
       "Projeto introdutório ao React do módulo de Front-end da Trybe.",
