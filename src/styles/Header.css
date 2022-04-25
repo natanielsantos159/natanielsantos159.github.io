@@ -51,7 +51,7 @@ header {
   display: flex;
   column-gap: 5px;
   align-items: center;
-  padding: 10px;
+  padding: 11px 15px;
   font-family: 'Poppins', san-serif;
   font-weight: 500;
   font-size: 15px;
