@@ -77,28 +77,6 @@ const projects = [
   },
   {
     id: 5,
-    name: "Todo List",
-    description: "Uma aplicação simples de lista de tarefas",
-    image:
-      "https://github.com/natanielsantos159/todo-list-project/raw/main/Captura%20de%20tela%20de%202021-12-22%2017-06-03.png",
-    repository: "https://github.com/natanielsantos159/todo-list-project",
-    website: "https://natanielsantos159.github.io/todo-list-project",
-    tags: ["Módulo de Fundamentos"],
-    skills: ["Manipular `CSS`", "Manipular `Javascript`"],
-  },
-  {
-    id: 6,
-    name: "Pixels Art",
-    description: "App simples pra desenhar pixel art",
-    image:
-      "https://github.com/natanielsantos159/pixels-art-project/blob/nataniel-santos-project-pixels-art/Captura%20de%20tela%20de%202022-01-17%2014-43-46.png?raw=true",
-    repository: "https://github.com/natanielsantos159/pixels-art-project",
-    website: "https://natanielsantos159.github.io/pixels-art-project/",
-    tags: ["Módulo de Fundamentos"],
-    skills: ["Manipular o `DOM`", "Manipular o `Javascript`"],
-  },
-  {
-    id: 7,
     name: "Recipes App",
     description: "Um app de receitas de bebibas e comidas completo.",
     image:
@@ -117,7 +95,46 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 6,
+    name: "ChoqueFlix",
+    description: "Um site baseado no design da Netflix com o tema do canal do youtube Choque de Cultura.",
+    image:
+      "https://joaoreisjpk-portfolio.vercel.app/_next/static/images/ChoqueFlix-b84ac8a612b3da3489472a646f18646c.png",
+    repository: "https://github.com/joaoreisjpk/ChoqueFlix--JS-CSS-Vanilla",
+    website: "https://choqueflix.vercel.app/",
+    tags: ["Módulo de Fundamentos", "Projeto em Grupo"],
+    skills: [
+      "Manipular elementos do DOM utitilizando `Javascript`",
+      "Consumir APIs",
+      "Salvar informações no LocalStorage",
+      "Criar animations utilizando CSS3",
+      "Trabalhar em equipe",
+    ],
+  },
+  {
+    id: 7,
+    name: "Todo List",
+    description: "Uma aplicação simples de lista de tarefas",
+    image:
+      "https://github.com/natanielsantos159/todo-list-project/raw/main/Captura%20de%20tela%20de%202021-12-22%2017-06-03.png",
+    repository: "https://github.com/natanielsantos159/todo-list-project",
+    website: "https://natanielsantos159.github.io/todo-list-project",
+    tags: ["Módulo de Fundamentos"],
+    skills: ["Manipular `CSS`", "Manipular `Javascript`"],
+  },
+  {
+    id: 9,
+    name: "Pixels Art",
+    description: "App simples pra desenhar pixel art",
+    image:
+      "https://github.com/natanielsantos159/pixels-art-project/blob/nataniel-santos-project-pixels-art/Captura%20de%20tela%20de%202022-01-17%2014-43-46.png?raw=true",
+    repository: "https://github.com/natanielsantos159/pixels-art-project",
+    website: "https://natanielsantos159.github.io/pixels-art-project/",
+    tags: ["Módulo de Fundamentos"],
+    skills: ["Manipular o `DOM`", "Manipular o `Javascript`"],
+  },
+  {
+    id: 10,
     name: "Talker Manager",
     description:
       "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe",
@@ -140,7 +157,7 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 11,
     name: "Movie Card Library",
     description:
       "Projeto introdutório ao React do módulo de Front-end da Trybe.",

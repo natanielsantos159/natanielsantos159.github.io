@@ -16,7 +16,7 @@ export default function ProjectsContainer() {
     <section className="projects-container-home" ref={ref}>
       <h1>Meus Projetos</h1>
       <section className="projects-container-home-wrapper">
-        {projects.slice(0, 4).map((proj, i) => (
+        {projects.slice(0, 6).map((proj, i) => (
           <ProjectCard {...proj} key={i} />
         ))}
       </section>
