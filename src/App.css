@@ -47,9 +47,9 @@ button:focus-visible {
   outline: none;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   display: none;
-}
+} */
 
 summary {
   font-weight: 800;
