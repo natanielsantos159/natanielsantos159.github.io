@@ -1,0 +1,18 @@
+.hard-skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+.hard-skills-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  gap: 10px;
+  flex-wrap: wrap;
+}

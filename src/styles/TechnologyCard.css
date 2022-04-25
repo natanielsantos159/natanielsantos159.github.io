@@ -1,0 +1,19 @@
+.technology-card {
+  color: var(--color-bg);
+  padding: 33px;
+  background-color: var(--color-bg-variant);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 172px;
+  border-radius: 13px;
+}
+
+.bx {
+  font-size: 8.5rem;
+  color: var(--color-primary);
+  height: auto;
+  width: auto;
+}
