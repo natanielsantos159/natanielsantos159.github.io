@@ -5,8 +5,6 @@ import homeIcon from "../images/home.png";
 import homeHover from "../images/home-hover.png";
 import projectsIcon from '../images/projects.png';
 import projectsHover from '../images/projects-hover.png';
-import aboutIcon from '../images/about.png';
-import aboutHover from '../images/about-hover.png';
 import contactIcon from '../images/contact.png';
 import contactHover from '../images/contact-hover.png';
 import hardSkillsIcon from '../images/hard-skills.png';
@@ -53,14 +51,6 @@ export default function Header() {
           imgHover={projectsHover}
         >
           Projetos
-        </HeaderNav>
-        <HeaderNav
-          name="about"
-          link="/about"
-          img={aboutIcon}
-          imgHover={aboutHover}
-        >
-          Sobre
         </HeaderNav>
         <HeaderNav
           name="contact"
