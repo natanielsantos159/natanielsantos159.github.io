@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import SkillsList from "../components/SkillsList";
+import SkillsList from "./SkillsList";
 import AppContext from "../context/AppContext";
 import projects from "../projects";
 
