@@ -26,8 +26,8 @@ export default function ProjectsContainer() {
         onMouseEnter={() => setSeeMoreBtnHover(true)}
         onMouseLeave={() => setSeeMoreBtnHover(false)}
       >
-        <img src={seeMoreBtnHover ? seeMoreHover : seeMoreIcon} alt="Ver Mais" />
-        Ver Mais
+        <img src={seeMoreBtnHover ? seeMoreHover : seeMoreIcon} alt="Ver Todos os Projetos" />
+        Ver Todos os Projetos
       </Link>
     </section>
   );
