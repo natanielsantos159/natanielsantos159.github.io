@@ -7,6 +7,7 @@ import { Element } from "react-scroll";
 import "../styles/Home.css";
 import ScrollToTop from "../components/ScrollToTop";
 import HardSkills from "../containers/HardSkills";
+import Footer from "../containers/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <ContactMe />
       </Element>
 
+      <Footer />
       <ProjectSkills />
     </main>
   );
