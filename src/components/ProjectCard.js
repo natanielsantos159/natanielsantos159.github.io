@@ -57,14 +57,18 @@ export default function ProjectCard({
     <div className="project-card">
       <div className="project-card-content">
         <div className="image-wrapper">
-          <img
-            src={image ? image : defaultProjectImage}
-            alt={`Imagem do Projeto ${name}`}
-            className="project-image"
-          />
+          <a href={website || repository} target="_blank" rel="noreferrer">
+            <img
+              src={image ? image : defaultProjectImage}
+              alt={`Imagem do Projeto ${name}`}
+              className="project-image"
+            />
+          </a>
         </div>
         <div className="project-info-wrapper">
-          <h2 className="project-name">{name}</h2>
+          <a href={website || repository} target="_blank" rel="noreferrer">
+            <h2 className="project-name">{name}</h2>
+          </a>
           <div className="tags-wrapper">
             {tags.map((tag, i) => (
               <div className="tag" key={i}>
