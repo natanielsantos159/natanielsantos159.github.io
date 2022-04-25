@@ -4,20 +4,11 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 import AppContext from "../context/AppContext";
 
-export default function HeaderNav({
-  children,
-  img,
-  imgHover,
-  name,
-  link,
-}) {
+export default function HeaderNav({ children, img, imgHover, name, link }) {
   const [hover, setHover] = useState(false);
   const { onScreen } = useContext(AppContext);
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const getImage = () => (
-    <img src={hover ? imgHover : img} alt={`${name} Icon`} />
-  );
 
   const handleScroll = () => {
     // se já estiver na homepage e clicou no icone de homepage
@@ -39,7 +30,7 @@ export default function HeaderNav({
       onMouseLeave={() => setHover(false)}
     >
       <a onClick={handleScroll}>
-        {getImage()}
+        <img src={hover ? imgHover : img} alt={`${name} Icon`} />
         {children}
       </a>
     </div>
