@@ -6,7 +6,7 @@ import ProjectSkills from "../components/ProjectSkills";
 import { Element } from "react-scroll";
 import "../styles/Home.css";
 import ScrollToTop from "../components/ScrollToTop";
-import HardSkills from "../containers/HardSkills";
+import Technologies from "../containers/Technologies";
 import Footer from "../containers/Footer";
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
       <ScrollToTop />
       <AboutMe />
 
-      <Element name="hard-skills-container">
-        <HardSkills />
+      <Element name="technologies-container">
+        <Technologies />
       </Element>
 
       <Element name="projects-container">

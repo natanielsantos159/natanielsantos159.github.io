@@ -1,15 +1,15 @@
 import React, { useRef } from 'react'
 import TechnologyCard from '../components/TechnologyCard';
 import useOnScreen from '../hooks/useOnScreen';
-import '../styles/HardSkills.css';
+import '../styles/Technologies.css';
 
-export default function HardSkills() {
+export default function Technologies() {
   const ref = useRef();
-  useOnScreen(ref, "-250px", "hard-skills");
+  useOnScreen(ref, "-250px", "technologies");
   return (
-    <section className="hard-skills-container" ref={ref}>
+    <section className="technologies-container" ref={ref}>
       <h1>Conhecimentos</h1>
-      <section className="hard-skills-wrapper">
+      <section className="technologies-wrapper">
         <TechnologyCard name="Node JS" iconClass="bx bxl-nodejs"/>
         <TechnologyCard name="React JS" iconClass="bx bxl-react"/>
         <TechnologyCard name="Redux" iconClass="bx bxl-redux"/>

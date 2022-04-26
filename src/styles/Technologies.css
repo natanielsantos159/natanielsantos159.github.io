@@ -1,4 +1,4 @@
-.hard-skills-container {
+.technologies-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.hard-skills-wrapper {
+.technologies-wrapper {
   display: flex;
   flex-direction: row;
   align-content: center;

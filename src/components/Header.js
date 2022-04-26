@@ -7,8 +7,8 @@ import projectsIcon from '../images/projects.png';
 import projectsHover from '../images/projects-hover.png';
 import contactIcon from '../images/contact.png';
 import contactHover from '../images/contact-hover.png';
-import hardSkillsIcon from '../images/hard-skills.png';
-import hardSkillsHover from '../images/hard-skills-hover.png';
+import technologiesIcon from '../images/technologies.png';
+import technologiesHover from '../images/technologies-hover.png';
 
 
 import "../styles/Header.css";
@@ -37,12 +37,12 @@ export default function Header() {
           Início
         </HeaderNav>
         <HeaderNav
-          name="hard-skills"
-          link="hard-skills-container"
-          img={hardSkillsIcon}
-          imgHover={hardSkillsHover}
+          name="technologies"
+          link="technologies-container"
+          img={technologiesIcon}
+          imgHover={technologiesHover}
         >
-          Conhecimentos
+          Tecnologias
         </HeaderNav>
         <HeaderNav
           name="projects"
