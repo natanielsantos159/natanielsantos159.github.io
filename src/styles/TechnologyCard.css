@@ -13,11 +13,12 @@
   cursor: pointer;
 }
 
-.bx {
-  font-size: 8.5rem;
+.technologies-wrapper i {
+  font-size: 6.5rem;
   color: var(--color-primary);
   height: auto;
   width: auto;
+  transition: 0.4s all ease;
 }
 
 .technology-card:hover {
