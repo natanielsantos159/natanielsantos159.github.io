@@ -12,7 +12,7 @@ import SkillsList from "./SkillsList";
 import useCollapse from "react-collapsed";
 import "../styles/Project.css";
 import ProjectCardButton from "./ProjectCardButton";
-import TechnologyIcon from "./TechnologyIcon";
+import TechnologyBadge from "./TechnologyBadge";
 
 export default function ProjectCard({
   id,
@@ -74,7 +74,7 @@ export default function ProjectCard({
             </a>
             <div className="techs">
               {technologies.slice(0, 4).map((tech, i) => (
-                <TechnologyIcon tech={tech} key={i}/>
+                <TechnologyBadge tech={tech} key={i}/>
               ))}
             </div>
           </div>

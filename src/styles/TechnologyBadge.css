@@ -1,0 +1,23 @@
+.technology-badge {
+  backdrop-filter: brightness(-5%);
+  padding: 3px 4px;
+  border-radius: 4px;
+  margin: 4px;
+  box-shadow: 3px 4px 15px 0px #00000033;
+  z-index: 2;
+}
+
+.technology-badge i{
+  text-shadow: 2px 2px 8px #00000080;
+}
+
+.tech-name-overlay {
+  position: absolute;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  padding: 7px; 
+  z-index: 0;
+  color: transparent;
+  cursor:default;
+  border-radius: 5px;
+}
