@@ -5,9 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <span>
-        Feito com
-        <i className="bx bxs-heart-circle"></i>
-         por Nataniel Santos.
+        Feito com 💙 por Nataniel Santos.
       </span>
       <span>Copyright © 2022, NMS - Todos os direitos reservados</span>
       <section className="footer-icons-section">
