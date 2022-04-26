@@ -20,8 +20,9 @@ export default function Technologies() {
         <TechnologyCard name="Express" iconClass="devicon-express-original"/>
         <TechnologyCard name="Docker" iconClass="devicon-docker-plain"/>
         <TechnologyCard name="Sequelize" iconClass="devicon-sequelize-plain"/>          
+        <TechnologyCard name="MySQL" iconClass="devicon-mysql-plain"/>          
         <TechnologyCard name="Jest" iconClass="devicon-jest-plain"/>          
-        <TechnologyCard name="Git" iconClass="devicon-git-plain"/>  
+        <TechnologyCard name="Git" iconClass="devicon-git-plain"/>
       </section>
     </section>
   )

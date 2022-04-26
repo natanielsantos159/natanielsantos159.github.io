@@ -8,7 +8,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/songidentifier",
     website: "https://natanielsantos159.github.io/songidentifier/",
     tags: ["Projeto Pessoal"],
-    technologies: ['react', 'javascript', 'css3'],
+    technologies: ['React', 'Javascript', 'CSS3'],
     skills: [
       "Solicitar acesso ao microfone e gravar áudio",
       "Manipular dados providos pelo microfone do usuário",
@@ -27,7 +27,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/trivia-redux",
     website: "https://natanielsantos159.github.io/trivia-redux/",
     tags: ["Módulo de Front-End", "Projeto em Grupo"],
-    technologies: ['react', 'redux', 'javascript', 'css3'],
+    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
     skills: [
       "Criar um `store` Redux em aplicações React",
       "Criar `reducers` no Redux em aplicações React",
@@ -47,7 +47,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/trybe-wallet",
     website: "https://natanielsantos159.github.io/trybe-wallet",
     tags: ["Módulo de Front-End"],
-    technologies: ['react', 'redux', 'javascript', 'css3'],
+    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
     skills: [
       "Criar um `store` Redux em aplicações React",
       "Criar `reducers` no Redux em aplicações React",
@@ -67,7 +67,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/trybetunes",
     website: "https://natanielsantos159.github.io/trybetunes/",
     tags: ["Módulo de Front-End"],
-    technologies: ['react', 'redux', 'javascript', 'css3'],
+    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
     skills: [
       "Fazer requisições e consumir dados vindos de uma `API`",
       "Utilizar os ciclos de vida de um componente React",
@@ -88,7 +88,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/recipes-app-project",
     website: "https://natanielsantos159.github.io/recipes-app-project/",
     tags: ["Módulo de Front-End", "Projeto em Grupo"],
-    technologies: ['react', 'redux', 'javascript', 'css3'],
+    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
     skills: [
       "Utilizar `Redux` para gerenciar estado",
       "Utilizar a biblioteca `React-Redux`",
@@ -108,7 +108,7 @@ const projects = [
     repository: "https://github.com/joaoreisjpk/ChoqueFlix--JS-CSS-Vanilla",
     website: "https://choqueflix.vercel.app/",
     tags: ["Módulo de Fundamentos", "Projeto em Grupo"],
-    technologies: ['javascript', 'html5','css3'],
+    technologies: ['Javascript', 'HTML5','CSS3'],
     skills: [
       "Manipular elementos do DOM utitilizando `Javascript`",
       "Consumir APIs",
@@ -126,7 +126,7 @@ const projects = [
     repository: "https://github.com/natanielsantos159/todo-list-project",
     website: "https://natanielsantos159.github.io/todo-list-project",
     tags: ["Módulo de Fundamentos"],
-    technologies: ['javascript', 'css3'],
+    technologies: ['Javascript', 'CSS3'],
     skills: ["Manipular `CSS`", "Manipular `Javascript`"],
   },
   {
@@ -139,7 +139,7 @@ const projects = [
     website: "https://natanielsantos159.github.io/pixels-art-project/",
     tags: ["Módulo de Fundamentos"],
     skills: ["Manipular o `DOM`", "Manipular o `Javascript`"],
-    technologies: ['javascript', 'css3'],
+    technologies: ['Javascript', 'CSS3'],
   },
   {
     id: 9,
@@ -148,7 +148,7 @@ const projects = [
       "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe",
     repository: "https://github.com/natanielsantos159/talker-manager-project",
     tags: ["Módulo de Back-End"],
-    technologies: ['nodejs', 'express'],
+    technologies: ['NodeJS', 'Express'],
     skills: [
       "Realizar operações assíncronas utilizando callbacks;",
       "Realizar operações assíncronas utilizando `Promises`;",
@@ -175,7 +175,7 @@ const projects = [
       "https://github.com/natanielsantos159/project-movie-cards-library",
     website: "https://natanielsantos159.github.io/project-movie-cards-library",
     tags: ["Módulo de Front-End"],
-    technologies: ['react', 'javascript', 'css3'],
+    technologies: ['React', 'Javascript', 'CSS3'],
     skills: [
       "Saber a melhor forma para instalar um gerenciador de pacotes",
       "Inicializar um projeto em `React`",

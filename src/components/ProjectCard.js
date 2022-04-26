@@ -12,6 +12,7 @@ import SkillsList from "./SkillsList";
 import useCollapse from "react-collapsed";
 import "../styles/Project.css";
 import ProjectCardButton from "./ProjectCardButton";
+import TechnologyIcon from "./TechnologyIcon";
 
 export default function ProjectCard({
   id,
@@ -73,9 +74,7 @@ export default function ProjectCard({
             </a>
             <div className="techs">
               {technologies.slice(0, 4).map((tech, i) => (
-                <div key={i} className="technology-icon" style={{backgroundColor: `var(--color-${tech})`}}>
-                  <i className={`devicon-${tech}-${tech !== 'express' ? 'plain' : 'original'}`}></i>
-                </div>
+                <TechnologyIcon tech={tech} key={i}/>
               ))}
             </div>
           </div>
