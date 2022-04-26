@@ -10,26 +10,17 @@ footer {
   background-color: var(--color-bg);
 }
 
-footer .bx {
+footer i {
   color: var(--color-white);
   font-size: 22px;
   transition: 0.3s all ease;
 }
 
-footer .bx:hover {
+footer i:hover {
   color: var(--color-primary);
 }
 
 .footer-icons-section {
   display:flex;
   gap: 15px;
-}
-
-footer  .bxs-heart-circle {
-  color: var(--color-primary);
-}
-
-footer span { 
-  display: flex; 
-  gap: 5px;
 }

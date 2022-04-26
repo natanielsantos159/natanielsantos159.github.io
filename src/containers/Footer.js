@@ -10,16 +10,10 @@ export default function Footer() {
       <span>Copyright © 2022, NMS - Todos os direitos reservados</span>
       <section className="footer-icons-section">
         <a href="https://github.com/natanielsantos159">
-          <i className="bx bxl-github"></i>
+          <i className="devicon-github-plain"></i>
         </a>
         <a href="https://www.linkedin.com/in/nataniel-santos">
-          <i className="bx bxl-linkedin"></i>
-        </a>
-        <a href="mailto:nathan.santos159@hotmail.com">
-          <i className="bx bxl-gmail"></i>
-        </a>
-        <a href="https://wa.me/98992128008">
-          <i className="bx bxl-whatsapp"></i>
+          <i className="devicon-linkedin-plain"></i>
         </a>
       </section>
     </footer>
