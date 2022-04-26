@@ -21,6 +21,7 @@ export default function ProjectCard({
   repository,
   website,
   tags,
+  technologies,
 }) {
   const {
     showSkills,
@@ -66,9 +67,18 @@ export default function ProjectCard({
           </a>
         </div>
         <div className="project-info-wrapper">
-          <a href={website || repository} target="_blank" rel="noreferrer">
-            <h2 className="project-name">{name}</h2>
-          </a>
+          <div className="title-and-techs-wrapper">
+            <a href={website || repository} target="_blank" rel="noreferrer">
+              <h2 className="project-name">{name}</h2>
+            </a>
+            <div className="techs">
+              {technologies.slice(0, 4).map((tech, i) => (
+                <div key={i} className="technology-icon" style={{backgroundColor: `var(--color-${tech})`}}>
+                  <i className={`devicon-${tech}-${tech !== 'express' ? 'plain' : 'original'}`}></i>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="tags-wrapper">
             {tags.map((tag, i) => (
               <div className="tag" key={i}>
@@ -125,4 +135,5 @@ ProjectCard.propTypes = {
   repository: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

@@ -89,3 +89,27 @@
   overflow: hidden;
   display: none;
 }
+
+.title-and-techs-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.techs {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology-icon {
+  backdrop-filter: brightness(-5%);
+  padding: 3px 4px;
+  border-radius: 4px;
+  margin: 4px;
+  box-shadow: 3px 4px 15px 0px #00000033;
+}
+
+.technology-icon i{
+  text-shadow: 2px 2px 8px #00000080;
+}

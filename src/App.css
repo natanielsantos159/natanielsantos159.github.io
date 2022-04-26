@@ -6,6 +6,18 @@
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6 );
   --color-text-dark: #17171a;
+  --color-nodejs: #83cd29;
+  --color-react: #61dafb;
+  --color-typescript: #007acc;
+  --color-redux: #764abc;
+  --color-css3: #3d8fc6;
+  --color-html5: #e54d26;
+  --color-javascript: #f0db4f;
+  --color-express: #444;
+  --color-docker: #019bc6;
+  --color-sequelize: #3b4b72;
+  --color-jest: #99425b;
+  --color-git: #f34f29;
 }
 
 html {
