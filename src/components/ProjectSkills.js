@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import SkillsList from "./SkillsList";
 import AppContext from "../context/AppContext";
 import projects from "../projects";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import closeIcon from "../images/close.png";
 import tipIcon from "../images/tip.png";
 
@@ -17,15 +17,18 @@ const dropIn = {
     y: "0",
     opacity: 1,
     transition: {
-      duration: 0.1,
+      duration: 0.2,
       type: "spring",
-      damping: 25,
-      stiffness: 500,
+      damping: 30,
+      stiffness: 400,
     },
   },
   exit: {
     y: "100vh",
     opacity: 0,
+    transition: {
+      duration: 0.1,
+    }
   },
 };
 
@@ -62,7 +65,11 @@ export default function ProjectSkills() {
   }, [show]);
 
   return (
-    <>
+    <AnimatePresence
+      initial={false}
+      exitBeforeEnter={true}
+      onExitComplete={() => null}
+    >
       {show && id && viewMode === "grid" ? (
         <div className="backdrop" onClick={closeModal}>
           <motion.div
@@ -89,6 +96,6 @@ export default function ProjectSkills() {
           </motion.div>
         </div>
       ) : null}
-    </>
+    </AnimatePresence>
   );
 }
