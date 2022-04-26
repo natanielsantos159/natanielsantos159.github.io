@@ -2,11 +2,32 @@ import React, { useContext, useEffect } from "react";
 import SkillsList from "./SkillsList";
 import AppContext from "../context/AppContext";
 import projects from "../projects";
-
+import { motion } from "framer-motion";
 import closeIcon from "../images/close.png";
 import tipIcon from "../images/tip.png";
 
 import "../styles/ProjectSkills.css";
+
+const dropIn = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0,
+  },
+  visible: {
+    y: "0",
+    opacity: 1,
+    transition: {
+      duration: 0.1,
+      type: "spring",
+      damping: 25,
+      stiffness: 500,
+    },
+  },
+  exit: {
+    y: "100vh",
+    opacity: 0,
+  },
+};
 
 export default function ProjectSkills() {
   const {
@@ -15,7 +36,7 @@ export default function ProjectSkills() {
     idSkill: id,
     isFirstTimeTip,
     setIsFirstTimeTip,
-    viewMode
+    viewMode,
   } = useContext(AppContext);
 
   const closeModal = () => {
@@ -42,15 +63,20 @@ export default function ProjectSkills() {
 
   return (
     <>
-      {(show && id && viewMode === "grid") ? (
-        <>
-          <div id="mask" onClick={closeModal}></div>
-          <section className="project-skills">
+      {show && id && viewMode === "grid" ? (
+        <div className="backdrop" onClick={closeModal}>
+          <motion.div
+            className="project-skills"
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
             <button className="close-btn" onClick={closeModal}>
               <img src={closeIcon} alt="Fechar" />
             </button>
             <h1>{projects[id - 1].name}</h1>
-            <SkillsList index={id -1} />
+            <SkillsList index={id - 1} />
             {isFirstTimeTip && (
               <section className="tip-section">
                 <img src={tipIcon} alt="Dica" />
@@ -60,8 +86,8 @@ export default function ProjectSkills() {
                 </span>
               </section>
             )}
-          </section>
-        </>
+          </motion.div>
+        </div>
       ) : null}
     </>
   );

@@ -1,9 +1,6 @@
 .project-skills {
-  animation: moveUp 0.3s;
   position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
   width: 72vh;
   max-height: 80vh;
   background: var(--color-bg);
@@ -24,15 +21,16 @@ ul.skills-list::-webkit-scrollbar-thumb {
   background: #ffffff6e;
 }
 
-#mask {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: rgb(0 0 0 / 28%);
-  z-index: 3;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn {
@@ -58,7 +56,6 @@ code {
 }
 
 .tip-section {
-  animation: moveUpTip 0.3s;
   animation-delay: 0.3s;
   animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   animation-fill-mode: backwards;
@@ -74,29 +71,4 @@ code {
 
 .tip-section img {
   height: 25px;
-}
-
-@keyframes moveUp{
-  from {
-    opacity: 0;
-    transform: translate(-50%, -20%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-
-@keyframes moveUpTip{
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
