@@ -17,7 +17,17 @@
   color: var(--color-white);
   padding: 7px; 
   z-index: 0;
-  color: transparent;
   cursor:default;
   border-radius: 5px;
+}
+
+.projects-section .tech-name-overlay {
+  position: relative;
+  margin: 0 3px 0 1px;
+  background-color: var(--color-bg-variant);
+}
+
+.projects-section.list .tech-name-overlay {
+  position: absolute;
+  background-color: var(--color-bg);
 }

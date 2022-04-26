@@ -31,6 +31,7 @@ ul.skills-list::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 4;
 }
 
 .close-btn {

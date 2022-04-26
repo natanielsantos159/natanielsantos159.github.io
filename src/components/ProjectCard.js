@@ -12,7 +12,8 @@ import SkillsList from "./SkillsList";
 import useCollapse from "react-collapsed";
 import "../styles/Project.css";
 import ProjectCardButton from "./ProjectCardButton";
-import TechnologyBadge from "./TechnologyBadge";
+import TechnologyBadgesContainer from "./TechnologyBadgesContainer";
+import { useLocation } from "react-router-dom";
 
 export default function ProjectCard({
   id,
@@ -34,6 +35,7 @@ export default function ProjectCard({
   } = useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
   const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     return () => setShowAllSkills(false);
@@ -72,11 +74,7 @@ export default function ProjectCard({
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
             </a>
-            <div className="techs">
-              {technologies.slice(0, 4).map((tech, i) => (
-                <TechnologyBadge tech={tech} key={i}/>
-              ))}
-            </div>
+            {(viewMode === "list" || pathname === "/") && <TechnologyBadgesContainer technologies={technologies} amount={4} />}
           </div>
           <div className="tags-wrapper">
             {tags.map((tag, i) => (
@@ -85,6 +83,7 @@ export default function ProjectCard({
               </div>
             ))}
           </div>
+          {viewMode === "grid" && pathname === "/projects" && <TechnologyBadgesContainer technologies={technologies} showTechnologies/>}
           <div className="description-wrapper">
             <p className="project-description">{description}</p>
           </div>
@@ -135,4 +134,5 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  showTechnologies: PropTypes.bool,
 };

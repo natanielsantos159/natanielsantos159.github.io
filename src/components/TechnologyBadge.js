@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import "../styles/TechnologyBadge.css";
 
-export default function TechnologyBadge({ tech }) {
+export default function TechnologyBadge({ tech, showTechnologies }) {
   const [hover, setHover] = useState(false);
 
   const animations = {
@@ -24,6 +24,19 @@ export default function TechnologyBadge({ tech }) {
       y: "-2vh",
     },
   };
+
+  const frameMotionProps = {
+    variants: animations,
+    initial: "initial",
+    animate: "animate",
+    exit: "exit",
+  }
+
+  const getBadgeProps = () => {
+    return !showTechnologies ? frameMotionProps : {}; 
+  }
+
+  const trigger = showTechnologies ? showTechnologies : hover;
   return (
     <>
       <div
@@ -39,13 +52,10 @@ export default function TechnologyBadge({ tech }) {
         ></i>
       </div>
       <AnimatePresence exitBeforeEnter={true} onExitComplete={() => null}>
-        {hover && (
+        {trigger && (
           <motion.div
             className="tech-name-overlay"
-            variants={animations}
-            initial="initial"
-            animate="animate"
-            exit="exit"
+            {...getBadgeProps()}
           >
             {tech}
           </motion.div>
@@ -57,4 +67,5 @@ export default function TechnologyBadge({ tech }) {
 
 TechnologyBadge.propTypes = {
   tech: PropTypes.string.isRequired,
+  showTechnologies: PropTypes.bool.isRequired,
 };

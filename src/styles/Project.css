@@ -98,6 +98,10 @@
 .techs {
   display: flex;
   align-content: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.projects-section.grid .techs {
+  justify-content: flex-start;
 }
