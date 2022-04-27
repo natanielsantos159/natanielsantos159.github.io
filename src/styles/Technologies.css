@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   flex-direction: column;
   align-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .technologies-wrapper {

@@ -1,9 +1,7 @@
 .technology-badge {
-  backdrop-filter: brightness(-5%);
   padding: 3px 4px;
   border-radius: 4px;
   margin: 4px;
-  box-shadow: 3px 4px 15px 0px #00000033;
   z-index: 2;
 }
 
