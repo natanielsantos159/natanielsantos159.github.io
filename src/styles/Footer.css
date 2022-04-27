@@ -21,6 +21,6 @@ footer i:hover {
 }
 
 .footer-icons-section {
-  display:flex;
+  display: flex;
   gap: 15px;
 }

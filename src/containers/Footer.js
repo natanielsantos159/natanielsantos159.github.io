@@ -1,12 +1,10 @@
-import React from "react";
-import "../styles/Footer.css";
+import React from 'react';
+import '../styles/Footer.css';
 
 export default function Footer() {
   return (
     <footer>
-      <span>
-        Desenvolvido com 💙 por Nataniel Santos.
-      </span>
+      <span>Desenvolvido com 💙 por Nataniel Santos.</span>
       <span>Copyright © 2022, NMS - Todos os direitos reservados</span>
       <section className="footer-icons-section">
         <a href="https://github.com/natanielsantos159">

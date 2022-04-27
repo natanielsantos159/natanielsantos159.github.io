@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import React, { useContext, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { scroller } from "react-scroll";
-import AppContext from "../context/AppContext";
-import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
+import React, { useContext, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { scroller } from 'react-scroll';
+import AppContext from '../context/AppContext';
+import { motion } from 'framer-motion';
 
 export default function HeaderNav({ children, img, imgHover, name, link }) {
   const [hover, setHover] = useState(false);
@@ -15,18 +15,18 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
     setOnScreen(name);
 
     // se já estiver na homepage e clicou no icone de homepage
-    if (pathname === "/" && link === "/") {
+    if (pathname === '/' && link === '/') {
       window.scrollTo(0, 0);
     }
 
     // se não estiver na homepage e clicou um icone qualquer
-    const delay = pathname === "/" ? 0 : 700;
+    const delay = pathname === '/' ? 0 : 700;
 
-    if (pathname !== "/") navigate("/");
+    if (pathname !== '/') navigate('/');
 
-    if (link !== "/") {
+    if (link !== '/') {
       // delay para esperar a pagina carregar
-      setTimeout(() => scroller.scrollTo(link, { offset: -60}), delay);
+      setTimeout(() => scroller.scrollTo(link, { offset: -60 }), delay);
     }
   };
   return (
@@ -39,7 +39,7 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
         <img src={hover ? imgHover : img} alt={`${name} Icon`} />
         {children}
       </a>
-      { onScreen === name ? <motion.div className="tab" layoutId="tab" /> : null }  
+      {onScreen === name ? <motion.div className="tab" layoutId="tab" /> : null}
     </div>
   );
 }
@@ -50,5 +50,5 @@ HeaderNav.propTypes = {
   imgHover: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  scroll: PropTypes.bool.isRequired,
+  scroll: PropTypes.bool.isRequired
 };

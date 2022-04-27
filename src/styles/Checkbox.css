@@ -6,9 +6,9 @@
   cursor: pointer;
   height: 0;
   width: 0;
- }
- 
- .container {
+}
+
+.container {
   display: flex;
   align-items: center;
   position: relative;
@@ -18,10 +18,10 @@
   margin-left: auto;
   font-size: 18px;
   user-select: none;
- }
- 
- /* Create a custom checkbox */
- .checkmark {
+}
+
+/* Create a custom checkbox */
+.checkmark {
   position: relative;
   top: 0;
   left: 0;
@@ -30,29 +30,29 @@
   background-color: #ccc;
   transition: all 0.3s;
   border-radius: 5px;
- }
- 
- /* When the checkbox is checked, add a blue background */
- .container input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
   background-color: var(--color-primary);
   animation: pop 0.4s;
   animation-direction: alternate;
- }
- 
- /* Create the checkmark/indicator (hidden when not checked) */
- .checkmark:after {
-  content: "";
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
   position: absolute;
   display: none;
- }
- 
- /* Show the checkmark when checked */
- .container input:checked ~ .checkmark:after {
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
   display: block;
- }
- 
- /* Style the checkmark/indicator */
- .container .checkmark:after {
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
   left: 0.45em;
   top: 0.25em;
   width: 0.25em;
@@ -60,18 +60,18 @@
   border: solid white;
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
- }
- 
- @keyframes pop {
+}
+
+@keyframes pop {
   0% {
-   transform: scale(1);
+    transform: scale(1);
   }
- 
+
   50% {
-   transform: scale(0.9);
+    transform: scale(0.9);
   }
- 
+
   100% {
-   transform: scale(1);
+    transform: scale(1);
   }
- }
+}

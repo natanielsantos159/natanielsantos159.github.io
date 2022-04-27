@@ -1,19 +1,41 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Header from "./components/Header";
-import "./App.css";
-import Provider from "./context/Provider";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Header from './components/Header';
+import './App.css';
+import Provider from './context/Provider';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    background: '#1f1f38',
+    primary: {
+      light: '#70c3ff',
+      main: '#4db5ff',
+      dark: '#1f1f38',
+      contrastText: '#fff'
+    },
+    secondary: {
+      main: '#2c2c6c',
+      contrastText: '#fff'
+    },
+    text: '#fff',
+    secondaryAlternative: '#4db5ff66',
+    shadowLight: '#3d3045'
+  }
+});
 
 function App() {
   return (
-    <Provider>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </Provider>
+    </ThemeProvider>
   );
 }
 

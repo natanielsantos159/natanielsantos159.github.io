@@ -1,35 +1,35 @@
-import React, { useContext, useEffect } from "react";
-import SkillsList from "./SkillsList";
-import AppContext from "../context/AppContext";
-import projects from "../projects";
-import { AnimatePresence, motion } from "framer-motion";
-import closeIcon from "../images/close.png";
-import tipIcon from "../images/tip.png";
+import React, { useContext, useEffect } from 'react';
+import SkillsList from './SkillsList';
+import AppContext from '../context/AppContext';
+import projects from '../projects';
+import { AnimatePresence, motion } from 'framer-motion';
+import closeIcon from '../images/close.png';
+import tipIcon from '../images/tip.png';
 
-import "../styles/ProjectSkills.css";
+import '../styles/ProjectSkills.css';
 
 const dropIn = {
   hidden: {
-    y: "-100vh",
-    opacity: 0,
+    y: '-100vh',
+    opacity: 0
   },
   visible: {
-    y: "0",
+    y: '0',
     opacity: 1,
     transition: {
       duration: 0.2,
-      type: "spring",
+      type: 'spring',
       damping: 30,
-      stiffness: 400,
-    },
-  },
-  exit: {
-    y: "100vh",
-    opacity: 0,
-    transition: {
-      duration: 0.1,
+      stiffness: 400
     }
   },
+  exit: {
+    y: '100vh',
+    opacity: 0,
+    transition: {
+      duration: 0.1
+    }
+  }
 };
 
 export default function ProjectSkills() {
@@ -39,22 +39,22 @@ export default function ProjectSkills() {
     idSkill: id,
     isFirstTimeTip,
     setIsFirstTimeTip,
-    viewMode,
+    viewMode
   } = useContext(AppContext);
 
   const closeModal = () => {
     setShowSkills(false);
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = 'scroll';
   };
 
   useEffect(() => {
     const escListener = ({ code }) => {
-      if (code === "Escape") closeModal();
+      if (code === 'Escape') closeModal();
     };
-    document.addEventListener("keydown", escListener);
+    document.addEventListener('keydown', escListener);
 
     return () => {
-      document.removeEventListener("keydown", escListener);
+      document.removeEventListener('keydown', escListener);
     };
   }, []);
 
@@ -65,12 +65,8 @@ export default function ProjectSkills() {
   }, [show]);
 
   return (
-    <AnimatePresence
-      initial={false}
-      exitBeforeEnter={true}
-      onExitComplete={() => null}
-    >
-      {show && id && viewMode === "grid" ? (
+    <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
+      {show && id && viewMode === 'grid' ? (
         <div className="backdrop" onClick={closeModal}>
           <motion.div
             className="project-skills"

@@ -1,40 +1,40 @@
-import { AnimatePresence, motion } from "framer-motion";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import "../styles/TechnologyBadge.css";
+import { AnimatePresence, motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import '../styles/TechnologyBadge.css';
 
 export default function TechnologyBadge({ tech, showTechnologies }) {
   const [hover, setHover] = useState(false);
 
   const animations = {
-    initial: { opacity: 0, y: "-2vh" },
+    initial: { opacity: 0, y: '-2vh' },
     animate: {
       opacity: 1,
-      y: "-5vh",
-      color: "white",
+      y: '-5vh',
+      color: 'white',
       transition: {
         duration: 1,
-        type: "spring",
+        type: 'spring',
         damping: 50,
-        stiffness: 800,
-      },
+        stiffness: 800
+      }
     },
     exit: {
       opacity: 0,
-      y: "-2vh",
-    },
+      y: '-2vh'
+    }
   };
 
   const frameMotionProps = {
     variants: animations,
-    initial: "initial",
-    animate: "animate",
-    exit: "exit",
-  }
+    initial: 'initial',
+    animate: 'animate',
+    exit: 'exit'
+  };
 
   const getBadgeProps = () => {
-    return !showTechnologies ? frameMotionProps : {}; 
-  }
+    return !showTechnologies ? frameMotionProps : {};
+  };
 
   const trigger = showTechnologies ? showTechnologies : hover;
   return (
@@ -47,16 +47,13 @@ export default function TechnologyBadge({ tech, showTechnologies }) {
       >
         <i
           className={`devicon-${tech.toLowerCase()}-${
-            tech.toLowerCase() !== "express" ? "plain" : "original"
+            tech.toLowerCase() !== 'express' ? 'plain' : 'original'
           }`}
         ></i>
       </div>
       <AnimatePresence exitBeforeEnter={true} onExitComplete={() => null}>
         {trigger && (
-          <motion.div
-            className="tech-name-overlay"
-            {...getBadgeProps()}
-          >
+          <motion.div className="tech-name-overlay" {...getBadgeProps()}>
             {tech}
           </motion.div>
         )}
@@ -67,5 +64,5 @@ export default function TechnologyBadge({ tech, showTechnologies }) {
 
 TechnologyBadge.propTypes = {
   tech: PropTypes.string.isRequired,
-  showTechnologies: PropTypes.bool.isRequired,
+  showTechnologies: PropTypes.bool.isRequired
 };

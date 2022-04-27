@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import React from "react";
-import ReactMarkdown from "react-markdown";
-import projects from "../projects";
+import PropTypes from 'prop-types';
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import projects from '../projects';
 
-export default function SkillsList({index}) {
+export default function SkillsList({ index }) {
   return (
     <ul className="skills-list">
       {projects[index].skills &&
@@ -18,4 +18,4 @@ export default function SkillsList({index}) {
 
 SkillsList.propTypes = {
   index: PropTypes.number
-}
+};

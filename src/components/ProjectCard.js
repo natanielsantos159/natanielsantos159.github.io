@@ -1,19 +1,19 @@
-import PropTypes from "prop-types";
-import React, { useContext, useEffect } from "react";
-import AppContext from "../context/AppContext";
-import githubIcon from "../images/github.png";
-import githubHover from "../images/github-dark.png";
-import websiteIcon from "../images/website.png";
-import websiteHover from "../images/website-dark.png";
-import skillsIcon from "../images/skills.png";
-import skillsHover from "../images/skills-dark.png";
-import defaultProjectImage from "../images/projectimage.png";
-import SkillsList from "./SkillsList";
-import useCollapse from "react-collapsed";
-import "../styles/Project.css";
-import ProjectCardButton from "./ProjectCardButton";
-import TechnologyBadgesContainer from "./TechnologyBadgesContainer";
-import { useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
+import React, { useContext, useEffect } from 'react';
+import AppContext from '../context/AppContext';
+import githubIcon from '../images/github.png';
+import githubHover from '../images/github-dark.png';
+import websiteIcon from '../images/website.png';
+import websiteHover from '../images/website-dark.png';
+import skillsIcon from '../images/skills.png';
+import skillsHover from '../images/skills-dark.png';
+import defaultProjectImage from '../images/projectimage.png';
+import SkillsList from './SkillsList';
+import useCollapse from 'react-collapsed';
+import '../styles/Project.css';
+import ProjectCardButton from './ProjectCardButton';
+import TechnologyBadgesContainer from './TechnologyBadgesContainer';
+import { useLocation } from 'react-router-dom';
 
 export default function ProjectCard({
   id,
@@ -23,16 +23,10 @@ export default function ProjectCard({
   repository,
   website,
   tags,
-  technologies,
+  technologies
 }) {
-  const {
-    showSkills,
-    idSkill,
-    setShowSkills,
-    showAllSkills,
-    setShowAllSkills,
-    viewMode,
-  } = useContext(AppContext);
+  const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
+    useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
   const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
   const { pathname } = useLocation();
@@ -49,12 +43,12 @@ export default function ProjectCard({
     setIdSkill(id);
     if (!showSkills) setShowSkills(true);
     if (showSkills && idSkill === id) setShowSkills(false);
-    if (viewMode === "grid") document.body.style.overflow = "hidden";
+    if (viewMode === 'grid') document.body.style.overflow = 'hidden';
   };
 
   const getOnClickProps = () => {
-    if (viewMode === "grid") return { onClick: showSkillsOnClick };
-    if (viewMode === "list") return { ...getToggleProps() };
+    if (viewMode === 'grid') return { onClick: showSkillsOnClick };
+    if (viewMode === 'list') return { ...getToggleProps() };
   };
 
   return (
@@ -74,7 +68,9 @@ export default function ProjectCard({
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
             </a>
-            {(viewMode === "list" || pathname === "/") && <TechnologyBadgesContainer technologies={technologies} amount={4} />}
+            {(viewMode === 'list' || pathname === '/') && (
+              <TechnologyBadgesContainer technologies={technologies} amount={4} />
+            )}
           </div>
           <div className="tags-wrapper">
             {tags.map((tag, i) => (
@@ -83,7 +79,9 @@ export default function ProjectCard({
               </div>
             ))}
           </div>
-          {viewMode === "grid" && pathname === "/projects" && <TechnologyBadgesContainer technologies={technologies} showTechnologies/>}
+          {viewMode === 'grid' && pathname === '/projects' && (
+            <TechnologyBadgesContainer technologies={technologies} showTechnologies />
+          )}
           <div className="description-wrapper">
             <p className="project-description">{description}</p>
           </div>
@@ -115,7 +113,7 @@ export default function ProjectCard({
           />
         </section>
       </div>
-      {viewMode === "list" && (
+      {viewMode === 'list' && (
         <section {...getCollapseProps()}>
           <h2>Skills</h2>
           <SkillsList index={id - 1} />
@@ -134,5 +132,5 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  showTechnologies: PropTypes.bool,
+  showTechnologies: PropTypes.bool
 };

@@ -1,8 +1,8 @@
-import { useEffect, useState, useContext } from "react";
-import AppContext from "../context/AppContext";
+import { useEffect, useState, useContext } from 'react';
+import AppContext from '../context/AppContext';
 
 // Source: https://usehooks.com/useOnScreen/
-export default function useOnScreen(ref, rootMargin = "0px", elementName) {
+export default function useOnScreen(ref, rootMargin = '0px', elementName) {
   // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState(false);
   const { setOnScreen } = useContext(AppContext);

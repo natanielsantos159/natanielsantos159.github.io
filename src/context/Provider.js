@@ -1,13 +1,13 @@
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import AppContext from './AppContext';
 
 export default function Provider({ children }) {
   const [showSkills, setShowSkills] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
-  const [ idSkill, setIdSkill ] = useState();
+  const [idSkill, setIdSkill] = useState();
   const [isFirstTimeTip, setIsFirstTimeTip] = useState(true);
-  const [viewMode, setViewMode] = useState("grid");
+  const [viewMode, setViewMode] = useState('grid');
   const [onScreen, setOnScreen] = useState('');
 
   const contextValue = {
@@ -21,17 +21,13 @@ export default function Provider({ children }) {
     setShowAllSkills,
     viewMode,
     setViewMode,
-    onScreen, 
-    setOnScreen,
+    onScreen,
+    setOnScreen
   };
 
-  return (
-    <AppContext.Provider value={ contextValue }>
-      {children}
-    </AppContext.Provider>
-  )
+  return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
 }
 
 Provider.propTypes = {
   children: PropTypes.node
-}
+};

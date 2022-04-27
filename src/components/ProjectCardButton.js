@@ -1,5 +1,5 @@
-import PropTypes from "prop-types"
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 export default function ProjectCardButton({
   href = false,
@@ -48,4 +48,4 @@ ProjectCardButton.propTypes = {
   icon: PropTypes.string.isRequired,
   iconHover: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
-}
+};

@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import React, { useState } from "react";
-import "../styles/TechnologyCard.css";
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import '../styles/TechnologyCard.css';
 
 export default function TechnologyCard({ iconClass, name }) {
   const [hover, setHover] = useState(false);
@@ -19,5 +19,5 @@ export default function TechnologyCard({ iconClass, name }) {
 
 TechnologyCard.propTypes = {
   iconClass: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };

@@ -5,7 +5,7 @@
   z-index: 2;
 }
 
-.technology-badge i{
+.technology-badge i {
   text-shadow: 2px 2px 8px #00000080;
 }
 
@@ -13,9 +13,9 @@
   position: absolute;
   background-color: var(--color-bg);
   color: var(--color-white);
-  padding: 7px; 
+  padding: 7px;
   z-index: 0;
-  cursor:default;
+  cursor: default;
   border-radius: 5px;
 }
 

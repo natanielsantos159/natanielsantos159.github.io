@@ -1,15 +1,15 @@
-import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import ProjectCard from "../components/ProjectCard";
-import projects from "../projects";
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import ProjectCard from '../components/ProjectCard';
+import projects from '../projects';
 import seeMoreIcon from '../images/see-more.png';
 import seeMoreHover from '../images/see-more-dark.png';
-import useOnScreen from "../hooks/useOnScreen";
-import "../styles/ProjectsContainer.css";
+import useOnScreen from '../hooks/useOnScreen';
+import '../styles/ProjectsContainer.css';
 
 export default function ProjectsContainer() {
   const ref = useRef();
-  useOnScreen(ref, "-250px", "projects");
+  useOnScreen(ref, '-250px', 'projects');
   const [seeMoreBtnHover, setSeeMoreBtnHover] = useState(false);
 
   return (
