@@ -11,9 +11,18 @@ export default function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const InputLabelProps = {
+    style: { color: 'var(--color-primary)', fontWeight: 800 }
+  };
+
+  const inputFieldProps = {
+    inputProps: { style: { color: 'white' } },
+    InputLabelProps
+  };
+
   return (
     <section className="contact-me-section" id="contact-me-section" ref={ref}>
-      <h1>Contato</h1>
+      <h1>Entre em contato:</h1>
       <section className="send-email-section">
         <TextField
           label="Nome"
@@ -21,6 +30,7 @@ export default function ContactMe() {
           onChange={({ target: { value } }) => setName(value)}
           name="name"
           variant="filled"
+          {...inputFieldProps}
         />
         <TextField
           label="E-mail"
@@ -28,6 +38,7 @@ export default function ContactMe() {
           onChange={({ target: { value } }) => setEmail(value)}
           name="email"
           variant="filled"
+          {...inputFieldProps}
         />
         <TextField
           label="Mensagem"
@@ -37,7 +48,9 @@ export default function ContactMe() {
           name="message"
           multiline
           rows={4}
+          {...inputFieldProps}
         />
+        <button className="default-btn">Enviar</button>
       </section>
     </section>
   );

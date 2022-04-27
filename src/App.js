@@ -7,8 +7,7 @@ import Provider from './context/Provider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-  palette: {
-    background: '#1f1f38',
+  color: {
     primary: {
       light: '#70c3ff',
       main: '#4db5ff',
@@ -20,8 +19,6 @@ const theme = createTheme({
       contrastText: '#fff'
     },
     text: '#fff',
-    secondaryAlternative: '#4db5ff66',
-    shadowLight: '#3d3045'
   }
 });
 
