@@ -10,7 +10,7 @@ export default function TechnologyBadgesContainer({
   return (
     <div className="techs">
       {technologies.slice(0, amount).map((tech, i) => (
-        <TechnologyBadge tech={tech} key={i} showTechnologies={showTechnologies} />
+        <TechnologyBadge tech={tech} key={i} showTechnologies={showTechnologies} i={i} />
       ))}
     </div>
   );

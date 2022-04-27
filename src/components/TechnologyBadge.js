@@ -1,10 +1,13 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import '../styles/TechnologyBadge.css';
 
-export default function TechnologyBadge({ tech, showTechnologies }) {
+export default function TechnologyBadge({ tech, showTechnologies, i }) {
   const [hover, setHover] = useState(false);
+  const width = 18;
+  const margin = 4;
+  const offsetLeft = (width + (margin * 2)) * i;
 
   const animations = {
     initial: { opacity: 0, y: '-2vh' },
@@ -37,23 +40,25 @@ export default function TechnologyBadge({ tech, showTechnologies }) {
   };
 
   const trigger = showTechnologies ? showTechnologies : hover;
+
   return (
     <>
       <div
         className="technology-badge"
         style={{ backgroundColor: `var(--color-${tech.toLowerCase()})` }}
         onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
+        onMouseLeave={() => setHover(false)}>
         <i
           className={`devicon-${tech.toLowerCase()}-${
             tech.toLowerCase() !== 'express' ? 'plain' : 'original'
-          }`}
-        ></i>
+          }`}></i>
       </div>
       <AnimatePresence exitBeforeEnter={true} onExitComplete={() => null}>
         {trigger && (
-          <motion.div className="tech-name-overlay" {...getBadgeProps()}>
+          <motion.div
+            className="tech-name-overlay"
+            {...getBadgeProps()}
+            style={{ left: `${offsetLeft}px`}}>
             {tech}
           </motion.div>
         )}
@@ -64,5 +69,6 @@ export default function TechnologyBadge({ tech, showTechnologies }) {
 
 TechnologyBadge.propTypes = {
   tech: PropTypes.string.isRequired,
-  showTechnologies: PropTypes.bool.isRequired
+  showTechnologies: PropTypes.bool.isRequired,
+  i: PropTypes.number.isRequired
 };
