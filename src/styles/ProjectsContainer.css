@@ -42,7 +42,7 @@
   overflow: visible;
   text-overflow: unset;
   display: block;
-  max-height: 90px;
+  max-height: 300px;
 }
 
 @media (max-width: 1000px) {

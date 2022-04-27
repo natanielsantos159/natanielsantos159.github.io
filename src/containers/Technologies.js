@@ -8,7 +8,7 @@ export default function Technologies() {
   useOnScreen(ref, "-250px", "technologies");
   return (
     <section className="technologies-container" ref={ref}>
-      <h1>Conhecimentos</h1>
+      <h1>Tecnologias</h1>
       <section className="technologies-wrapper">
         <TechnologyCard name="Node JS" iconClass="devicon-nodejs-plain"/>
         <TechnologyCard name="React JS" iconClass="devicon-react-plain"/>
@@ -21,6 +21,7 @@ export default function Technologies() {
         <TechnologyCard name="Docker" iconClass="devicon-docker-plain"/>
         <TechnologyCard name="Sequelize" iconClass="devicon-sequelize-plain"/>          
         <TechnologyCard name="MySQL" iconClass="devicon-mysql-plain"/>          
+        <TechnologyCard name="MongoDB" iconClass="devicon-mongodb-plai"/>          
         <TechnologyCard name="Jest" iconClass="devicon-jest-plain"/>          
         <TechnologyCard name="Git" iconClass="devicon-git-plain"/>
       </section>
