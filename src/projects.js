@@ -21,7 +21,7 @@ const projects = [
   {
     id: 2,
     name: "Trivia",
-    description: "Um game de perguntas que utiliza a API do Trivia",
+    description: "Um jogo de perguntas e respostas baseado no jogo Trivia (tipo um show do milhão americano rs) utilizando React e Redux, desenvolvendo em grupo suas funcionalidades de acordo com as demandas definidas em um quadro Kanban.",
     image:
       "https://github.com/natanielsantos159/trivia-redux/raw/main-group-16/public/trivia.gif",
     repository: "https://github.com/natanielsantos159/trivia-redux",
@@ -61,7 +61,7 @@ const projects = [
     id: 4,
     name: "TrybeTunes",
     description:
-      "Uma aplicação web para pesquisar e salvar as músicas favoritas",
+      "Uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.",
     image:
       "https://github.com/natanielsantos159/trybetunes/raw/main/src/images/trybetuneshomepage.png",
     repository: "https://github.com/natanielsantos159/trybetunes",
@@ -82,7 +82,13 @@ const projects = [
   {
     id: 5,
     name: "Recipes App",
-    description: "Um app de receitas de bebibas e comidas completo.",
+    description: `Um app de receitas de bebibas e comidas completo, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
+
+    Nela é possível ver, buscar, filtrar, favoritar e acompanhar o processo de preparação de receitas e drinks!
+    
+    A base de dados são 2 APIs distintas, uma para comidas e outra para bebidas.
+    
+    O layout tem como foco dispositivos móveis, então todos os protótipos estão desenvolvidos em telas menores.`,
     image:
       "https://github.com/natanielsantos159/recipes-app-project/blob/main-group-18-development/src/images/Captura%20de%20tela%20de%202022-01-17%2016-37-13.png?raw=true",
     repository: "https://github.com/natanielsantos159/recipes-app-project",
@@ -145,7 +151,7 @@ const projects = [
     id: 9,
     name: "Talker Manager",
     description:
-      "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe",
+      "Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe. Foi desenvoldida uma API de um CRUD (Create, Read, Update e Delete) de palestrantes por meio de endpoints que irão ler e escrever em um arquivo, isso utilizando o módulo fs.",
     repository: "https://github.com/natanielsantos159/talker-manager-project",
     tags: ["Módulo de Back-End"],
     technologies: ['NodeJS', 'Express'],
@@ -169,7 +175,7 @@ const projects = [
     id: 10,
     name: "Movie Card Library",
     description:
-      "Projeto introdutório ao React do módulo de Front-end da Trybe.",
+      "Projeto introdutório ao React do módulo de Front-end da Trybe. Foi desenvolvido ma biblioteca de cartões de filmes",
     image: "https://github.com/natanielsantos159/project-movie-cards-library/blob/nataniel-santos-movie-cards-library/src/images/Captura%20de%20tela%20de%202022-01-18%2021-12-10.png?raw=true",
     repository:
       "https://github.com/natanielsantos159/project-movie-cards-library",
