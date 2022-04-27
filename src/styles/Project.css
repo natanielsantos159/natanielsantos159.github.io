@@ -103,6 +103,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .projects-section.grid .techs {

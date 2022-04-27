@@ -7,7 +7,7 @@ export default function TechnologyBadge({ tech, showTechnologies, i }) {
   const [hover, setHover] = useState(false);
   const width = 18;
   const margin = 4;
-  const offsetLeft = (width + (margin * 2)) * i;
+  const offsetLeft = showTechnologies ? 0 : (width + (margin * 2)) * i;
 
   const animations = {
     initial: { opacity: 0, y: '-2vh' },
