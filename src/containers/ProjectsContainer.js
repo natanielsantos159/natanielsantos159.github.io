@@ -5,10 +5,11 @@ import seeMoreHover from '../images/see-more-dark.png';
 import useOnScreen from '../hooks/useOnScreen';
 import '../styles/ProjectsContainer.css';
 import Carousel from '../components/Carousel';
-import { IconButton, } from '@mui/material';
+import { IconButton } from '@mui/material';
 import gridIcon from '../images/grid-icon.png';
 import carouselIcon from '../images/carousel.png';
 import { motion } from 'framer-motion';
+import MainPageGrid from '../components/MainPageGrid';
 
 export default function ProjectsContainer() {
   const ref = useRef();
@@ -44,21 +45,8 @@ export default function ProjectsContainer() {
           {viewMode === 'grid' && <motion.div className="tab" layoutId="viewModeTab" />}
         </div>
       </div>
-      {/* <section className="projects-container-home-wrapper">
-        {projects.slice(0, 6).map((proj, i) => (
-          <ProjectCard {...proj} key={i} />
-        ))}
-      </section>
-      <Link
-        to="/projects"
-        className="default-btn btn-see-more"
-        onMouseEnter={() => setSeeMoreBtnHover(true)}
-        onMouseLeave={() => setSeeMoreBtnHover(false)}
-      >
-        <img src={seeMoreBtnHover ? seeMoreHover : seeMoreIcon} alt="Ver Todos os Projetos" />
-        Ver Todos os Projetos
-      </Link> */}
-      <Carousel />
+
+      {viewMode === 'grid' ? <MainPageGrid /> : <Carousel />}
 
       <Link
         to="/projects"
