@@ -71,7 +71,7 @@ export default function ProjectCard({
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
             </a>
-            {(viewMode === 'list' || pathname === '/') && (
+            {(viewMode === 'list' || (viewMode === 'grid' && pathname === '/')) && (
               <TechnologyBadgesContainer technologies={technologies} amount={4} />
             )}
           </div>
@@ -82,8 +82,8 @@ export default function ProjectCard({
               </div>
             ))}
           </div>
-          {viewMode === 'grid' && pathname === '/projects' && (
-            <TechnologyBadgesContainer technologies={technologies} showTechnologies />
+          {((viewMode === 'grid' && pathname === '/projects') || viewMode === 'carousel') && (
+            <TechnologyBadgesContainer technologies={technologies} expandTechnologies />
           )}
           <div className="description-wrapper">
             <p className="project-description">{description}</p>
@@ -135,7 +135,6 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  showTechnologies: PropTypes.bool,
   carouselClass:PropTypes.string,
   framerMotionProps: PropTypes.arrayOf(PropTypes.any),
 };

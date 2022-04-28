@@ -53,6 +53,7 @@ export default function Carousel() {
             carouselClass={carouselClasses[i]}
             key={i}
           framerMotionProps={{...framerMotionProps }}
+          expandTechnologies
         />
       ))}
       <IconButton height="small" sx={{ position: 'absolute', top: '50%', left: '20%', zIndex: 6 }}>

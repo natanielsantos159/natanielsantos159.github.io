@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import seeMoreIcon from '../images/see-more.png';
 import seeMoreHover from '../images/see-more-dark.png';
@@ -10,12 +10,17 @@ import gridIcon from '../images/grid-icon.png';
 import carouselIcon from '../images/carousel.png';
 import { motion } from 'framer-motion';
 import MainPageGrid from '../components/MainPageGrid';
+import AppContext from '../context/AppContext';
 
 export default function ProjectsContainer() {
   const ref = useRef();
   useOnScreen(ref, '-250px', 'projects');
   const [seeMoreBtnHover, setSeeMoreBtnHover] = useState(false);
-  const [viewMode, setViewMode] = useState('carousel');
+  const {viewMode, setViewMode} = useContext(AppContext);
+
+  useEffect(() => {
+    setViewMode('carousel');
+  },[]);
 
   const switchMode = () => setViewMode(viewMode === 'carousel' ? 'grid' : 'carousel');
 

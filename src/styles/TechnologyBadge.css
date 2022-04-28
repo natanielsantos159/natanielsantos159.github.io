@@ -20,7 +20,7 @@
   border-radius: 5px;
 }
 
-.projects-section .tech-name-overlay {
+.projects-section .tech-name-overlay, .carrousel-mode .tech-name-overlay {
   position: relative;
   margin: 0 3px 0 1px;
   background-color: var(--color-bg-variant);

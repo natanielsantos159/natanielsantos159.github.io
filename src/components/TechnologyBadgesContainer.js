@@ -4,13 +4,13 @@ import TechnologyBadge from './TechnologyBadge';
 
 export default function TechnologyBadgesContainer({
   technologies,
-  showTechnologies,
+  expandTechnologies,
   amount = technologies.length
 }) {
   return (
     <div className="techs">
       {technologies.slice(0, amount).map((tech, i) => (
-        <TechnologyBadge tech={tech} key={i} showTechnologies={showTechnologies} i={i} />
+        <TechnologyBadge tech={tech} key={i} expandTechnologies={expandTechnologies} i={i} />
       ))}
     </div>
   );
@@ -18,6 +18,6 @@ export default function TechnologyBadgesContainer({
 
 TechnologyBadgesContainer.propTypes = {
   amount: PropTypes.number,
-  showTechnologies: PropTypes.bool,
+  expandTechnologies: PropTypes.bool,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired
 };

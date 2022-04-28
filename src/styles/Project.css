@@ -106,6 +106,6 @@
   position: relative;
 }
 
-.projects-section.grid .techs {
+.projects-section.grid .techs, .carrousel-mode .techs {
   justify-content: flex-start;
 }

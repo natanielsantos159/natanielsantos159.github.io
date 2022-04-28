@@ -19,6 +19,7 @@ export default function Projects() {
   };
 
   useEffect(() => {
+    setViewMode('grid');
     setOnScreen('projects');
     return () => setViewMode('grid');
   }, []);

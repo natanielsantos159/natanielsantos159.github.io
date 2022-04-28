@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import React, {  useState } from 'react';
 import '../styles/TechnologyBadge.css';
 
-export default function TechnologyBadge({ tech, showTechnologies, i }) {
+export default function TechnologyBadge({ tech, expandTechnologies, i }) {
   const [hover, setHover] = useState(false);
   const width = 18;
   const margin = 4;
-  const offsetLeft = showTechnologies ? 0 : (width + (margin * 2)) * i;
+  const offsetLeft = expandTechnologies ? 0 : (width + (margin * 2)) * i;
 
   const animations = {
     initial: { opacity: 0, y: '-2vh' },
@@ -36,10 +36,10 @@ export default function TechnologyBadge({ tech, showTechnologies, i }) {
   };
 
   const getBadgeProps = () => {
-    return !showTechnologies ? frameMotionProps : {};
+    return !expandTechnologies ? frameMotionProps : {};
   };
 
-  const trigger = showTechnologies ? showTechnologies : hover;
+  const trigger = expandTechnologies ? expandTechnologies : hover;
 
   return (
     <>
@@ -69,6 +69,6 @@ export default function TechnologyBadge({ tech, showTechnologies, i }) {
 
 TechnologyBadge.propTypes = {
   tech: PropTypes.string.isRequired,
-  showTechnologies: PropTypes.bool.isRequired,
+  expandTechnologies: PropTypes.bool.isRequired,
   i: PropTypes.number.isRequired
 };
