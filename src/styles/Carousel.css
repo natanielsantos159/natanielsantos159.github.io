@@ -5,11 +5,11 @@
   min-width: 95vw;
   min-height: 100vh;
   align-items: center;
-  transition: 0.2s all ease;
 }
 
 .carrousel-mode .project-card {
   position: absolute;
+  transition: 0.3s left, 0.3s transform, 0.4s filter;
 }
 
 .carrousel-mode .far-left {
@@ -30,7 +30,7 @@
 .carrousel-mode .mid-left, .carrousel-mode .mid-right {
   left: 25%;
   z-index: 5;
-  transform: translatex(-50%) scale(0.7) !important;
+  transform: translatex(-50%) scale(0.7)!important;
   filter: brightness(70%);
 }
 
