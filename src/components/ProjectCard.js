@@ -14,6 +14,7 @@ import '../styles/Project.css';
 import ProjectCardButton from './ProjectCardButton';
 import TechnologyBadgesContainer from './TechnologyBadgesContainer';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function ProjectCard({
   id,
@@ -25,6 +26,7 @@ export default function ProjectCard({
   tags,
   technologies,
   carouselClass,
+  framerMotionProps = {},
 }) {
   const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
     useContext(AppContext);
@@ -53,7 +55,7 @@ export default function ProjectCard({
   };
 
   return (
-    <div className={`project-card ${carouselClass ? carouselClass : ''}`}>
+    <motion.div className={`project-card ${carouselClass ? carouselClass : ''}`} {...framerMotionProps}>
       <div className="project-card-content">
         <div className="image-wrapper">
           <a href={website || repository} target="_blank" rel="noreferrer">
@@ -120,7 +122,7 @@ export default function ProjectCard({
           <SkillsList index={id - 1} />
         </section>
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -135,4 +137,5 @@ ProjectCard.propTypes = {
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
   showTechnologies: PropTypes.bool,
   carouselClass:PropTypes.string,
+  framerMotionProps: PropTypes.arrayOf(PropTypes.any),
 };

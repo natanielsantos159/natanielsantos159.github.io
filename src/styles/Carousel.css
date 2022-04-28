@@ -5,6 +5,7 @@
   min-width: 95vw;
   min-height: 100vh;
   align-items: center;
+  transition: 0.2s all ease;
 }
 
 .carrousel-mode .project-card {
@@ -22,14 +23,14 @@
 .carrousel-mode .far-left, .carrousel-mode .far-right {
   left: 15%;
   z-index: 4;
-  transform: translatex(-50%) scale(0.6);
+  transform: translatex(-50%) scale(0.6) !important;
   filter: brightness(40%);
 }
 
 .carrousel-mode .mid-left, .carrousel-mode .mid-right {
   left: 25%;
   z-index: 5;
-  transform: translatex(-50%) scale(0.7);
+  transform: translatex(-50%) scale(0.7) !important;
   filter: brightness(70%);
 }
 
@@ -37,6 +38,11 @@
   left: 50%;
   z-index: 6;
   transform: translatex(-50%);
+  cursor: grab;
+}
+
+.carrousel-mode .center-item:active {
+  cursor: grabbing;
 }
 
 .carrousel-mode .mid-right {
