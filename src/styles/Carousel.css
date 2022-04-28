@@ -1,0 +1,52 @@
+
+.carrousel-mode {
+  display: flex;
+  position: relative;
+  min-width: 95vw;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.carrousel-mode .project-card {
+  position: absolute;
+}
+
+.carrousel-mode .far-left {
+  left: 15%;
+}
+
+.carrousel-mode .mid-left {
+  left: 25%;
+}
+
+.carrousel-mode .far-left, .carrousel-mode .far-right {
+  left: 15%;
+  z-index: 4;
+  transform: translatex(-50%) scale(0.6);
+  filter: brightness(40%);
+}
+
+.carrousel-mode .mid-left, .carrousel-mode .mid-right {
+  left: 25%;
+  z-index: 5;
+  transform: translatex(-50%) scale(0.7);
+  filter: brightness(70%);
+}
+
+.carrousel-mode .center-item {
+  left: 50%;
+  z-index: 6;
+  transform: translatex(-50%);
+}
+
+.carrousel-mode .mid-right {
+  left: 75%;
+}
+
+.carrousel-mode .far-right {
+  left: 85%;
+}
+
+.carrousel-mode .hidden {
+  display: none;
+}

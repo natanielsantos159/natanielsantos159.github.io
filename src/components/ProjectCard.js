@@ -23,7 +23,8 @@ export default function ProjectCard({
   repository,
   website,
   tags,
-  technologies
+  technologies,
+  carouselClass,
 }) {
   const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
     useContext(AppContext);
@@ -52,7 +53,7 @@ export default function ProjectCard({
   };
 
   return (
-    <div className="project-card">
+    <div className={`project-card ${carouselClass ? carouselClass : ''}`}>
       <div className="project-card-content">
         <div className="image-wrapper">
           <a href={website || repository} target="_blank" rel="noreferrer">
@@ -132,5 +133,6 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  showTechnologies: PropTypes.bool
+  showTechnologies: PropTypes.bool,
+  carouselClass:PropTypes.string,
 };
