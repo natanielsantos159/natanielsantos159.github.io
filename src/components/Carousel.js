@@ -42,7 +42,8 @@ export default function Carousel() {
       if (info.offset.x > 150 || info.velocity.x > 100) nextItem();
       if (info.offset.x < -150 || info.velocity.x < -100) previousItem();
     },
-    dragSnapToOrigin: false
+    dragSnapToOrigin: false,
+    style: { transition: '0.3s left, 0.3s transform, 0.4s filter' }
   };
 
   return (
@@ -50,9 +51,9 @@ export default function Carousel() {
       {carouselProjects.map((proj, i) => (
         <ProjectCard
           {...proj}
-            carouselClass={carouselClasses[i]}
-            key={i}
-          framerMotionProps={{...framerMotionProps }}
+          carouselClass={carouselClasses[i]}
+          key={i}
+          framerMotionProps={{ ...framerMotionProps }}
           expandTechnologies
         />
       ))}

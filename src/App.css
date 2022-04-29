@@ -99,3 +99,11 @@ summary {
   height: 25px;
   margin: 2px 3px;
 }
+
+img, a {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+  

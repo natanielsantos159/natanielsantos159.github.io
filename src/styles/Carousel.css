@@ -9,7 +9,6 @@
 
 .carrousel-mode .project-card {
   position: absolute;
-  transition: 0.3s left, 0.3s transform, 0.4s filter;
 }
 
 .carrousel-mode .far-left {
