@@ -6,24 +6,30 @@ import '../styles/Technologies.css';
 export default function Technologies() {
   const ref = useRef();
   useOnScreen(ref, '-250px', 'technologies');
+
+  const technologies = [
+    { name: 'Node JS', iconClass: 'devicon-nodejs-plain' },
+    { name: 'React JS', iconClass: 'devicon-react-plain' },
+    { name: 'TypeScript', iconClass: 'devicon-typescript-plain' },
+    { name: 'Redux', iconClass: 'devicon-redux-plain' },
+    { name: 'CSS3', iconClass: 'devicon-css3-plain' },
+    { name: 'HTML5', iconClass: 'devicon-html5-plain' },
+    { name: 'Javascript', iconClass: 'devicon-javascript-plain' },
+    { name: 'Express', iconClass: 'devicon-express-original' },
+    { name: 'Docker', iconClass: 'devicon-docker-plain' },
+    { name: 'Sequelize', iconClass: 'devicon-sequelize-plain' },
+    { name: 'MySQL', iconClass: 'devicon-mysql-plain' },
+    { name: 'MongoDB', iconClass: 'devicon-mongodb-plain' },
+    { name: 'Jest', iconClass: 'devicon-jest-plain' },
+    { name: 'Git', iconClass: 'devicon-git-plain' }
+  ];
   return (
     <section className="technologies-container" ref={ref}>
       <h1>Tecnologias</h1>
       <section className="technologies-wrapper">
-        <TechnologyCard name="Node JS" iconClass="devicon-nodejs-plain" />
-        <TechnologyCard name="React JS" iconClass="devicon-react-plain" />
-        <TechnologyCard name="TypeScript" iconClass="devicon-typescript-plain" />
-        <TechnologyCard name="Redux" iconClass="devicon-redux-plain" />
-        <TechnologyCard name="CSS3" iconClass="devicon-css3-plain" />
-        <TechnologyCard name="HTML5" iconClass="devicon-html5-plain" />
-        <TechnologyCard name="Javascript" iconClass="devicon-javascript-plain" />
-        <TechnologyCard name="Express" iconClass="devicon-express-original" />
-        <TechnologyCard name="Docker" iconClass="devicon-docker-plain" />
-        <TechnologyCard name="Sequelize" iconClass="devicon-sequelize-plain" />
-        <TechnologyCard name="MySQL" iconClass="devicon-mysql-plain" />
-        <TechnologyCard name="MongoDB" iconClass="devicon-mongodb-plain" />
-        <TechnologyCard name="Jest" iconClass="devicon-jest-plain" />
-        <TechnologyCard name="Git" iconClass="devicon-git-plain" />
+        { technologies.map(({name, iconClass}, i)=> (
+          <TechnologyCard name={name} iconClass={iconClass} key={i} i={i} />
+        ))}
       </section>
     </section>
   );
