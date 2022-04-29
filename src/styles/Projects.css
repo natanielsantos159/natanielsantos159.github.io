@@ -17,6 +17,14 @@
   align-items: center;
 }
 
+.projects-section .project-card {
+  transition: 0.5s;
+}
+
+.projects-section .project-card:hover {
+  transform: scale(1.04);
+}
+
 .projects-section:last-child {
   justify-self: flex-start;
 }
