@@ -17,10 +17,6 @@ ul.skills-list {
   max-height: 60vh;
 }
 
-ul.skills-list::-webkit-scrollbar-thumb {
-  background: #ffffff6e;
-}
-
 .backdrop {
   position: fixed;
   top: 0;

@@ -35,7 +35,6 @@
 }
 
 .image-wrapper {
-  min-height: 50%;
   grid-area: image-wrapper;
 }
 
