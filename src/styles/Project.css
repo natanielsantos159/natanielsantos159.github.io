@@ -6,13 +6,11 @@
   margin: 10px 20px;
   height: min-content;
   font-size: 17px;
-  transition: 0.5s;
   box-shadow: 1px 4px 7px 3px #00000033;
 }
 
 .project-card:hover {
   box-shadow: 0 0 19px 0px #3a3f888c;
-  transform: scale(1.04);
 }
 
 .list .project-card {

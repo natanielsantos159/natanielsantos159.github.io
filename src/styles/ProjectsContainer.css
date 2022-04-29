@@ -18,6 +18,7 @@
 
 .projects-container-home-wrapper .project-card {
   width: min-content;
+  cursor: pointer;
 }
 
 .projects-container-home-wrapper .project-description:hover {
