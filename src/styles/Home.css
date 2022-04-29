@@ -3,9 +3,21 @@
 }
 
 .project-card-open {
+  display: flex;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   position: fixed;
   z-index: 9;
+}
+
+.project-card-open .project-card {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.homepage-skills {
+  padding: 1vw 2vw;
+  min-width: 40vw;
 }

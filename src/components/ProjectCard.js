@@ -13,7 +13,6 @@ import useCollapse from 'react-collapsed';
 import '../styles/Project.css';
 import ProjectCardButton from './ProjectCardButton';
 import TechnologyBadgesContainer from './TechnologyBadgesContainer';
-import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function ProjectCard({
@@ -27,12 +26,13 @@ export default function ProjectCard({
   technologies,
   carouselClass,
   framerMotionProps = {},
+  expandTechnologies = false,
+  children,
 }) {
   const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
     useContext(AppContext);
   const { setIdSkill } = useContext(AppContext);
   const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
-  const { pathname } = useLocation();
 
   useEffect(() => {
     return () => setShowAllSkills(false);
@@ -55,7 +55,9 @@ export default function ProjectCard({
   };
 
   return (
-    <motion.div className={`project-card ${carouselClass ? carouselClass : ''}`} {...framerMotionProps}>
+    <motion.div
+      className={`project-card ${carouselClass ? carouselClass : ''}`}
+      {...framerMotionProps}>
       <div className="project-card-content">
         <div className="image-wrapper">
           <a href={website || repository} target="_blank" rel="noreferrer">
@@ -71,7 +73,7 @@ export default function ProjectCard({
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
             </a>
-            {(viewMode === 'list' || (viewMode === 'grid' && pathname === '/')) && (
+            {(expandTechnologies === false) && (
               <TechnologyBadgesContainer technologies={technologies} amount={4} />
             )}
           </div>
@@ -82,7 +84,7 @@ export default function ProjectCard({
               </div>
             ))}
           </div>
-          {((viewMode === 'grid' && pathname === '/projects') || viewMode === 'carousel') && (
+          {(expandTechnologies) && (
             <TechnologyBadgesContainer technologies={technologies} expandTechnologies />
           )}
           <div className="description-wrapper">
@@ -122,6 +124,7 @@ export default function ProjectCard({
           <SkillsList index={id - 1} />
         </section>
       )}
+      { children }
     </motion.div>
   );
 }
@@ -135,6 +138,8 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  carouselClass:PropTypes.string,
-  framerMotionProps: PropTypes.arrayOf(PropTypes.any),
+  carouselClass: PropTypes.string,
+  framerMotionProps: PropTypes.object,
+  expandTechnologies: PropTypes.bool,
+  children: PropTypes.node
 };

@@ -3,6 +3,7 @@ import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import React, { useState } from 'react';
 import projects from '../projects';
 import ProjectCard from './ProjectCard';
+import SkillsList from './SkillsList';
 
 export default function MainPageGrid() {
   const [selectedId, setSelectedId] = useState(null);
@@ -14,18 +15,28 @@ export default function MainPageGrid() {
           <ProjectCard
             {...proj}
             key={i}
-            framerMotionProps={{ onClick: () => setSelectedId(proj.id), layoutId: proj.id }}
+            framerMotionProps={{
+              onClick: (e) => {
+                if (!e.target.classList.contains('default-btn')) setSelectedId(proj.id);
+              },
+              layoutId: proj.id
+            }}
           />
         ))}
       </section>
       <AnimatePresence>
         {selectedId && (
-          <Backdrop open={open} onClick={() => setSelectedId(null)} sx={{zIndex: 6}} >
+          <Backdrop open={open} onClick={() => setSelectedId(null)} sx={{ zIndex: 6 }}>
             <div className="project-card-open">
               <ProjectCard
                 {...projects[selectedId - 1]}
                 framerMotionProps={{ layoutId: selectedId }}
-              />
+                expandTechnologies>
+                <section className="homepage-skills">
+                  <h2>Skills</h2>
+                  <SkillsList index={selectedId - 1} />
+                </section>
+              </ProjectCard>
             </div>
           </Backdrop>
         )}

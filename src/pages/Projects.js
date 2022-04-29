@@ -40,7 +40,7 @@ export default function Projects() {
       </div>
       <section className={`projects-section ${viewMode}`}>
         {projects.map((proj, i) => (
-          <ProjectCard {...proj} showTechnologies={viewMode === 'grid'} key={i} />
+          <ProjectCard {...proj} expandTechnologies={viewMode === 'grid'} key={i} />
         ))}
       </section>
       <ProjectSkills />
