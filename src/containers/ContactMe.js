@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import useOnScreen from '../hooks/useOnScreen';
 import { TextField } from '@mui/material';
-import '../styles/ContactMe.css';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+import '../styles/ContactMe.css';
 
 export default function ContactMe() {
   const ref = useRef();
@@ -39,9 +40,27 @@ export default function ContactMe() {
     emailjs.send('service_vwfp2nh', 'template_y82qdu5', templateParams, 'PDtV6JmAww644P-M6').then(
       () => {
         resetForm();
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'E-mail enviado com sucesso!',
+          showConfirmButton: false,
+          timer: 2500,
+          background: 'var(--color-bg)',
+          color: 'var(--color-primary)',
+        })
+
       },
-      (error) => {
-        console.log(error.text);
+      () => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: 'Ocorreu um erro ao enviar o e-mail',
+          showConfirmButton: false,
+          timer: 2500,
+          background: 'var(--color-bg)',
+          color: 'var(--color-primary)',
+        })
       }
     );
   };
@@ -76,7 +95,7 @@ export default function ContactMe() {
           rows={4}
           {...inputFieldProps}
         />
-        <button type="submit" className="default-btn" onClick={sendEmail}>
+        <button type="submit" className="default-btn" onClick={sendEmail} disabled={!email || !name || !message}>
           Enviar
         </button>
       </form>
