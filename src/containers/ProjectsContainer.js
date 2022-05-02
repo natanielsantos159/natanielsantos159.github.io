@@ -35,9 +35,9 @@ export default function ProjectsContainer() {
             padding="10px"
             sx={{ height: '50px', margin: '5px' }}
             onClick={switchMode}>
-            <img src={carouselIcon} style={{ height: '32px' }} />
+            <img src={carouselIcon} style={{ height: '27px' }} />
           </IconButton>
-          {viewMode === 'carousel' && <motion.div className="tab" layoutId="viewModeTab" />}
+          {viewMode === 'carousel' && <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />}
         </div>
 
         <div className="icon-wrapper">
@@ -46,9 +46,9 @@ export default function ProjectsContainer() {
             padding="10px"
             sx={{ height: '50px', margin: '5px' }}
             onClick={switchMode}>
-            <img src={gridIcon} style={{ height: '32px' }} />
+            <img src={gridIcon} style={{ height: '27px' }} />
           </IconButton>
-          {viewMode === 'grid' && <motion.div className="tab" layoutId="viewModeTab" />}
+          {viewMode === 'grid' && <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />}
         </div>
       </div>
 
