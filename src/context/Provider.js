@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import AppContext from './AppContext';
 
 export default function Provider({ children }) {
@@ -9,6 +9,7 @@ export default function Provider({ children }) {
   const [isFirstTimeTip, setIsFirstTimeTip] = useState(true);
   const [viewMode, setViewMode] = useState('grid');
   const [onScreen, setOnScreen] = useState('');
+  const isScrollingRef = useRef(false);
 
   const contextValue = {
     showSkills,
@@ -22,7 +23,8 @@ export default function Provider({ children }) {
     viewMode,
     setViewMode,
     onScreen,
-    setOnScreen
+    setOnScreen,
+    isScrollingRef,
   };
 
   return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;

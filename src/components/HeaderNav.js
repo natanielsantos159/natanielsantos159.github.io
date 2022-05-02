@@ -7,13 +7,12 @@ import { motion } from 'framer-motion';
 
 export default function HeaderNav({ children, img, imgHover, name, link }) {
   const [hover, setHover] = useState(false);
-  const { onScreen, setOnScreen } = useContext(AppContext);
+  const { onScreen, setOnScreen, isScrollingRef } = useContext(AppContext);
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   const handleScroll = () => {
     setOnScreen(name);
-
     // se já estiver na homepage e clicou no icone de homepage
     if (pathname === '/' && link === '/') {
       window.scrollTo(0, 0);
@@ -26,7 +25,12 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
 
     if (link !== '/') {
       // delay para esperar a pagina carregar
-      setTimeout(() => scroller.scrollTo(link, { offset: -60 }), delay);
+      setTimeout(() => {
+        isScrollingRef.current = true
+        scroller.scrollTo(link, { offset: -60 })
+        setTimeout(() => isScrollingRef.current = false, 700)
+
+      }, delay);
     }
   };
   return (
