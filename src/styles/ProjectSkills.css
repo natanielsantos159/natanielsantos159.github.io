@@ -9,7 +9,7 @@
   padding: 6vh 6vh 1vh;
   font-size: 18px;
   overflow-y: hidden;
-  z-index: 4;
+  z-index: 10;
 }
 
 ul.skills-list {
@@ -27,7 +27,7 @@ ul.skills-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 4;
+  z-index: 9;
 }
 
 .close-btn {

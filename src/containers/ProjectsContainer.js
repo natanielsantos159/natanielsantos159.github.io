@@ -10,18 +10,19 @@ import carouselIcon from '../images/carousel.png';
 import { motion } from 'framer-motion';
 import MainPageGrid from '../components/MainPageGrid';
 import AppContext from '../context/AppContext';
-import '../styles/ProjectsContainer.css';
 import DefaultButton from '../components/DefaultButton';
+import ProjectSkills from '../components/ProjectSkills';
+import '../styles/ProjectsContainer.css';
 
 export default function ProjectsContainer() {
   const ref = useRef();
   useOnScreen(ref, '-250px', 'projects');
-  const {viewMode, setViewMode} = useContext(AppContext);
+  const { viewMode, setViewMode } = useContext(AppContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     setViewMode('carousel');
-  },[]);
+  }, []);
 
   const switchMode = () => setViewMode(viewMode === 'carousel' ? 'grid' : 'carousel');
 
@@ -37,7 +38,9 @@ export default function ProjectsContainer() {
             onClick={switchMode}>
             <img src={carouselIcon} style={{ height: '27px' }} />
           </IconButton>
-          {viewMode === 'carousel' && <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />}
+          {viewMode === 'carousel' && (
+            <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+          )}
         </div>
 
         <div className="icon-wrapper">
@@ -48,7 +51,9 @@ export default function ProjectsContainer() {
             onClick={switchMode}>
             <img src={gridIcon} style={{ height: '27px' }} />
           </IconButton>
-          {viewMode === 'grid' && <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />}
+          {viewMode === 'grid' && (
+            <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+          )}
         </div>
       </div>
 
@@ -60,7 +65,9 @@ export default function ProjectsContainer() {
         icon={seeMoreIcon}
         iconHover={seeMoreHover}
         name="Ver Todos os Projetos"
-        />
+      />
+
+      <ProjectSkills />
     </section>
   );
 }

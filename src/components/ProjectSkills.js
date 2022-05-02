@@ -66,7 +66,7 @@ export default function ProjectSkills() {
 
   return (
     <AnimatePresence initial={false} exitBeforeEnter={true} onExitComplete={() => null}>
-      {show && id && viewMode === 'grid' ? (
+      {show && id && viewMode !== 'list' ? (
         <div className="backdrop" onClick={closeModal}>
           <motion.div
             className="project-skills"

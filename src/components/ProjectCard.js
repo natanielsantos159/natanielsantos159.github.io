@@ -28,6 +28,7 @@ export default function ProjectCard({
   framerMotionProps = {},
   expandTechnologies = false,
   animateCrossfade = false,
+  showSkillsBtn = true,
   children,
 }) {
   const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
@@ -47,11 +48,11 @@ export default function ProjectCard({
     setIdSkill(id);
     if (!showSkills) setShowSkills(true);
     if (showSkills && idSkill === id) setShowSkills(false);
-    if (viewMode === 'grid') document.body.style.overflow = 'hidden';
+    if (viewMode === 'grid' || viewMode === 'carousel') document.body.style.overflow = 'hidden';
   };
 
   const getOnClickProps = () => {
-    if (viewMode === 'grid') return { onClick: showSkillsOnClick };
+    if (viewMode === 'grid' || viewMode === 'carousel') return { onClick: showSkillsOnClick };
     if (viewMode === 'list') return { ...getToggleProps() };
   };
 
@@ -59,7 +60,9 @@ export default function ProjectCard({
     <motion.div
       className={`project-card ${carouselClass ? carouselClass : ''}`}
       {...framerMotionProps}>
-      <motion.div className="project-card-content" layoutId={animateCrossfade && `project-card-content-${id}`}>
+      <motion.div
+        className="project-card-content"
+        layoutId={animateCrossfade && `project-card-content-${id}`}>
         <motion.div className="image-wrapper" layoutId={animateCrossfade && `image-wrapper-${id}`}>
           <a href={website || repository} target="_blank" rel="noreferrer">
             <img
@@ -69,12 +72,14 @@ export default function ProjectCard({
             />
           </a>
         </motion.div>
-        <motion.div className="project-info-wrapper" layoutId={animateCrossfade && `project-info-wrapper-${id}`}>
+        <motion.div
+          className="project-info-wrapper"
+          layoutId={animateCrossfade && `project-info-wrapper-${id}`}>
           <div className="title-and-techs-wrapper">
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
             </a>
-            {(expandTechnologies === false) && (
+            {expandTechnologies === false && (
               <TechnologyBadgesContainer technologies={technologies} amount={4} />
             )}
           </div>
@@ -85,7 +90,7 @@ export default function ProjectCard({
               </div>
             ))}
           </div>
-          {(expandTechnologies) && (
+          {expandTechnologies && (
             <TechnologyBadgesContainer technologies={technologies} expandTechnologies />
           )}
           <div className="description-wrapper">
@@ -110,13 +115,15 @@ export default function ProjectCard({
             />
           )}
 
-          <DefaultButton
-            name="Skills"
-            className="btn-skills"
-            icon={skillsIcon}
-            iconHover={skillsHover}
-            {...getOnClickProps()}
-          />
+          {showSkillsBtn && (
+            <DefaultButton
+              name="Skills"
+              className="btn-skills"
+              icon={skillsIcon}
+              iconHover={skillsHover}
+              {...getOnClickProps()}
+            />
+          )}
         </section>
       </motion.div>
       {viewMode === 'list' && (
@@ -125,7 +132,7 @@ export default function ProjectCard({
           <SkillsList index={id - 1} />
         </section>
       )}
-      { children }
+      {children}
     </motion.div>
   );
 }
@@ -143,5 +150,6 @@ ProjectCard.propTypes = {
   framerMotionProps: PropTypes.object,
   expandTechnologies: PropTypes.bool,
   animateCrossfade: PropTypes.bool,
+  showSkillsBtn: PropTypes.bool,
   children: PropTypes.node
 };
