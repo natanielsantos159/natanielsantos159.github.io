@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-export default function ProjectCardButton({
+export default function DefaultButton({
   href = false,
   icon,
   iconHover,
   name,
-  className,
-  ...onClickProps
+  className = '',
+  ...props
 }) {
   const [hover, setHover] = useState(false);
 
@@ -19,9 +19,8 @@ export default function ProjectCardButton({
         target="_blank"
         rel="noreferrer"
         onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <img src={hover ? iconHover : icon} alt={name} />
+        onMouseLeave={() => setHover(false)}>
+        {icon && <img src={hover ? iconHover : icon} alt={name} />}
         {name}
       </a>
     );
@@ -31,21 +30,20 @@ export default function ProjectCardButton({
     return (
       <button
         className={`${className} default-btn`}
-        {...onClickProps}
+        {...props}
         onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      >
-        <img src={hover ? iconHover : icon} alt={name} />
+        onMouseLeave={() => setHover(false)}>
+        {icon && <img src={hover ? iconHover : icon} alt={name} />}
         {name}
       </button>
     );
   }
 }
 
-ProjectCardButton.propTypes = {
-  className: PropTypes.string.isRequired,
+DefaultButton.propTypes = {
+  className: PropTypes.string,
   href: PropTypes.bool,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   iconHover: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
 };

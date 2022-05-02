@@ -3,6 +3,7 @@ import useOnScreen from '../hooks/useOnScreen';
 import { TextField } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import DefaultButton from '../components/DefaultButton';
 import '../styles/ContactMe.css';
 
 export default function ContactMe() {
@@ -35,8 +36,8 @@ export default function ContactMe() {
     const templateParams = {
       from_email: email,
       from_name: name,
-      message,
-    }
+      message
+    };
     emailjs.send('service_vwfp2nh', 'template_y82qdu5', templateParams, 'PDtV6JmAww644P-M6').then(
       () => {
         resetForm();
@@ -47,9 +48,8 @@ export default function ContactMe() {
           showConfirmButton: false,
           timer: 2500,
           background: 'var(--color-bg)',
-          color: 'var(--color-primary)',
-        })
-
+          color: 'var(--color-primary)'
+        });
       },
       () => {
         Swal.fire({
@@ -59,8 +59,8 @@ export default function ContactMe() {
           showConfirmButton: false,
           timer: 2500,
           background: 'var(--color-bg)',
-          color: 'var(--color-primary)',
-        })
+          color: 'var(--color-primary)'
+        });
       }
     );
   };
@@ -95,9 +95,12 @@ export default function ContactMe() {
           rows={4}
           {...inputFieldProps}
         />
-        <button type="submit" className="default-btn" onClick={sendEmail} disabled={!email || !name || !message}>
-          Enviar
-        </button>
+        <DefaultButton
+          type="submit"
+          onClick={sendEmail}
+          disabled={!email || !name || !message}
+          name="Enviar"
+        />
       </form>
     </section>
   );

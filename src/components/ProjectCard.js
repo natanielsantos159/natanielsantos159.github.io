@@ -11,7 +11,7 @@ import defaultProjectImage from '../images/projectimage.png';
 import SkillsList from './SkillsList';
 import useCollapse from 'react-collapsed';
 import '../styles/Project.css';
-import ProjectCardButton from './ProjectCardButton';
+import DefaultButton from './DefaultButton';
 import TechnologyBadgesContainer from './TechnologyBadgesContainer';
 import { motion } from 'framer-motion';
 
@@ -92,7 +92,7 @@ export default function ProjectCard({
           </div>
         </div>
         <section className="btn-wrapper">
-          <ProjectCardButton
+          <DefaultButton
             name="GitHub"
             href={repository}
             className="btn-repository"
@@ -100,7 +100,7 @@ export default function ProjectCard({
             iconHover={githubHover}
           />
           {website && (
-            <ProjectCardButton
+            <DefaultButton
               name="Website"
               href={website}
               className="btn-website"
@@ -109,7 +109,7 @@ export default function ProjectCard({
             />
           )}
 
-          <ProjectCardButton
+          <DefaultButton
             name="Skills"
             className="btn-skills"
             icon={skillsIcon}

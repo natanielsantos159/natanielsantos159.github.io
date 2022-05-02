@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import seeMoreIcon from '../images/see-more.png';
 import seeMoreHover from '../images/see-more-dark.png';
 import useOnScreen from '../hooks/useOnScreen';
-import '../styles/ProjectsContainer.css';
 import Carousel from '../components/Carousel';
 import { IconButton } from '@mui/material';
 import gridIcon from '../images/grid-icon.png';
@@ -11,12 +10,14 @@ import carouselIcon from '../images/carousel.png';
 import { motion } from 'framer-motion';
 import MainPageGrid from '../components/MainPageGrid';
 import AppContext from '../context/AppContext';
+import '../styles/ProjectsContainer.css';
+import DefaultButton from '../components/DefaultButton';
 
 export default function ProjectsContainer() {
   const ref = useRef();
   useOnScreen(ref, '-250px', 'projects');
-  const [seeMoreBtnHover, setSeeMoreBtnHover] = useState(false);
   const {viewMode, setViewMode} = useContext(AppContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setViewMode('carousel');
@@ -53,14 +54,13 @@ export default function ProjectsContainer() {
 
       {viewMode === 'grid' ? <MainPageGrid /> : <Carousel />}
 
-      <Link
-        to="/projects"
-        className="default-btn btn-see-more"
-        onMouseEnter={() => setSeeMoreBtnHover(true)}
-        onMouseLeave={() => setSeeMoreBtnHover(false)}>
-        <img src={seeMoreBtnHover ? seeMoreHover : seeMoreIcon} alt="Ver Todos os Projetos" />
-        Ver Todos os Projetos
-      </Link>
+      <DefaultButton
+        onClick={() => navigate('/projects')}
+        className="btn-see-more"
+        icon={seeMoreIcon}
+        iconHover={seeMoreHover}
+        name="Ver Todos os Projetos"
+        />
     </section>
   );
 }

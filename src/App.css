@@ -85,13 +85,14 @@ summary {
   margin-right: 5px;
   transition: ease 0.4s all;
   color: var(--color-white);
+  width: max-content;
 }
 
 .default-btn:hover {
   filter: brightness(1.15);
   transform: translateY(-7px);
   background: var(--color-primary);
-  color: var(--color-text-dark);
+  color: var(--color-bg);
   box-shadow: 0 0 19px 0px var(--color-primary-variant);
 }
 
