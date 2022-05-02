@@ -94,7 +94,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/recipes-app-project',
     website: 'https://natanielsantos159.github.io/recipes-app-project/',
     tags: ['Módulo de Front-End', 'Projeto em Grupo'],
-    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
+    technologies: ['React', 'Javascript', 'CSS3'],
     skills: [
       'Utilizar `Redux` para gerenciar estado',
       'Utilizar a biblioteca `React-Redux`',

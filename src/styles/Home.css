@@ -19,5 +19,6 @@
 
 .homepage-skills {
   padding: 1vw 2vw;
-  min-width: 40vw;
+  max-width: 40vw;
+  min-width: 400px;
 }
