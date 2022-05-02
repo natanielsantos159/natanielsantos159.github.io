@@ -21,17 +21,19 @@ export default function MainPageGrid() {
               },
               layoutId: proj.id
             }}
+            animateCrossfade
           />
         ))}
       </section>
       <AnimatePresence>
         {selectedId && (
-          <Backdrop open={open} onClick={() => setSelectedId(null)} sx={{ zIndex: 6 }}>
+          <Backdrop open={open} onClick={() => setSelectedId(null)} sx={{ zIndex: 8 }}>
             <div className="project-card-open">
               <ProjectCard
                 {...projects[selectedId - 1]}
                 framerMotionProps={{ layoutId: selectedId }}
-                expandTechnologies>
+                expandTechnologies
+                animateCrossfade>
                 <section className="homepage-skills">
                   <h2>Skills</h2>
                   <SkillsList index={selectedId - 1} />

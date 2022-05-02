@@ -27,6 +27,7 @@ export default function ProjectCard({
   carouselClass,
   framerMotionProps = {},
   expandTechnologies = false,
+  animateCrossfade = false,
   children,
 }) {
   const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
@@ -58,8 +59,8 @@ export default function ProjectCard({
     <motion.div
       className={`project-card ${carouselClass ? carouselClass : ''}`}
       {...framerMotionProps}>
-      <div className="project-card-content">
-        <div className="image-wrapper">
+      <motion.div className="project-card-content" layoutId={animateCrossfade && `project-card-content-${id}`}>
+        <motion.div className="image-wrapper" layoutId={animateCrossfade && `image-wrapper-${id}`}>
           <a href={website || repository} target="_blank" rel="noreferrer">
             <img
               src={image ? image : defaultProjectImage}
@@ -67,8 +68,8 @@ export default function ProjectCard({
               className="project-image"
             />
           </a>
-        </div>
-        <div className="project-info-wrapper">
+        </motion.div>
+        <motion.div className="project-info-wrapper" layoutId={animateCrossfade && `project-info-wrapper-${id}`}>
           <div className="title-and-techs-wrapper">
             <a href={website || repository} target="_blank" rel="noreferrer">
               <h2 className="project-name">{name}</h2>
@@ -90,7 +91,7 @@ export default function ProjectCard({
           <div className="description-wrapper">
             <p className="project-description">{description}</p>
           </div>
-        </div>
+        </motion.div>
         <section className="btn-wrapper">
           <DefaultButton
             name="GitHub"
@@ -117,7 +118,7 @@ export default function ProjectCard({
             {...getOnClickProps()}
           />
         </section>
-      </div>
+      </motion.div>
       {viewMode === 'list' && (
         <section {...getCollapseProps()}>
           <h2>Skills</h2>
@@ -141,5 +142,6 @@ ProjectCard.propTypes = {
   carouselClass: PropTypes.string,
   framerMotionProps: PropTypes.object,
   expandTechnologies: PropTypes.bool,
+  animateCrossfade: PropTypes.bool,
   children: PropTypes.node
 };

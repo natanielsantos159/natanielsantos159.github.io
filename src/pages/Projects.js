@@ -38,11 +38,13 @@ export default function Projects() {
           <img src={viewMode === 'grid' ? listIcon : gridIcon} alt={viewMode} />
         </button>
       </div>
+
       <section className={`projects-section ${viewMode}`}>
         {projects.map((proj, i) => (
           <ProjectCard {...proj} expandTechnologies={viewMode === 'grid'} key={i} />
         ))}
       </section>
+
       <ProjectSkills />
     </main>
   );
