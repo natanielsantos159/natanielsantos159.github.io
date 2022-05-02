@@ -8,11 +8,13 @@ import '../styles/Home.css';
 import ScrollToTop from '../components/ScrollToTop';
 import Technologies from '../containers/Technologies';
 import Footer from '../containers/Footer';
+import Welcome from '../containers/Welcome';
 
 export default function Home() {
   return (
     <main className="homepage">
       <ScrollToTop />
+      <Welcome />
       <AboutMe />
 
       <Element name="technologies-container">
