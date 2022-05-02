@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { motion } from 'framer-motion';
+import useOnScreen from '../hooks/useOnScreen';
 import '../styles/Welcome.css';
 
 export default function Welcome() {
+  const ref = useRef();
+  useOnScreen(ref, '-250px', 'welcome');
+
   return (
-    <section className="welcome-container">
+    <section className="welcome-container" ref={ref}>
       <div className="typewriter">
         <h1>Bem-vindo(a) ao meu portifólio!</h1>
       </div>

@@ -9,6 +9,8 @@ import contactIcon from '../images/contact.png';
 import contactHover from '../images/contact-hover.png';
 import technologiesIcon from '../images/technologies.png';
 import technologiesHover from '../images/technologies-hover.png';
+import aboutMeIcon from '../images/about.png';
+import aboutMeHover from '../images/about-hover.png';
 
 import '../styles/Header.css';
 
@@ -25,8 +27,16 @@ export default function Header() {
     <header className={scrolled && 'header-scrolled'}>
       <h1>Nataniel Santos</h1>
       <nav className="header-navs">
-        <HeaderNav name="home" link="/" img={homeIcon} imgHover={homeHover}>
+        <HeaderNav name="welcome" link="/" img={homeIcon} imgHover={homeHover}>
           Início
+        </HeaderNav>
+        <HeaderNav
+          name="about-me"
+          link="about-me-container"
+          img={aboutMeIcon}
+          imgHover={aboutMeHover}
+        >
+          Sobre
         </HeaderNav>
         <HeaderNav
           name="technologies"

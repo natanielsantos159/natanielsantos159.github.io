@@ -9,7 +9,7 @@ import DefaultButton from '../components/DefaultButton';
 
 export default function AboutMe() {
   const ref = useRef();
-  useOnScreen(ref, '-250px', 'home');
+  useOnScreen(ref, '-250px', 'about-me');
 
   return (
     <div className="about-me-container" ref={ref}>
