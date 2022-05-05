@@ -3,12 +3,14 @@ import ProjectCard from '../components/ProjectCard';
 import AppContext from '../context/AppContext';
 import projects from '../projects';
 
-import gridIcon from '../images/grid.png';
-import listIcon from '../images/list.png';
+import gridIcon from '../images/grid-icon.png';
+import listIcon from '../images/list-icon.png';
 import ProjectSkills from '../components/ProjectSkills';
 import ScrollToTop from '../components/ScrollToTop';
 import Checkbox from '../components/Checkbox';
 import '../styles/Projects.css';
+import { IconButton } from '@mui/material';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
   const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode, setOnScreen } =
@@ -34,9 +36,33 @@ export default function Projects() {
             Expandir todas as skills
           </Checkbox>
         )}
-        <button className="switch-view-mode-btn" onClick={switchViewMode}>
-          <img src={viewMode === 'grid' ? listIcon : gridIcon} alt={viewMode} />
-        </button>
+        <div className="switch-mode-btns">
+          <div className="icon-wrapper">
+            <IconButton
+              height="small"
+              padding="10px"
+              sx={{ height: '50px', margin: '5px' }}
+              onClick={switchViewMode}>
+              <img src={gridIcon} style={{ height: '27px' }} />
+            </IconButton>
+            {viewMode === 'grid' && (
+              <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+            )}
+          </div>
+
+          <div className="icon-wrapper">
+            <IconButton
+              height="medium"
+              padding="10px"
+              sx={{ height: '50px', margin: '5px' }}
+              onClick={switchViewMode}>
+              <img src={listIcon} style={{ height: '27px' }} />
+            </IconButton>
+            {viewMode === 'list' && (
+              <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+            )}
+          </div>
+        </div>
       </div>
 
       <section className={`projects-section ${viewMode}`}>

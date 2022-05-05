@@ -38,11 +38,6 @@
   gap: 10px;
 }
 
-.switch-view-mode-btn {
-  background: transparent;
-  height: 30px;
-}
-
-.switch-view-mode-btn img {
-  height: 30px;
+.projects-page .switch-mode-btns {
+  position: unset;
 }
