@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import DefaultButton from '../components/DefaultButton';
 import '../styles/ContactMe.css';
+import TechnologyCard from '../components/TechnologyCard';
 
 export default function ContactMe() {
   const ref = useRef();
@@ -68,40 +69,50 @@ export default function ContactMe() {
   return (
     <section className="contact-me-section" id="contact-me-section" ref={ref}>
       <h1>Entre em contato:</h1>
-      <form className="send-email-section" ref={form}>
-        <TextField
-          label="Nome"
-          value={name}
-          onChange={({ target: { value } }) => setName(value)}
-          name="name"
-          variant="filled"
-          {...inputFieldProps}
-        />
-        <TextField
-          label="E-mail"
-          value={email}
-          onChange={({ target: { value } }) => setEmail(value)}
-          name="email"
-          variant="filled"
-          {...inputFieldProps}
-        />
-        <TextField
-          label="Mensagem"
-          value={message}
-          variant="filled"
-          onChange={({ target: { value } }) => setMessage(value)}
-          name="message"
-          multiline
-          rows={4}
-          {...inputFieldProps}
-        />
-        <DefaultButton
-          type="submit"
-          onClick={sendEmail}
-          disabled={!email || !name || !message}
-          name="Enviar"
-        />
-      </form>
+      <div className="contact-me-content">
+        <form className="send-email-section" ref={form}>
+          <TextField
+            label="Nome"
+            value={name}
+            onChange={({ target: { value } }) => setName(value)}
+            name="name"
+            variant="filled"
+            {...inputFieldProps}
+          />
+          <TextField
+            label="E-mail"
+            value={email}
+            onChange={({ target: { value } }) => setEmail(value)}
+            name="email"
+            variant="filled"
+            {...inputFieldProps}
+          />
+          <TextField
+            label="Mensagem"
+            value={message}
+            variant="filled"
+            onChange={({ target: { value } }) => setMessage(value)}
+            name="message"
+            multiline
+            rows={4}
+            {...inputFieldProps}
+          />
+          <DefaultButton
+            type="submit"
+            onClick={sendEmail}
+            disabled={!email || !name || !message}
+            name="Enviar"
+          />
+        </form>
+        <section className="contact-links-section">
+          <a href="https://github.com/natanielsantos159" target="_blank" rel="noreferrer">
+            <TechnologyCard name="GitHub" iconClass="devicon-github-original" />
+          </a>
+          <a href="https://www.linkedin.com/in/nataniel-santos/" target="_blank" rel="noreferrer">
+            <TechnologyCard name="LinkedIn" iconClass="devicon-linkedin-plain" />
+          </a>
+        </section>
+      </div>
     </section>
   );
 }

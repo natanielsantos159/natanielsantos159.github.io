@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.technologies-wrapper i {
+.technology-card i {
   font-size: 6.5rem;
   color: var(--color-primary);
   height: auto;

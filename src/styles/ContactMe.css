@@ -40,3 +40,25 @@
 .send-email-section .default-btn {
   width: min-content;
 }
+
+.contact-links-section {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-me-content {
+  display: flex;
+}
+
+.contact-links-section .technology-card {
+  height: 60px;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px;
+}
+
+.contact-links-section .technology-card i {
+  font-size: 60px;
+}
