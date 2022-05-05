@@ -46,6 +46,15 @@ export default function Carousel() {
     style: { transition: '0.3s left, 0.3s transform, 0.4s filter' }
   };
 
+  const buttonStyles = { 
+    position: 'absolute',
+    top: '50%',
+    zIndex: 6,
+    transform: 'translateY(-50%)',
+    height: '72vh',
+    minWidth: '20vw',
+  }
+
   return (
     <motion.section className="carrousel-mode">
       {carouselProjects.map((proj, i) => (
@@ -57,11 +66,11 @@ export default function Carousel() {
           expandTechnologies
         />
       ))}
-      <IconButton height="small" sx={{ position: 'absolute', top: '50%', left: '20%', zIndex: 6 }}>
-        <img src={arrowLeftIcon} onClick={nextItem} />
+      <IconButton sx={ { ...buttonStyles, left: '10%'}} onClick={nextItem}>
+        <img src={arrowLeftIcon} />
       </IconButton>
-      <IconButton size="small" sx={{ position: 'absolute', top: '50%', left: '80%', zIndex: 6 }}>
-        <img src={arrowRightIcon} onClick={previousItem} />
+      <IconButton sx={{ ...buttonStyles, right: '10%'}} onClick={previousItem}>
+        <img src={arrowRightIcon} />
       </IconButton>
     </motion.section>
   );
