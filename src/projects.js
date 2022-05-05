@@ -114,7 +114,7 @@ const projects = [
       'https://joaoreisjpk-portfolio.vercel.app/_next/static/images/ChoqueFlix-b84ac8a612b3da3489472a646f18646c.png',
     repository: 'https://github.com/joaoreisjpk/ChoqueFlix--JS-CSS-Vanilla',
     website: 'https://choqueflix.vercel.app/',
-    tags: ['Módulo de Fundamentos', 'Projeto em Grupo'],
+    tags: ['Projeto Pessoal', 'Projeto em Grupo'],
     technologies: ['Javascript', 'HTML5', 'CSS3'],
     skills: [
       'Manipular elementos do DOM utitilizando `Javascript`',
