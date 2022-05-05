@@ -16,8 +16,9 @@ export default function MainPageGrid() {
             {...proj}
             key={i}
             framerMotionProps={{
-              onClick: (e) => {
-                if (!e.target.classList.contains('default-btn')) setSelectedId(proj.id);
+              onClick: ({ target: { classList }}) => {
+                if (classList.contains('default-btn') && !classList.contains('btn-skills')) return;
+                setSelectedId(proj.id);
               },
               layoutId: proj.id
             }}

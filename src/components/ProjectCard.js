@@ -52,6 +52,7 @@ export default function ProjectCard({
   };
 
   const getOnClickProps = () => {
+    if (animateCrossfade) return { onClick: framerMotionProps.onClick }
     if (viewMode === 'grid' || viewMode === 'carousel') return { onClick: showSkillsOnClick };
     if (viewMode === 'list') return { ...getToggleProps() };
   };
