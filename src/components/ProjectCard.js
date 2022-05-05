@@ -64,21 +64,17 @@ export default function ProjectCard({
         className="project-card-content"
         layoutId={animateCrossfade && `project-card-content-${id}`}>
         <motion.div className="image-wrapper" layoutId={animateCrossfade && `image-wrapper-${id}`}>
-          <a href={website || repository} target="_blank" rel="noreferrer">
-            <img
-              src={image ? image : defaultProjectImage}
-              alt={`Imagem do Projeto ${name}`}
-              className="project-image"
-            />
-          </a>
+          <img
+            src={image ? image : defaultProjectImage}
+            alt={`Imagem do Projeto ${name}`}
+            className="project-image"
+          />
         </motion.div>
         <motion.div
           className="project-info-wrapper"
           layoutId={animateCrossfade && `project-info-wrapper-${id}`}>
           <div className="title-and-techs-wrapper">
-            <a href={website || repository} target="_blank" rel="noreferrer">
-              <h2 className="project-name">{name}</h2>
-            </a>
+            <h2 className="project-name">{name}</h2>
             {expandTechnologies === false && (
               <TechnologyBadgesContainer technologies={technologies} amount={4} />
             )}
