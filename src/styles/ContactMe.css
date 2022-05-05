@@ -1,9 +1,10 @@
-.contact-me-section, .contact-container {
+.contact-me-section {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
+  padding: 10vh;
 }
 
 .contact-me-btns {
