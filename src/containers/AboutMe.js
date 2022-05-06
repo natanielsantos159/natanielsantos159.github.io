@@ -24,7 +24,7 @@ export default function AboutMe() {
             <br/>
             <br/>
             Nos últimos 12 meses tenho aperfeiçoado minhas capacidades, tanto Hard Skills quanto Soft Skills. 
-            Ao longo de 3 módulos(Fundamentos, Front-end e Back-end), densenvolvi mais de <a href="https://github.com/natanielsantos159?tab=repositories">32 projetos</a> na Trybe até o momento. 
+            Ao longo de 3 módulos(Fundamentos, Front-end e Back-end), desenvolvi mais de <a href="https://github.com/natanielsantos159?tab=repositories">32 projetos</a> na Trybe até o momento. 
             Estou finalizando o módulo de Back-end e entrando no módulo de Ciência da Computação e estou em busca da minha primeira oportunidade como desenvolvedor Full Stack Jr.
           </p>
           <DefaultButton

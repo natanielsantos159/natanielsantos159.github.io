@@ -11,7 +11,7 @@ export default function Welcome() {
   return (
     <section className="welcome-container" ref={ref}>
       <div className="typewriter">
-        <h1>Bem-vindo(a) ao meu portifólio!</h1>
+        <h1>Bem-vindo(a) ao meu portfólio!</h1>
       </div>
       <motion.div
         initial={{ y: 0 }}

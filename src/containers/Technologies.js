@@ -14,7 +14,7 @@ export default function Technologies() {
     { name: 'Redux', iconClass: 'devicon-redux-plain' },
     { name: 'CSS3', iconClass: 'devicon-css3-plain' },
     { name: 'HTML5', iconClass: 'devicon-html5-plain' },
-    { name: 'Javascript', iconClass: 'devicon-javascript-plain' },
+    { name: 'JavaScript', iconClass: 'devicon-javascript-plain' },
     { name: 'Express', iconClass: 'devicon-express-original' },
     { name: 'Docker', iconClass: 'devicon-docker-plain' },
     { name: 'Sequelize', iconClass: 'devicon-sequelize-plain' },

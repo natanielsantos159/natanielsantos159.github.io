@@ -67,7 +67,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/trybetunes',
     website: 'https://natanielsantos159.github.io/trybetunes/',
     tags: ['Módulo de Front-End'],
-    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
+    technologies: ['React', 'Redux', 'JavaScript', 'CSS3'],
     skills: [
       'Fazer requisições e consumir dados vindos de uma `API`',
       'Utilizar os ciclos de vida de um componente React',
@@ -94,7 +94,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/recipes-app-project',
     website: 'https://natanielsantos159.github.io/recipes-app-project/',
     tags: ['Módulo de Front-End', 'Projeto em Grupo'],
-    technologies: ['React', 'Javascript', 'CSS3'],
+    technologies: ['React', 'JavaScript', 'CSS3'],
     skills: [
       'Utilizar `Redux` para gerenciar estado',
       'Utilizar a biblioteca `React-Redux`',
@@ -133,9 +133,9 @@ const projects = [
     repository: 'https://github.com/joaoreisjpk/ChoqueFlix--JS-CSS-Vanilla',
     website: 'https://choqueflix.vercel.app/',
     tags: ['Projeto Pessoal', 'Projeto em Grupo'],
-    technologies: ['Javascript', 'HTML5', 'CSS3'],
+    technologies: ['JavaScript', 'HTML5', 'CSS3'],
     skills: [
-      'Manipular elementos do DOM utitilizando `Javascript`',
+      'Manipular elementos do DOM utitilizando `JavaScript`',
       'Consumir APIs',
       'Salvar informações no LocalStorage',
       'Criar animations utilizando CSS3',
@@ -222,7 +222,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/project-movie-cards-library',
     website: 'https://natanielsantos159.github.io/project-movie-cards-library',
     tags: ['Módulo de Front-End'],
-    technologies: ['React', 'Javascript', 'CSS3'],
+    technologies: ['React', 'JavaScript', 'CSS3'],
     skills: [
       'Saber a melhor forma para instalar um gerenciador de pacotes',
       'Inicializar um projeto em `React`',
@@ -248,8 +248,8 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/todo-list-project',
     website: 'https://natanielsantos159.github.io/todo-list-project',
     tags: ['Módulo de Fundamentos'],
-    technologies: ['Javascript', 'CSS3'],
-    skills: ['Manipular `CSS`', 'Manipular `Javascript`']
+    technologies: ['JavaScript', 'CSS3'],
+    skills: ['Manipular `CSS`', 'Manipular `JavaScript`']
   },
   {
     id: 14,
@@ -260,7 +260,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/pixels-art-project',
     website: 'https://natanielsantos159.github.io/pixels-art-project/',
     tags: ['Módulo de Fundamentos'],
-    skills: ['Manipular o `DOM`', 'Manipular o `Javascript`'],
+    skills: ['Manipular o `DOM`', 'Manipular o `JavaScript`'],
     technologies: ['Javascript', 'CSS3']
   },
 ];
