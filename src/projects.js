@@ -107,6 +107,24 @@ const projects = [
   },
   {
     id: 6,
+    name: 'Trybe Futebol Club',
+    description: `O TFC é um site informativo sobre partidas e classificações de futebol! ⚽`,
+    image:
+      'https://github.com/natanielsantos159/trybe-futebol-clube/raw/nataniel-santos-trybe-futebol-clube/front-example.png?raw=true',
+    repository: 'https://github.com/natanielsantos159/trybe-futebol-clube',
+    tags: ['Módulo de Back-End'],
+    technologies: ['React', 'TypeScript', 'NodeJS', 'Express', 'Sequelize', 'MySQL', 'Docker'],
+    skills: [
+      'Realizar a dockerização dos apps, network, volume e compose',
+      'Modelar dados com `MySQL` através do `Sequelize`',
+      'Criar e associar tabelas usando `models` do `sequelize`',
+      'Construir uma `API REST` com endpoints para consumir os models criados',
+      'Fazer um `CRUD` utilizando `ORM`',
+    ]
+  },
+
+  {
+    id: 7,
     name: 'ChoqueFlix',
     description:
       'Um site baseado no design da Netflix com o tema do canal do youtube Choque de Cultura.',
@@ -125,28 +143,23 @@ const projects = [
     ]
   },
   {
-    id: 7,
-    name: 'Todo List',
-    description: 'Uma aplicação simples de lista de tarefas',
-    image:
-      'https://github.com/natanielsantos159/todo-list-project/raw/main/Captura%20de%20tela%20de%202021-12-22%2017-06-03.png',
-    repository: 'https://github.com/natanielsantos159/todo-list-project',
-    website: 'https://natanielsantos159.github.io/todo-list-project',
-    tags: ['Módulo de Fundamentos'],
-    technologies: ['Javascript', 'CSS3'],
-    skills: ['Manipular `CSS`', 'Manipular `Javascript`']
-  },
-  {
     id: 8,
-    name: 'Pixels Art',
-    description: 'App simples pra desenhar pixel art',
-    image:
-      'https://github.com/natanielsantos159/pixels-art-project/blob/nataniel-santos-project-pixels-art/Captura%20de%20tela%20de%202022-01-17%2014-43-46.png?raw=true',
-    repository: 'https://github.com/natanielsantos159/pixels-art-project',
-    website: 'https://natanielsantos159.github.io/pixels-art-project/',
-    tags: ['Módulo de Fundamentos'],
-    skills: ['Manipular o `DOM`', 'Manipular o `Javascript`'],
-    technologies: ['Javascript', 'CSS3']
+    name: 'Store Manager',
+    description:
+      'Minha primeira API RESTful desenvolvida utilizando a arquitetura MSC! A API trata-se de um sistema de gerenciamento de vendas, onde será possível criar, visualizar, deletar e atualizar produtos e vendas',
+    repository: 'https://github.com/natanielsantos159/store-manager',
+    tags: ['Módulo de Back-End'],
+    technologies: ['NodeJS', 'Express', 'MySQL'],
+    skills: [
+      'Entender o funcionamento da camada de Model',
+      'Delegar responsabilidades específicas para essa camada',
+      'Conectar sua aplicação com diferentes bancos de dados',
+      'Estruturar uma aplicação em camadas',
+      'Delegar responsabilidades específicas para cada parte do app',
+      'Melhorar manutenibilidade e reusabilidade do código',
+      'Entender e aplicar os padrões REST',
+      'Escrever assinaturas para APIs intuitivas e facilmente entendíveis',
+    ]
   },
   {
     id: 9,
@@ -174,6 +187,33 @@ const projects = [
   },
   {
     id: 10,
+    name: 'Blogs API',
+    description:
+      'Uma API CRUD para um site de blogs, ultizando Express, Node.js e Sequelize',
+    repository: 'https://github.com/natanielsantos159/blogs-api',
+    tags: ['Módulo de Back-End'],
+    technologies: ['Express', 'NodeJS', 'Sequelize', 'MySQL'],
+    skills: [
+      'Criar e associar tabelas usando `models` do `sequelize`',
+      'Construir endpoints para consumir os models',
+      'Fazer um `CRUD` com o `ORM`',
+    ]
+  },
+  {
+    id: 11,
+    name: 'Trybe Smith',
+    description:
+      'Uma API CRUD de itens medievais em TypeScript.',
+    repository: 'https://github.com/natanielsantos159/trybe-smith',
+    tags: ['Módulo de Back-End'],
+    technologies: ['TypeScript', 'NodeJS', 'Express', 'MySQL'],
+    skills: [
+      'Declarar variáveis e funções com tipagens `Typescript`',
+      'Construir uma API Node Express utilizando o `Typescript`.',
+    ]
+  },
+  {
+    id: 12,
     name: 'Movie Card Library',
     description:
       'Projeto introdutório ao React do módulo de Front-end da Trybe. Foi desenvolvido ma biblioteca de cartões de filmes',
@@ -198,7 +238,31 @@ const projects = [
       'Utilizar `PropTypes` para checar que uma prop é um objeto de formato específico',
       'Utilizar `PropTypes` para garantir que uma prop é um array com elementos de um determinado tipo'
     ]
-  }
+  },
+  {
+    id: 13,
+    name: 'Todo List',
+    description: 'Uma aplicação simples de lista de tarefas',
+    image:
+      'https://github.com/natanielsantos159/todo-list-project/raw/main/Captura%20de%20tela%20de%202021-12-22%2017-06-03.png',
+    repository: 'https://github.com/natanielsantos159/todo-list-project',
+    website: 'https://natanielsantos159.github.io/todo-list-project',
+    tags: ['Módulo de Fundamentos'],
+    technologies: ['Javascript', 'CSS3'],
+    skills: ['Manipular `CSS`', 'Manipular `Javascript`']
+  },
+  {
+    id: 14,
+    name: 'Pixels Art',
+    description: 'App simples pra desenhar pixel art',
+    image:
+      'https://github.com/natanielsantos159/pixels-art-project/blob/nataniel-santos-project-pixels-art/Captura%20de%20tela%20de%202022-01-17%2014-43-46.png?raw=true',
+    repository: 'https://github.com/natanielsantos159/pixels-art-project',
+    website: 'https://natanielsantos159.github.io/pixels-art-project/',
+    tags: ['Módulo de Fundamentos'],
+    skills: ['Manipular o `DOM`', 'Manipular o `Javascript`'],
+    technologies: ['Javascript', 'CSS3']
+  },
 ];
 
 export default projects;
