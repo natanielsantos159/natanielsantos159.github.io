@@ -94,3 +94,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.projects-container-home-wrapper .project-card .image-wrapper {
+  min-width: 340px;
+}
