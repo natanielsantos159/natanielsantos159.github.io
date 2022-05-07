@@ -55,3 +55,32 @@
 .carrousel-mode .hidden {
   display: none;
 }
+
+@media screen and (max-width: 880px) {
+  .carrousel-mode .project-card {
+    width: 60vh;
+    font-size: 15px;
+  }
+  .carrousel-mode {
+    min-width: 75vw;
+  }
+
+  .carrousel-mode .project-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 20px;
+    max-height: 60px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+  }
+
+  .carrousel-mode .project-description:hover {
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    max-height: 300px;
+  }
+
+}

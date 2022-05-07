@@ -49,8 +49,9 @@ export default function Carousel() {
   const buttonStyles = { 
     position: 'absolute',
     top: '50%',
+    left: '50%',
+    right: '50%',
     zIndex: 6,
-    transform: 'translateY(-50%)',
     height: '72vh',
     minWidth: '20vw',
   }
@@ -66,10 +67,10 @@ export default function Carousel() {
           expandTechnologies
         />
       ))}
-      <IconButton sx={ { ...buttonStyles, left: '10%'}} onClick={nextItem}>
+      <IconButton sx={ { ...buttonStyles, transform: 'translate(-200%, -50%)'}} onClick={nextItem}>
         <img src={arrowLeftIcon} />
       </IconButton>
-      <IconButton sx={{ ...buttonStyles, right: '10%'}} onClick={previousItem}>
+      <IconButton sx={{ ...buttonStyles, transform: 'translate(100%, -50%)'}} onClick={previousItem}>
         <img src={arrowRightIcon} />
       </IconButton>
     </motion.section>
