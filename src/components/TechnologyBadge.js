@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, {  useState } from 'react';
 import '../styles/TechnologyBadge.css';
+import technologies from '../technologies';
 
 export default function TechnologyBadge({ tech, expandTechnologies, i }) {
   const [hover, setHover] = useState(false);
@@ -41,6 +42,7 @@ export default function TechnologyBadge({ tech, expandTechnologies, i }) {
 
   const trigger = expandTechnologies ? expandTechnologies : hover;
 
+  const techInfo = technologies.find(({name}) => name === tech) || {};
   return (
     <>
       <div
@@ -48,10 +50,8 @@ export default function TechnologyBadge({ tech, expandTechnologies, i }) {
         style={{ backgroundColor: `var(--color-${tech.toLowerCase()})` }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}>
-        <i
-          className={`devicon-${tech.toLowerCase()}-${
-            tech.toLowerCase() !== 'express' ? 'plain' : 'original'
-          }`}></i>
+        { techInfo.iconClass && <i className={techInfo.iconClass}></i> }
+        { techInfo.imageLink && <img src={techInfo.imageHover} />}
       </div>
       <AnimatePresence exitBeforeEnter={true} onExitComplete={() => null}>
         {trigger && (

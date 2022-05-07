@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import '../styles/TechnologyCard.css';
 
-export default function TechnologyCard({ iconClass, name, i }) {
+export default function TechnologyCard({ iconClass, imageLink, imageHover, name, i }) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -17,14 +17,17 @@ export default function TechnologyCard({ iconClass, name, i }) {
         scale: 1.05,
         transition: { duration: 0.1 }
       }}>
-      <i className={`${iconClass} ${hover ? 'colored' : ''}`}></i>
+      {iconClass && <i className={`${iconClass} ${hover ? 'colored' : ''}`}></i>}
+      {imageLink && <img src={hover ? imageHover : imageLink } alt={`${name} Icon`}/>}
       <h3>{name}</h3>
     </motion.div>
   );
 }
 
 TechnologyCard.propTypes = {
-  iconClass: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
+  imageLink: PropTypes.string,
+  imageHover: PropTypes.string,
   name: PropTypes.string.isRequired,
   i: PropTypes.number.isRequired,
 };
