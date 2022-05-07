@@ -1,13 +1,21 @@
 .technology-badge {
-  padding: 3px 4px;
+  padding: 5px 4px;
   border-radius: 4px;
   margin: 4px;
   width: 18px;
   z-index: 2;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .technology-badge i {
   text-shadow: 2px 2px 8px #00000080;
+}
+
+.technology-badge img {
+  height: 24px;
 }
 
 .tech-name-overlay {

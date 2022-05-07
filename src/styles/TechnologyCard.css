@@ -13,6 +13,11 @@
   cursor: pointer;
 }
 
+.technology-card img {
+  height: 100px;
+  transition: 0.4s all ease;
+}
+
 .technology-card i {
   font-size: 6.5rem;
   color: var(--color-primary);
