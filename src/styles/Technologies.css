@@ -17,3 +17,9 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 880px) {
+  .technologies-wrapper {
+    gap: 36px;
+  }
+}

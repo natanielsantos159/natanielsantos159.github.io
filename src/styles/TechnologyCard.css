@@ -30,3 +30,12 @@
   box-shadow: 0 0 19px 0px var(--color-primary-variant);
   transform: scale(1.03);
 }
+
+@media screen and (max-width: 880px) {
+  .technology-card {
+    padding: 9px 20px
+  }
+  .technology-card i {
+    font-size: 3.5rem;
+  }
+}
