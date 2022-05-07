@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -6,7 +7,9 @@ export default function Footer() {
     <footer>
       <span>Desenvolvido com 💙 por Nataniel Santos.</span>
       <span>Copyright © 2022, NMS - Todos os direitos reservados</span>
-      <a href="https://www.flaticon.com/free-icons/carousel" title="carousel icon">Flaticons</a>
+      <Link to="/credits">
+        Credits
+      </Link>
       <section className="footer-icons-section">
         <a href="https://github.com/natanielsantos159">
           <i className="devicon-github-plain"></i>

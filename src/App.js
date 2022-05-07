@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Credits from './pages/Credits';
 import Header from './components/Header';
 import './App.css';
 import Provider from './context/Provider';
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/credits" element={<Credits />} />
         </Routes>
       </Provider>
     </ThemeProvider>
