@@ -8,9 +8,10 @@
 
  /* Source: https://css-tricks.com/snippets/css/typewriter-effect/ */
 .typewriter h1 {
+  display: flex;
   font-size: 30px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid var(--color-primary);; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -31,4 +32,17 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--color-primary); }
+}
+@media screen and (max-width: 880px) {
+
+  .welcome-container {
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .typewriter h1 {
+    font-size: 3.4vw;
+  }
 }

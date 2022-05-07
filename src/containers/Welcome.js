@@ -22,7 +22,7 @@ export default function Welcome() {
           loop={true}
           controls={true}
           src="https://assets1.lottiefiles.com/packages/lf20_gssu2dkm.json"
-          style={{ height: '65vh' }}></Player>
+        ></Player>
       </motion.div>
     </section>
   );
