@@ -10,12 +10,12 @@ import { motion } from 'framer-motion';
 export default function Carousel() {
   const [carouselProjects] = useState(projects.slice(0, 6));
   const [carouselClasses, setCarouselClasses] = useState([
+    'mid-right',
+    'far-right',
+    'hidden',
     'far-left',
     'mid-left',
     'center-item',
-    'mid-right',
-    'far-right',
-    'hidden'
   ]);
 
   const previousItem = () => {
