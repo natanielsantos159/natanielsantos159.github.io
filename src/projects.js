@@ -8,7 +8,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/songidentifier',
     website: 'https://natanielsantos159.github.io/songidentifier/',
     tags: ['Projeto Pessoal'],
-    technologies: ['React', 'Javascript', 'CSS3'],
+    technologies: ['React', 'JavaScript', 'CSS3'],
     skills: [
       'Solicitar acesso ao microfone e gravar áudio',
       'Manipular dados providos pelo microfone do usuário',
@@ -27,7 +27,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/trivia-redux',
     website: 'https://natanielsantos159.github.io/trivia-redux/',
     tags: ['Módulo de Front-End', 'Projeto em Grupo'],
-    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
+    technologies: ['React', 'Redux', 'JavaScript', 'CSS3'],
     skills: [
       'Criar um `store` Redux em aplicações React',
       'Criar `reducers` no Redux em aplicações React',
@@ -47,7 +47,7 @@ const projects = [
     repository: 'https://github.com/natanielsantos159/trybe-wallet',
     website: 'https://natanielsantos159.github.io/trybe-wallet',
     tags: ['Módulo de Front-End'],
-    technologies: ['React', 'Redux', 'Javascript', 'CSS3'],
+    technologies: ['React', 'Redux', 'JavaScript', 'CSS3'],
     skills: [
       'Criar um `store` Redux em aplicações React',
       'Criar `reducers` no Redux em aplicações React',
@@ -113,16 +113,16 @@ const projects = [
       'https://github.com/natanielsantos159/trybe-futebol-clube/raw/nataniel-santos-trybe-futebol-clube/front-example.png?raw=true',
     repository: 'https://github.com/natanielsantos159/trybe-futebol-clube',
     tags: ['Módulo de Back-End'],
-    technologies: ['React', 'TypeScript', 'NodeJS', 'Express', 'Sequelize', 'MySQL', 'Docker'],
+    technologies: ['React', 'TypeScript', 'NodeJS', 'Express', 'Sequelize', 'MySQL', 'Docker', 'Mocha', 'JWT'],
     skills: [
       'Realizar a dockerização dos apps, network, volume e compose',
       'Modelar dados com `MySQL` através do `Sequelize`',
       'Criar e associar tabelas usando `models` do `sequelize`',
       'Construir uma `API REST` com endpoints para consumir os models criados',
       'Fazer um `CRUD` utilizando `ORM`',
+      'Testar uma aplicação back-end utilizando `Mocha, Chai e Sinon`',
     ]
   },
-
   {
     id: 7,
     name: 'ChoqueFlix',
@@ -192,7 +192,7 @@ const projects = [
       'Uma API CRUD para um site de blogs, ultizando Express, Node.js e Sequelize',
     repository: 'https://github.com/natanielsantos159/blogs-api',
     tags: ['Módulo de Back-End'],
-    technologies: ['Express', 'NodeJS', 'Sequelize', 'MySQL'],
+    technologies: ['Express', 'NodeJS', 'Sequelize', 'MySQL', 'JWT'],
     skills: [
       'Criar e associar tabelas usando `models` do `sequelize`',
       'Construir endpoints para consumir os models',
@@ -206,7 +206,7 @@ const projects = [
       'Uma API CRUD de itens medievais em TypeScript.',
     repository: 'https://github.com/natanielsantos159/trybe-smith',
     tags: ['Módulo de Back-End'],
-    technologies: ['TypeScript', 'NodeJS', 'Express', 'MySQL'],
+    technologies: ['TypeScript', 'NodeJS', 'Express', 'MySQL', 'JWT'],
     skills: [
       'Declarar variáveis e funções com tipagens `Typescript`',
       'Construir uma API Node Express utilizando o `Typescript`.',
@@ -261,7 +261,7 @@ const projects = [
     website: 'https://natanielsantos159.github.io/pixels-art-project/',
     tags: ['Módulo de Fundamentos'],
     skills: ['Manipular o `DOM`', 'Manipular o `JavaScript`'],
-    technologies: ['Javascript', 'CSS3']
+    technologies: ['JavaScript', 'CSS3']
   },
 ];
 
