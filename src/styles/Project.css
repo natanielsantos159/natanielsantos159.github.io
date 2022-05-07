@@ -95,7 +95,10 @@
   justify-content: space-between;
 }
 
-.projects-container-home-wrapper .project-card .image-wrapper, 
-.project-card-open  .project-card .image-wrapper{
+.projects-container-home-wrapper .project-card .image-wrapper {
   min-width: 300px;
+}
+
+.project-card-open .project-card .image-wrapper {
+  min-width: 390px;
 }
