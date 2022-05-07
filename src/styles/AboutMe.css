@@ -43,3 +43,21 @@
     transform: translateY(0%);
   }
 }
+
+
+@media screen and (max-width: 880px) {
+  .info-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile-picture {
+    height: 23vh;
+    width: 23vh;
+  }
+
+  .about-me-home {
+    font-size: 16px;
+  }
+
+}
