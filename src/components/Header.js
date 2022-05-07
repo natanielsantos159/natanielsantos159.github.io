@@ -24,8 +24,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={scrolled && 'header-scrolled'}>
-      <h1>Nataniel Santos</h1>
+    <header className={ scrolled ? 'header-scrolled' : '' }>
+      <h1 className="header-title">Nataniel Santos</h1>
       <nav className="header-navs">
         <HeaderNav name="welcome" link="/" img={homeIcon} imgHover={homeHover}>
           Início

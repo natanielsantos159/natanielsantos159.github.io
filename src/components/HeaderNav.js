@@ -35,13 +35,13 @@ export default function HeaderNav({ children, img, imgHover, name, link }) {
   };
   return (
     <div
-      className={`nav-wrapper`}
+      className="nav-wrapper"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <a onClick={handleScroll}>
         <img src={hover ? imgHover : img} alt={`${name} Icon`} />
-        {children}
+        <span className={`nav-name ${onScreen === name ? 'selected' : ''}`}>{children}</span>
       </a>
       {onScreen === name ? <motion.div className="tab" layoutId="tab" /> : null}
     </div>

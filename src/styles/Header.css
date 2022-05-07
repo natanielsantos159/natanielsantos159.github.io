@@ -38,9 +38,7 @@ header {
   justify-content: space-around;
   align-items: center;
 
-  color: #ffeedb;
-  font-weight: 800;
-  font-size: 17px;
+  color: var(--color-white);
 }
 
 .header-navs img {
@@ -96,4 +94,21 @@ a:visited {
   background: linear-gradient(183deg, var(--color-primary), var(--color-bg));
   border-radius: 50px;
   box-shadow: 0 0 19px 0px var(--color-primary-variant);
+}
+
+@media screen and (max-width: 880px) {
+  .header-title {
+    display: none;
+  }
+
+  .header-navs a {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-name:not(.selected) {
+    display: none;
+  }
+
 }
