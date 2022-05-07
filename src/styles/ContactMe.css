@@ -42,11 +42,6 @@
   width: min-content;
 }
 
-.contact-links-section {
-  flex-direction: column;
-  gap: 30px;
-}
-
 .contact-me-content {
   display: flex;
 }
@@ -62,4 +57,20 @@
 
 .contact-links-section .technology-card i {
   font-size: 60px;
+}
+
+@media screen and (max-width: 640px) {
+
+  .contact-me-content {
+    flex-direction: column-reverse;
+  }
+
+  .contact-links-section {
+    width: 40%;
+    display: flex;
+  }
+
+  .send-email-section {
+    width: unset;
+  }
 }
