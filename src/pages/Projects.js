@@ -8,13 +8,15 @@ import listIcon from '../images/list-icon.png';
 import ProjectSkills from '../components/ProjectSkills';
 import ScrollToTop from '../components/ScrollToTop';
 import Checkbox from '../components/Checkbox';
-import '../styles/Projects.css';
-import { IconButton } from '@mui/material';
+import { IconButton, useMediaQuery } from '@mui/material';
 import { motion } from 'framer-motion';
+import '../styles/Projects.css';
 
 export default function Projects() {
   const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode, setOnScreen } =
     useContext(AppContext);
+  const isMobileView = useMediaQuery('(max-width:450px)');
+  
   const switchViewMode = () => {
     setViewMode(viewMode === 'grid' ? 'list' : 'grid');
     setShowSkills(false);
@@ -36,7 +38,7 @@ export default function Projects() {
             Expandir todas as skills
           </Checkbox>
         )}
-        <div className="switch-mode-btns">
+        {!isMobileView && <div className="switch-mode-btns">
           <div className="icon-wrapper">
             <IconButton
               height="small"
@@ -62,7 +64,7 @@ export default function Projects() {
               <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
             )}
           </div>
-        </div>
+        </div>}
       </div>
 
       <section className={`projects-section ${viewMode}`}>
