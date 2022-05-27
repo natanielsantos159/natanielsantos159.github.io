@@ -12,6 +12,8 @@ import MainPageGrid from '../components/MainPageGrid';
 import AppContext from '../context/AppContext';
 import DefaultButton from '../components/DefaultButton';
 import ProjectSkills from '../components/ProjectSkills';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import '../styles/ProjectsContainer.css';
 
 export default function ProjectsContainer() {
@@ -19,6 +21,7 @@ export default function ProjectsContainer() {
   useOnScreen(ref, '-250px', 'projects');
   const { viewMode, setViewMode } = useContext(AppContext);
   const navigate = useNavigate();
+  const isMobileView = useMediaQuery('(max-width:450px)');
 
   useEffect(() => {
     setViewMode('carousel');
@@ -29,7 +32,7 @@ export default function ProjectsContainer() {
   return (
     <section className="projects-container-home" ref={ref}>
       <h1>Meus Projetos</h1>
-      <div className="switch-mode-btns">
+      { !isMobileView && <div className="switch-mode-btns">
         <div className="icon-wrapper">
           <IconButton
             height="medium"
@@ -55,9 +58,9 @@ export default function ProjectsContainer() {
             <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
           )}
         </div>
-      </div>
+      </div>}
 
-      {viewMode === 'grid' ? <MainPageGrid /> : <Carousel />}
+      {viewMode === 'grid' || isMobileView ? <MainPageGrid /> : <Carousel />}
 
       <DefaultButton
         onClick={() => navigate('/projects')}
