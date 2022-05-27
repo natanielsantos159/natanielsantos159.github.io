@@ -32,10 +32,30 @@
 }
 
 @media screen and (max-width: 880px) {
+
   .technology-card {
     padding: 9px 20px
   }
+
+  .contact-links-section .technology-card i,
   .technology-card i {
     font-size: 3.5rem;
+  }
+
+  .technology-card img {
+    height: 80px;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  .technology-card img {
+    height: 60px;
+  }
+
+  .contact-links-section .technology-card i,
+  .technology-card i {
+    font-size: 2.0rem;
   }
 }
