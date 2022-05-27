@@ -62,7 +62,7 @@
     font-size: 15px;
   }
   .carrousel-mode {
-    min-width: 75vw;
+    width: 100%;
   }
 
   .carrousel-mode .project-description {
@@ -83,4 +83,23 @@
     max-height: 300px;
   }
 
+}
+
+@media screen and (max-width: 450px) {
+
+  .carrousel-mode .project-card {
+    width: 40vh;
+    font-size: 14px;
+  }
+
+  .carrousel-mode .project-card:not(.center-item) {
+    display: none;
+  }
+  .carrousel-mode .project-card .btn-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .expanded .tech-name-overlay {
+    display: none;
+  }
 }
