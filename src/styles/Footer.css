@@ -24,3 +24,11 @@ footer i:hover {
   display: flex;
   gap: 15px;
 }
+
+
+@media screen and (max-width: 400px) {
+
+  footer, footer i {
+    font-size: 13px;
+  }
+}
