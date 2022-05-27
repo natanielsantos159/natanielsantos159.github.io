@@ -8,15 +8,15 @@ import listIcon from '../images/list-icon.png';
 import ProjectSkills from '../components/ProjectSkills';
 import ScrollToTop from '../components/ScrollToTop';
 import Checkbox from '../components/Checkbox';
-import { IconButton, useMediaQuery } from '@mui/material';
-import { motion } from 'framer-motion';
+import { useMediaQuery } from '@mui/material';
 import '../styles/Projects.css';
+import SwitchViewButton from '../components/SwitchViewButton';
 
 export default function Projects() {
   const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode, setOnScreen } =
     useContext(AppContext);
-  const isMobileView = useMediaQuery('(max-width:450px)');
-  
+  const isTabletView = useMediaQuery('(max-width:800px)');
+
   const switchViewMode = () => {
     setViewMode(viewMode === 'grid' ? 'list' : 'grid');
     setShowSkills(false);
@@ -33,37 +33,22 @@ export default function Projects() {
       <ScrollToTop />
       <div className="header-projects-page">
         <h1 className="projects-h1">Projetos</h1>
-        {viewMode === 'list' && (
+        {!isTabletView && viewMode === 'list' && (
           <Checkbox onClick={() => setShowAllSkills(!showAllSkills)} checked={showAllSkills}>
             Expandir todas as skills
           </Checkbox>
         )}
-        {!isMobileView && <div className="switch-mode-btns">
-          <div className="icon-wrapper">
-            <IconButton
-              height="small"
-              padding="10px"
-              sx={{ height: '50px', margin: '5px' }}
-              onClick={switchViewMode}>
-              <img src={gridIcon} style={{ height: '27px' }} />
-            </IconButton>
-            {viewMode === 'grid' && (
-              <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
-            )}
-          </div>
-
-          <div className="icon-wrapper">
-            <IconButton
-              height="medium"
-              padding="10px"
-              sx={{ height: '50px', margin: '5px' }}
-              onClick={switchViewMode}>
-              <img src={listIcon} style={{ height: '27px' }} />
-            </IconButton>
-            {viewMode === 'list' && (
-              <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
-            )}
-          </div>
+        {!isTabletView && <div className="switch-mode-btns">
+          <SwitchViewButton
+            icon={ gridIcon }
+            isSelected={ viewMode === 'grid' }
+            onClick={ switchViewMode }
+          />
+          <SwitchViewButton
+            icon={ listIcon }
+            isSelected={ viewMode === 'list' }
+            onClick={ switchViewMode }
+          />
         </div>}
       </div>
 
