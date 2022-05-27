@@ -60,7 +60,8 @@ export default function ProjectCard({
   return (
     <motion.div
       className={`project-card ${carouselClass ? carouselClass : ''}`}
-      {...framerMotionProps}>
+      {...framerMotionProps}
+    >
       <motion.div
         className="project-card-content"
         layoutId={animateCrossfade && `project-card-content-${id}`}>

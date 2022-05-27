@@ -1,4 +1,4 @@
-import { Backdrop } from '@mui/material';
+import { Backdrop, useMediaQuery } from '@mui/material';
 import { AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 import projects from '../projects';
@@ -7,6 +7,7 @@ import SkillsList from './SkillsList';
 
 export default function MainPageGrid() {
   const [selectedId, setSelectedId] = useState(null);
+  const isTabletView = useMediaQuery('(max-width:800px)');
 
   return (
     <>
@@ -15,14 +16,14 @@ export default function MainPageGrid() {
           <ProjectCard
             {...proj}
             key={i}
-            framerMotionProps={{
+            framerMotionProps={ !isTabletView && {
               onClick: ({ target: { classList }}) => {
                 if (classList.contains('default-btn') && !classList.contains('btn-skills')) return;
                 setSelectedId(proj.id);
               },
               layoutId: proj.id
             }}
-            animateCrossfade
+            animateCrossfade={ !isTabletView }
           />
         ))}
       </section>

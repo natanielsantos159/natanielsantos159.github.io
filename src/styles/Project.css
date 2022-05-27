@@ -102,3 +102,15 @@
 .project-card-open .project-card .image-wrapper {
   min-width: 390px;
 }
+
+@media screen and (max-width: 450px) {
+
+  .project-card {
+    width: 40vh;
+    font-size: 14px;
+  }
+
+  .project-card .btn-wrapper {
+    flex-wrap: wrap;
+  }
+}
