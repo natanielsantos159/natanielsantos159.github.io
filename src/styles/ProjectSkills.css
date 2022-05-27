@@ -59,7 +59,7 @@ code {
   display: flex;
   padding: 15px;
   column-gap: 10px;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .tip {
@@ -68,4 +68,19 @@ code {
 
 .tip-section img {
   height: 25px;
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .project-skills {
+    width: 80vw;
+    padding: 3vh 3vh 1vh;
+    font-size: 14px;
+  }
+
+  .close-btn img {
+    height: 15px;
+    padding: 5px;
+  }
 }
