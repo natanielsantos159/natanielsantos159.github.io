@@ -4,10 +4,8 @@ import seeMoreIcon from '../images/see-more.png';
 import seeMoreHover from '../images/see-more-dark.png';
 import useOnScreen from '../hooks/useOnScreen';
 import Carousel from '../components/Carousel';
-import { IconButton } from '@mui/material';
 import gridIcon from '../images/grid-icon.png';
 import carouselIcon from '../images/carousel.png';
-import { motion } from 'framer-motion';
 import MainPageGrid from '../components/MainPageGrid';
 import AppContext from '../context/AppContext';
 import DefaultButton from '../components/DefaultButton';
@@ -15,6 +13,7 @@ import ProjectSkills from '../components/ProjectSkills';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import '../styles/ProjectsContainer.css';
+import SwitchViewButton from '../components/SwitchViewButton';
 
 export default function ProjectsContainer() {
   const ref = useRef();
@@ -33,31 +32,16 @@ export default function ProjectsContainer() {
     <section className="projects-container-home" ref={ref}>
       <h1>Meus Projetos</h1>
       { !isMobileView && <div className="switch-mode-btns">
-        <div className="icon-wrapper">
-          <IconButton
-            height="medium"
-            padding="10px"
-            sx={{ height: '50px', margin: '5px' }}
-            onClick={switchMode}>
-            <img src={carouselIcon} style={{ height: '27px' }} />
-          </IconButton>
-          {viewMode === 'carousel' && (
-            <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
-          )}
-        </div>
-
-        <div className="icon-wrapper">
-          <IconButton
-            height="small"
-            padding="10px"
-            sx={{ height: '50px', margin: '5px' }}
-            onClick={switchMode}>
-            <img src={gridIcon} style={{ height: '27px' }} />
-          </IconButton>
-          {viewMode === 'grid' && (
-            <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
-          )}
-        </div>
+        <SwitchViewButton
+          icon={carouselIcon}
+          isSeletected={ viewMode === 'carousel' }
+          onClick={ switchMode }
+        />
+        <SwitchViewButton
+          icon={gridIcon}
+          isSeletected={ viewMode === 'grid' }
+          onClick={ switchMode }
+        />
       </div>}
 
       {viewMode === 'grid' || isMobileView ? <MainPageGrid /> : <Carousel />}
