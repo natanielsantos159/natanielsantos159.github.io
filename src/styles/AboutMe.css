@@ -16,9 +16,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   align-items: center;
   justify-content: flex-start;
+  padding-bottom: 10vh;
 }
 
 .about-me-home {
@@ -60,4 +60,12 @@
     font-size: 16px;
   }
 
+}
+
+@media screen and (max-width: 880px) {
+
+  .about-me-home {
+    font-size: 13px;
+    padding: 4vh;
+  }
 }
