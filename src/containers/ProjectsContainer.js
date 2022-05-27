@@ -39,7 +39,7 @@ export default function ProjectsContainer() {
             <img src={carouselIcon} style={{ height: '27px' }} />
           </IconButton>
           {viewMode === 'carousel' && (
-            <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+            <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
           )}
         </div>
 
@@ -52,7 +52,7 @@ export default function ProjectsContainer() {
             <img src={gridIcon} style={{ height: '27px' }} />
           </IconButton>
           {viewMode === 'grid' && (
-            <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+            <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
           )}
         </div>
       </div>

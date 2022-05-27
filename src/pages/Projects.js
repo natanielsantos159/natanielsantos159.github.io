@@ -46,7 +46,7 @@ export default function Projects() {
               <img src={gridIcon} style={{ height: '27px' }} />
             </IconButton>
             {viewMode === 'grid' && (
-              <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+              <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
             )}
           </div>
 
@@ -59,7 +59,7 @@ export default function Projects() {
               <img src={listIcon} style={{ height: '27px' }} />
             </IconButton>
             {viewMode === 'list' && (
-              <motion.div className="tab switch-mode-btn" layoutId="viewModeTab" />
+              <motion.div className="switch-mode-btn" layoutId="viewModeTab" />
             )}
           </div>
         </div>
