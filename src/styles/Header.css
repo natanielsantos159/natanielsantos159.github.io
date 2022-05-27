@@ -112,3 +112,13 @@ a:visited {
   }
 
 }
+
+@media screen and (max-width: 400px) {
+  .nav-name {
+    display: none;
+  }
+
+  header {
+    min-width: 80vw;
+  }
+}
