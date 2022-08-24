@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
@@ -16,3 +17,9 @@ export default function SwitchViewButton({ onClick, icon, isSelected }) {
     </div>
   );
 }
+
+SwitchViewButton.propTypes = {
+  icon: PropTypes.string,
+  isSelected: PropTypes.bool,
+  onClick: PropTypes.function,
+};
