@@ -18,6 +18,8 @@ const technologies = [
   { name: 'Git', iconClass: 'devicon-git-plain' },
   { name: 'Mocha', iconClass: 'devicon-mocha-plain' },
   { name: 'JWT', imageLink: jwtIcon, imageHover: jwtHover },
+  { name: 'NextJS',  iconClass: 'devicon-nextjs-original' },
+  { name: 'Python',  iconClass: 'devicon-python-plain' },
 ];
 
 export default technologies;
