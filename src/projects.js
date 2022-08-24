@@ -144,6 +144,28 @@ const projects = [
   },
   {
     id: 8,
+    name: 'Open Weather Project',
+    description:
+      'O intuito desse desafio é identificar o clima atual e a previsão do clima nos próximos 5 dias da cidade pesquisada através do site',
+    image:
+      'https://camo.githubusercontent.com/62914ed4a1179a94c28ffd900a47802de36c0b7dbba21db8412e86d20d99257e/687474703a2f2f692e696d6775722e636f6d2f48437a6a5641622e676966',
+    repository: 'https://github.com/natanielsantos159/open-weather-desafio',
+    website: 'https://open-weather-desafio.vercel.app/',
+    tags: ['Projeto Pessoal'],
+    technologies: ['JavaScript', 'NextJS', 'CSS3'],
+    skills: [
+      'Criar rotas no `Next.js`',
+      'Utilizar autocomplete de cidades utilizando a API do `Google Maps`',
+      'Página de pesquisa de cidade',
+      'Página que mostra o clima da cidade pesquisada',
+      'Página que mostra a previsão do clima nos próximos 5 dias da cidade pesquisada',
+      'Opção de mudar a escala de grau: `Celsius` ou `Fahrenheit`',
+      'Pesquisa por geolocalização',
+      'Internacionalização para inglês/espanhol',
+    ]
+  },
+  {
+    id: 9,
     name: 'Store Manager',
     description:
       'Minha primeira API RESTful desenvolvida utilizando a arquitetura MSC! A API trata-se de um sistema de gerenciamento de vendas, onde será possível criar, visualizar, deletar e atualizar produtos e vendas',
@@ -162,7 +184,7 @@ const projects = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     name: 'Talker Manager',
     description:
       'Projeto introdutório ao NodeJs e Node Express do módulo de back-end da Trybe. Foi desenvoldida uma API de um CRUD (Create, Read, Update e Delete) de palestrantes por meio de endpoints que irão ler e escrever em um arquivo, isso utilizando o módulo fs.',
@@ -186,7 +208,7 @@ const projects = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     name: 'Blogs API',
     description:
       'Uma API CRUD para um site de blogs, ultizando Express, Node.js e Sequelize',
@@ -200,7 +222,7 @@ const projects = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     name: 'Trybe Smith',
     description:
       'Uma API CRUD de itens medievais em TypeScript.',
@@ -213,7 +235,7 @@ const projects = [
     ]
   },
   {
-    id: 12,
+    id: 13,
     name: 'Movie Card Library',
     description:
       'Projeto introdutório ao React do módulo de Front-end da Trybe. Foi desenvolvido ma biblioteca de cartões de filmes',
@@ -240,7 +262,7 @@ const projects = [
     ]
   },
   {
-    id: 13,
+    id: 14,
     name: 'Todo List',
     description: 'Uma aplicação simples de lista de tarefas',
     image:
@@ -252,7 +274,7 @@ const projects = [
     skills: ['Manipular `CSS`', 'Manipular `JavaScript`']
   },
   {
-    id: 14,
+    id: 15,
     name: 'Pixels Art',
     description: 'App simples pra desenhar pixel art',
     image:
