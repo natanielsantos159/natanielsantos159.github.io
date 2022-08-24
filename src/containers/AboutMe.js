@@ -24,12 +24,12 @@ export default function AboutMe() {
             <br/>
             <br/>
             Nos últimos 12 meses tenho aperfeiçoado minhas capacidades, tanto Hard Skills quanto Soft Skills. 
-            Ao longo de 3 módulos(Fundamentos, Front-end e Back-end), desenvolvi mais de <a href="https://github.com/natanielsantos159?tab=repositories">32 projetos</a> na Trybe até o momento. 
-            Estou finalizando o módulo de Back-end e entrando no módulo de Ciência da Computação e estou em busca da minha primeira oportunidade como desenvolvedor Full Stack Jr.
+            Ao longo de 3 módulos(Fundamentos, Front-end e Back-end), desenvolvi mais de <a href="https://github.com/natanielsantos159?tab=repositories">32 projetos</a> na Trybe até o momento
+             e estou em busca da minha primeira oportunidade como desenvolvedor Full Stack Jr.
           </p>
           <DefaultButton
             name="Download CV"
-            href="https://drive.google.com/file/d/1oGv6JgZv-YJFtQD5uTiT1YSXYjVe3Yjp/view?usp=sharing"
+            href="https://drive.google.com/file/d/1kBIozrlTEV9hh2FC3Tm3mo8kahZWo49l/view?usp=sharing"
             icon={downloadIcon}
             iconHover={downloadHover}
           />
