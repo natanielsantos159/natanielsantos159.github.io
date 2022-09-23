@@ -19,7 +19,10 @@ export default function Header() {
 
   useEffect(() => {
     if (window) {
-      window.addEventListener('scroll', () => setScrolled(window.scrollY > 200));
+      window.addEventListener('scroll', () => {
+        const newValue = window.scrollY > 200;
+        if(newValue !== scrolled) setScrolled(newValue)
+      });
     }
   }, []);
 
