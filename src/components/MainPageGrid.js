@@ -2,8 +2,7 @@ import { Backdrop, useMediaQuery } from '@mui/material';
 import { AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 import projects from '../projects';
-import ProjectCard from './ProjectCard';
-import SkillsList from './SkillsList';
+import GridProjectCard from './ProjectCard/GridProjectCard';
 
 export default function MainPageGrid() {
   const [selectedId, setSelectedId] = useState(null);
@@ -13,7 +12,7 @@ export default function MainPageGrid() {
     <>
       <section className="projects-container-home-wrapper">
         {projects.slice(0, 6).map((proj, i) => (
-          <ProjectCard
+          <GridProjectCard
             {...proj}
             key={i}
             framerMotionProps={ !isTabletView && {
@@ -31,17 +30,14 @@ export default function MainPageGrid() {
         {selectedId && (
           <Backdrop open={open} onClick={() => setSelectedId(null)} sx={{ zIndex: 8 }}>
             <div className="project-card-open">
-              <ProjectCard
+              <GridProjectCard
                 {...projects[selectedId - 1]}
                 framerMotionProps={{ layoutId: selectedId }}
                 expandTechnologies
                 animateCrossfade
-                showSkillsBtn={false}>
-                <section className="homepage-skills">
-                  <h2>Skills</h2>
-                  <SkillsList index={selectedId - 1} />
-                </section>
-              </ProjectCard>
+                showSkillsBtn={false}
+                showSkillsList={true}
+              />
             </div>
           </Backdrop>
         )}

@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
-import React, { useContext, useEffect } from 'react';
-import AppContext from '../context/AppContext';
-import githubIcon from '../images/github.png';
-import githubHover from '../images/github-dark.png';
-import websiteIcon from '../images/website.png';
-import websiteHover from '../images/website-dark.png';
-import skillsIcon from '../images/skills.png';
-import skillsHover from '../images/skills-dark.png';
-import defaultProjectImage from '../images/projectimage.png';
-import SkillsList from './SkillsList';
-import useCollapse from 'react-collapsed';
-import '../styles/Project.css';
-import DefaultButton from './DefaultButton';
-import TechnologyBadgesContainer from './TechnologyBadgesContainer';
+import React from 'react';
+import githubIcon from '../../images/github.png';
+import githubHover from '../../images/github-dark.png';
+import websiteIcon from '../../images/website.png';
+import websiteHover from '../../images/website-dark.png';
+import skillsIcon from '../../images/skills.png';
+import skillsHover from '../../images/skills-dark.png';
+import defaultProjectImage from '../../images/projectimage.png';
+import SkillsList from '../SkillsList';
+import DefaultButton from '../DefaultButton';
+import TechnologyBadgesContainer from '../TechnologyBadgesContainer';
 import { motion } from 'framer-motion';
+import '../../styles/ProjectCard.css';
 
-export default function ProjectCard({
+export default function GridProjectCard({
   id,
   image,
   name,
@@ -24,48 +22,21 @@ export default function ProjectCard({
   website,
   tags,
   technologies,
-  carouselClass,
   framerMotionProps = {},
   expandTechnologies = false,
-  animateCrossfade = false,
   showSkillsBtn = true,
-  children,
+  showSkillsList = false,
 }) {
-  const { showSkills, idSkill, setShowSkills, showAllSkills, setShowAllSkills, viewMode } =
-    useContext(AppContext);
-  const { setIdSkill } = useContext(AppContext);
-  const { getCollapseProps, getToggleProps, setExpanded } = useCollapse();
-
-  useEffect(() => {
-    return () => setShowAllSkills(false);
-  }, []);
-
-  useEffect(() => {
-    setExpanded(showAllSkills);
-  }, [showAllSkills, setExpanded]);
-
-  const showSkillsOnClick = () => {
-    setIdSkill(id);
-    if (!showSkills) setShowSkills(true);
-    if (showSkills && idSkill === id) setShowSkills(false);
-    if (viewMode === 'grid' || viewMode === 'carousel') document.body.style.overflow = 'hidden';
-  };
-
-  const getOnClickProps = () => {
-    if (animateCrossfade) return { onClick: framerMotionProps.onClick }
-    if (viewMode === 'grid' || viewMode === 'carousel') return { onClick: showSkillsOnClick };
-    if (viewMode === 'list') return { ...getToggleProps() };
-  };
 
   return (
     <motion.div
-      className={`project-card ${carouselClass ? carouselClass : ''}`}
+      className={`project-card`}
       {...framerMotionProps}
     >
       <motion.div
         className="project-card-content"
-        layoutId={animateCrossfade && `project-card-content-${id}`}>
-        <motion.div className="image-wrapper" layoutId={animateCrossfade && `image-wrapper-${id}`}>
+        layoutId={`project-card-content-${id}`}>
+        <motion.div className="image-wrapper" layoutId={`image-wrapper-${id}`}>
           <img
             src={image ? image : defaultProjectImage}
             alt={`Imagem do Projeto ${name}`}
@@ -74,7 +45,7 @@ export default function ProjectCard({
         </motion.div>
         <motion.div
           className="project-info-wrapper"
-          layoutId={animateCrossfade && `project-info-wrapper-${id}`}>
+          layoutId={`project-info-wrapper-${id}`}>
           <div className="title-and-techs-wrapper">
             <h2 className="project-name">{name}</h2>
             {expandTechnologies === false && (
@@ -119,23 +90,20 @@ export default function ProjectCard({
               className="btn-skills"
               icon={skillsIcon}
               iconHover={skillsHover}
-              {...getOnClickProps()}
+              onClick={framerMotionProps.onClick}
             />
           )}
         </section>
       </motion.div>
-      {viewMode === 'list' && (
-        <section {...getCollapseProps()}>
-          <h2>Skills</h2>
-          <SkillsList index={id - 1} />
-        </section>
-      )}
-      {children}
+      {showSkillsList && <section className="homepage-skills">
+        <h2>Skills</h2>
+        <SkillsList index={id - 1} />
+      </section>}
     </motion.div>
   );
 }
 
-ProjectCard.propTypes = {
+GridProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
@@ -144,10 +112,8 @@ ProjectCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string).isRequired,
   website: PropTypes.string,
   technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  carouselClass: PropTypes.string,
   framerMotionProps: PropTypes.object,
-  expandTechnologies: PropTypes.bool,
-  animateCrossfade: PropTypes.bool,
   showSkillsBtn: PropTypes.bool,
-  children: PropTypes.node
+  showSkillsList: PropTypes.bool,
+  expandTechnologies: PropTypes.bool,
 };

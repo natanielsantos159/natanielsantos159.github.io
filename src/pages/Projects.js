@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import ProjectCard from '../components/ProjectCard';
+import ProjectPageGridCard from '../components/ProjectCard/ProjectPageGridCard';
+import ListProjectCard from '../components/ProjectCard/ListProjectCard';
 import AppContext from '../context/AppContext';
 import projects from '../projects';
 
@@ -9,12 +10,18 @@ import ProjectSkills from '../components/ProjectSkills';
 import ScrollToTop from '../components/ScrollToTop';
 import Checkbox from '../components/Checkbox';
 import { useMediaQuery } from '@mui/material';
-import '../styles/Projects.css';
 import SwitchViewButton from '../components/SwitchViewButton';
+import '../styles/Projects.css';
 
 export default function Projects() {
-  const { showAllSkills, setShowAllSkills, setShowSkills, viewMode, setViewMode, setOnScreen } =
-    useContext(AppContext);
+  const {
+    showAllSkills,
+    setShowAllSkills,
+    setShowSkills,
+    viewMode,
+    setViewMode,
+    setOnScreen,
+  } = useContext(AppContext);
   const isTabletView = useMediaQuery('(max-width:800px)');
 
   const switchViewMode = () => {
@@ -38,25 +45,39 @@ export default function Projects() {
             Expandir todas as skills
           </Checkbox>
         )}
-        {!isTabletView && <div className="switch-mode-btns">
-          <SwitchViewButton
-            icon={ gridIcon }
-            isSelected={ viewMode === 'grid' }
-            onClick={ switchViewMode }
-          />
-          <SwitchViewButton
-            icon={ listIcon }
-            isSelected={ viewMode === 'list' }
-            onClick={ switchViewMode }
-          />
-        </div>}
+        {!isTabletView && (
+          <div className="switch-mode-btns">
+            <SwitchViewButton
+              icon={gridIcon}
+              isSelected={viewMode === 'grid'}
+              onClick={switchViewMode}
+            />
+            <SwitchViewButton
+              icon={listIcon}
+              isSelected={viewMode === 'list'}
+              onClick={switchViewMode}
+            />
+          </div>
+        )}
       </div>
 
-      <section className={`projects-section ${viewMode}`}>
-        {projects.map((proj, i) => (
-          <ProjectCard {...proj} expandTechnologies={viewMode === 'grid'} key={i} />
-        ))}
-      </section>
+      {viewMode === 'grid' && (
+        <section className={`projects-section ${viewMode}`}>
+          {projects.map((proj, i) => (
+            <ProjectPageGridCard
+              {...proj}
+              key={i}
+            />
+          ))}
+        </section>
+      )}
+      {viewMode === 'list' && (
+        <section className={`projects-section ${viewMode}`}>
+          {projects.map((proj, i) => (
+            <ListProjectCard {...proj} key={i} />
+          ))}
+        </section>
+      )}
 
       <ProjectSkills />
     </main>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import ProjectCard from './ProjectCard';
-import '../styles/Carousel.css';
+import CarouselProjectCard from './ProjectCard/CarouselProjectCard';
 import projects from '../projects';
 import { IconButton } from '@mui/material';
 import arrowLeftIcon from '../images/arrow-left.png';
 import arrowRightIcon from '../images/arrow-right.png';
 import { motion } from 'framer-motion';
+import '../styles/Carousel.css';
 
 export default function Carousel() {
   const [carouselProjects] = useState(projects.slice(0, 6));
@@ -59,12 +59,11 @@ export default function Carousel() {
   return (
     <motion.section className="carrousel-mode">
       {carouselProjects.map((proj, i) => (
-        <ProjectCard
+        <CarouselProjectCard
           {...proj}
           carouselClass={carouselClasses[i]}
           key={i}
           framerMotionProps={{ ...framerMotionProps }}
-          expandTechnologies
         />
       ))}
       <IconButton sx={ { ...buttonStyles, transform: 'translate(-200%, -50%)'}} onClick={nextItem}>
