@@ -23,7 +23,7 @@ export default function ProjectsContainer() {
   const isMobileView = useMediaQuery('(max-width:450px)');
 
   useEffect(() => {
-    setViewMode('carousel');
+    setViewMode('grid');
   }, []);
 
   const switchMode = () => setViewMode(viewMode === 'carousel' ? 'grid' : 'carousel');
