@@ -17,7 +17,7 @@ export default function AboutMe() {
       <div className="info-wrapper">
         <div>
           <p className="about-me-home">
-            Me chamo Nataniel Santos, tenho 20 anos e moro em Santa inês - MA. Atualmente estou
+            Me chamo Nataniel Santos, tenho 2! anos e moro em Santa inês - MA. Atualmente estou
             finalizando o curso Desenvolvimento Web Full Stack na <a href="https://www.betrybe.com/">Trybe</a> e sou formado em Análise e
             Desenvolvimento de Sistemas. Sempre fui fascinado por tecnologia e no seu poder de gerar
             inovação e oportunidade na vida das pessoas.
@@ -25,11 +25,11 @@ export default function AboutMe() {
             <br/>
             Nos últimos 12 meses tenho aperfeiçoado minhas capacidades, tanto Hard Skills quanto Soft Skills. 
             Ao longo de 3 módulos(Fundamentos, Front-end e Back-end), desenvolvi mais de <a href="https://github.com/natanielsantos159?tab=repositories">32 projetos</a> na Trybe até o momento
-             e estou em busca da minha primeira oportunidade como desenvolvedor Full Stack Jr.
+             e estou em busca da minha primeira oportunidade como desenvolvedor Web Jr.
           </p>
           <DefaultButton
             name="Download CV"
-            href="https://drive.google.com/file/d/1kBIozrlTEV9hh2FC3Tm3mo8kahZWo49l/view?usp=sharing"
+            href="https://bit.ly/curriculonataniel"
             icon={downloadIcon}
             iconHover={downloadHover}
           />
